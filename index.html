@@ -4,12 +4,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <link rel="stylesheet" type="text/css" href="sass/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6e3acb5797.js" crossorigin="anonymous"></script>
     <title>Projet 4</title>
 </head>
+
+
+<body>
+    <header class="root logo">
+
+        <img src="assets/images/logo/ohmyfood.png" alt="Logo ohmyfood">
+
+    </header>
+
+
+    <main class="root">
+
+        <form id="search-form" method="post" action="#">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="search" name="location" placeholder="Paris, Belleville" class="location-search-bar">
+        </form>
+
+        <section class="vertical-and-centered">
+            <h1>Réservez le menu qui
+                vous convient</h1>
+
+            <p class="the-darkest-dull-color">Découvrez des restaurants d’exception, sélectionnés par nos soins.</p>
+
+            <a class="pink-button">Explorer nos restaurants</a>
+        </section>
+
+        <section class="second-section">
+            <h1>Fonctionnement</h1>
+
+            <div class="user-guide-section">
+
+                <a class="navigation-button">
+                    <span class="purple-circle center">1</span>
+                    <i class="fa-solid fa-mobile-screen-button margins-for-navigation-buttons-icon"></i>
+
+                    <span class="center">Choisissez un restaurant</span>
+                </a>
+
+                <a class="navigation-button">
+                    <span class="purple-circle center">2</span>
+                    <i class="fa-solid fa-list margins-for-navigation-buttons-icon"></i>
+                    <span class="center">Composez votre menu</span>
+                </a>
+
+
+                <a class="navigation-button">
+                    <span class="purple-circle center">3</span>
+                    <i class="fa-solid fa-store margins-for-navigation-buttons-icon"></i>
+                    <span class="center">Dégustez au restaurant</span>
+                </a>
+
+            </div>
+            </div>
+        </section>
+
+
+        <section class="all-restaurants">
+
+            <h1>Restaurants</h1>
+
+            <div class="card-container">
+
+
+                <div class="card">
+
+                    <div class="label-new">Nouveau</div>
+
+                    <img src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                        alt="photo restaurant numéro 1">
+
+                    <h2>La palette du goût</h2>
+                    <i class="fa-regular fa-heart"></i>
+                    <p>Ménilmontant</p>
+                </div>
+
+                <div class="card">
+
+                    <div class="label-new">Nouveau</div>
+
+                    <img src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo restaurant numéro 2">
+                    <h2>La note enchantée</h2>
+                    <i class="fa-regular fa-heart"></i>
+                    <p>Charonne</p>
+                </div>
+
+                <div class="card">
+                    <img src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                        alt="photo restaurant numéro 3">
+                    <h2>À la française</h2>
+                    <i class="fa-regular fa-heart"></i>
+                    <p>Cité Rouge</p>
+                </div>
+
+                <div class="card">
+                    <img src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                        alt="photo restaurant numéro 4">
+                    <h2>Le délice des sens</h2>
+                    <i class="fa-regular fa-heart"></i>
+                    <p>Folie-Méricourt</p>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="root">
+        <img src="assets/images/logo/ohmyfood@2x.svg" alt="logo du footer">
+
+        <div class="footer-links">
+
+            <div>
+                <li>
+                    <i class="fa-solid fa-utensils"></i>
+                    <h3><a href="#">Proposer un restaurant</a></h3>
+                </li>
+            </div>
+
+            <div>
+                <li>
+                    <i class="fa-solid fa-utensils"></i>
+                    <h3><a href="#">Proposer un restaurant</a></h3>
+                </li>
+            </div>
+
+            <div>
+                <li>
+                    <i class="fa-solid fa-utensils"></i>
+                    <h3><a href="#">Proposer un restaurant</a></h3>
+                </li>
+            </div>
+
+
+
+
+            <!--  
+            <a href="#">
+                <i class="fa-solid fa-handshake-angle"></i>
+                <span>
+                    <h3>Devenir partenaire</h3>
+                </span>
+            </a>
+
+
+            <a href="#">
+
+                <span>
+                    <h4>Mentions légales</h4>
+                </span>
+        </div>
+        </a>
+
+
+        <a href="#">
+
+            <span>
+                <h4>Contact</h4>
+            </span>
+        </a>
+
+
+        -->
+        </div>
+    </footer>
+
+
+    <!--
+        <footer class="root">
+    <div class="footer-links">
+      <div>
+        <h3><a href="#">À propos</a></h3>
+        <ul class="no-list-style">
+          <li><a href="#">Fonctionnement du site</a></li>
+          <li><a href="#">Conditions générales</a></li>
+          <li><a href="#">Données et confidentialité</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3><a href="#">Nos hébergements</a></h3>
+        <ul class="no-list-style">
+          <li><a href="#">Charte qualité</a></li>
+          <li><a href="#">Proposer votre hôtel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3><a href="#">Assistance</a></h3>
+        <ul class="no-list-style">
+          <li><a href="#">Centre d’aide</a></li>
+          <li><a href="#">Nous contacter</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+    -->
+
+
+
+</body>
+
 
 </html>
