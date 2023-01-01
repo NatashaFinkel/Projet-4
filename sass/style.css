@@ -1,7 +1,6 @@
-/*# sourceMappingURL=style.css.map */
 /* General */
 :root {
-  --max-width: 767px;
+  max-width: 767px;
 }
 
 /* Used to simplify the sizing process 
@@ -32,7 +31,7 @@ body {
 }
 
 .root {
-  max-width: var(--max-width);
+  max-width: 767px;
 }
 
 h2, p {
@@ -234,4 +233,4 @@ footer a {
 h3 {
   font-weight: 500;
   font-size: 16px;
-} /*# sourceMappingURL=style.css.map *//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

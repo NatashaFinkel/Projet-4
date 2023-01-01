@@ -1,4 +1,253 @@
-@import "utils/colors";
-@import "utils/variables";
+@import "./utils/variables";
+@import "./utils/colors";
+@import "./utils/functions";
+@import "./utils/mixin";
+
+@import "./base/reset";
+@import "./base/typography";
+
+@import "./components/button";
+
+@import "./layout/display";
+@import "./layout/alignment";
+@import "./layout/header";
+@import "./layout/form";
+@import "./layout/footer";
 
 
+
+/* General */
+
+
+:root {
+    max-width: $max-width;
+  }
+  
+  /* Used to simplify the sizing process 
+  of a couple of elements inside a box :
+  
+  Each element will be automatically resized
+  to fit into the box (here, the box's total 
+  size includes automatically every margin, 
+  border, and padding of all of its elements).
+  
+  If those elements are too wide for 
+  the size of the box, they will 
+  squeeze up to each other
+  (the size of the box itself will remain the same).
+  
+  The star (*) selects all the elements 
+  (in this case, before AND after the css properties 
+  are declared) */
+  *,
+  *::before,
+  *::after {
+    box-sizing: $box-sizing;
+  }
+  
+  body {
+    font-family: $primary-font;
+    margin: $margin;
+  }
+  
+  .root {
+    max-width: $max-width;
+  }
+  
+  h2, p {
+    margin-left: 20px;
+  }
+  
+  .no-margin {
+    margin: 0px;
+  }
+  
+  h1 {
+    font-size: $the-largest-font-size;
+    margin-left: 20px;
+  }
+  
+  h2 {
+    margin-bottom: 0px;
+  }
+  
+  p {
+    margin-top: 0px;
+  }
+  
+  /*HEADER*/
+  header {
+    @include primary-layout;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    padding: 20px 0px 15px 0px;
+  }
+  
+  #search-form {
+    @include primary-layout;
+    padding: 15px;
+    background-color: $medium-light-dull-color;
+  }
+  
+  .location-search-bar {
+    border-width: 0px;
+    background-color: $medium-light-dull-color;
+    font-weight: $primary-font-weight;
+    margin-left: 17px;
+    color: $the-darkest-dull-color;
+    outline: none;
+  }
+  
+  .vertical-and-centered {
+    display: $primary-display;
+    flex-direction: $secondary-direction;
+    align-items: $primary-position;
+    background-color: $the-lightest-dull-color;
+  }
+  
+  .the-darkest-dull-color {
+    color: $the-darkest-dull-color;
+   
+  }
+  
+  .pink-button {
+    color: $white-color;
+    background: $gradient-color;
+    padding: 13px 16px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    margin-bottom: 45px;
+    width: 218px;
+    height: 50px;
+    font-size: $the-smallest-font-size;
+    font-weight: $primary-font-weight;
+  }
+  
+  .second-section {
+    margin: 0px 20px;
+  }
+  
+  .user-guide-section {
+    display: $primary-display;
+    flex-direction: $secondary-direction;
+    justify-items: $primary-position;
+    gap: 25px;
+  }
+  
+  .purple-circle {
+    height: 24px;
+    width: 24px;
+    border-radius: 20px;
+    background-color: $primary-color;
+    margin: 0px;
+    position: absolute;
+    z-index: 1;
+    left: 10px;
+    border: none;
+    color: $white-color;
+  }
+  
+  .margins-for-navigation-buttons-icon {
+    margin-right: 23px;
+  }
+  
+  a {
+    color: $text-color;
+  }
+  
+  .navigation-button {
+    @include primary-layout;
+    border: solid;
+    text-decoration: none;
+    -webkit-text-decoration-color: $text-color;
+            text-decoration-color: $text-color;
+    border-radius: 20px;
+    padding: 16px;
+    padding-left: 0px;
+    background-color: $the-lightest-dull-color;
+  }
+  
+  .navigation-button i {
+    color: $the-darkest-dull-color;
+  }
+  
+  .center {
+    @include primary-layout;
+  }
+  
+  .all-restaurants {
+    background-color: $the-lightest-dull-color;
+    padding-top: 45px;
+    margin-top: 40px;
+  }
+  
+  .card-container {
+    padding-bottom: 55px;
+    display: $primary-display;
+    flex-direction: $secondary-direction;
+    gap: 30px;
+  }
+  
+  .card {
+    max-width: 90%;
+    border: solid;
+    display: $primary-display;
+    flex-direction: $secondary-direction;
+    border-radius: 15px;
+    background-color: $white-color;
+    margin-left: 35px;
+  }
+  
+  .label-new {
+    background-color: $light-vivid-color;
+    border-radius: 2px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    color: $dark-vivid-color;
+    position: absolute;
+    z-index: 1;
+    margin: 20px 60px 0px 0px;
+    right: 15px;
+    display: flex;
+    padding: 7px 10px;
+  }
+  
+  img {
+    display: $secondary-display;
+    -o-object-fit: cover;
+       object-fit: cover;
+    max-width: 90%;
+    max-height: 243px;
+    border-radius: 15px;
+  }
+  
+  .card i {
+    display: $primary-display;
+    justify-content: flex-end;
+    margin-right: 25px;
+  }
+  
+  footer {
+    background-color: $the-darkest-dull-color;
+    padding: 20px 0px 35px 25px;
+    color: $white-color;
+    font-size: $the-smallest-font-size;
+  }
+  
+  footer img {
+    filter: invert(100%);
+    border-radius: 0px;
+    margin: 22px 0px 16px 0px;
+  }
+  
+  .footer-links {
+    display: $primary-display;
+  }
+  
+  footer a {
+    color: $white-color;
+    text-decoration: none;
+  }
+  
+  h3 {
+    font-weight: $primary-font-weight;
+    font-size: $the-smallest-font-size;
+  }

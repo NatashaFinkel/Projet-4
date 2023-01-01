@@ -1,5 +1,6 @@
 //display 
 
 @mixin primary-layout {
-    // Mettre ici : $primary-display + $primary-position
+    display: flex;
+    justify-content: center;
 }
