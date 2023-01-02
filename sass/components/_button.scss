@@ -1,0 +1,41 @@
+
+@mixin pink-button {
+
+    @include primary-layout;
+    color: $white-color;
+    box-shadow: $primary-box-shadow;
+    background: $gradient-color;
+    padding: 13px 16px;
+    border-radius: 25px;
+    margin-bottom: 45px;
+    height: 50px;
+    font-size: $the-smallest-font-size;
+    font-weight: $primary-font-weight;
+
+    &:hover {
+        filter: brightness(115%);
+        box-shadow: $secondary-box-shadow;
+    }    
+}
+
+@mixin navigation-button {
+
+    @include primary-layout;
+    border: solid;
+    text-decoration: none;
+    -webkit-text-decoration-color: $text-color;
+            text-decoration-color: $text-color;
+    border-radius: 20px;
+    padding: 16px;
+    padding-left: 0px;
+    background-color: $the-lightest-dull-color;
+
+    &:hover {
+        background-color: $lighter-primary-color;
+        
+    &:hover i {
+        color: $primary-color;
+    }
+
+    }
+}
