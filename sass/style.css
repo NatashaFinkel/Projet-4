@@ -34,8 +34,7 @@ body {
   max-width: 767px;
 }
 
-h2,
-p {
+h1, h2, p {
   margin-left: 20px;
 }
 
@@ -45,7 +44,6 @@ p {
 
 h1 {
   font-size: 24px;
-  margin-left: 20px;
 }
 
 h2 {
