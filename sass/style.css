@@ -91,16 +91,22 @@ header {
 }
 
 .pink-button {
+  display: flex;
+  justify-content: center;
   color: #FFFFFF;
   background: linear-gradient(#9356DC, #FF79DA);
   padding: 13px 16px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
   margin-bottom: 45px;
-  width: 218px;
   height: 50px;
   font-size: 16px;
   font-weight: 500;
+}
+
+.pink-button-highlight:hover {
+  filter: brightness(115%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
 }
 
 .second-section {
@@ -136,15 +142,15 @@ a {
 }
 
 .navigation-button {
-  border: solid;
   display: flex;
+  justify-content: center;
+  border: solid;
   text-decoration: none;
   -webkit-text-decoration-color: #000000;
   text-decoration-color: #000000;
   border-radius: 20px;
   padding: 16px;
   padding-left: 0px;
-  justify-content: center;
   background-color: #F6F6F6;
 }
 
