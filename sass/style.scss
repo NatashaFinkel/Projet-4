@@ -4,8 +4,10 @@
 @import "./utils/functions";
 @import "./utils/mixin";
 
+
 @import "./base/reset";
 @import "./base/typography";
+@import "./base/keyframes";
 
 @import "./components/button";
 
@@ -55,7 +57,9 @@ body {
   max-width: $max-width;
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
   margin-left: 20px;
 }
 
@@ -141,7 +145,11 @@ header {
 }
 
 a {
-  color: $text-color;
+
+
+  &:active {
+    @include setting-secondary-keyframe;
+  }
 }
 
 .navigation-button {
@@ -196,16 +204,27 @@ img {
   display: $secondary-display;
   -o-object-fit: cover;
   object-fit: cover;
-  max-width: 90%;
   max-height: 243px;
   border-radius: 15px;
 }
+
 
 .card i {
   display: $primary-display;
   justify-content: flex-end;
   margin-right: 25px;
+  margin-left: 89%;
+  font-weight: 400;
 }
+
+.heart-icon {
+  font-weight: 400;
+  &:active {
+    @extend setting-primary-keyframe !optional;
+  }
+
+}
+
 
 footer {
   background-color: $the-darkest-dull-color;

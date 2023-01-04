@@ -1,3 +1,55 @@
+@-webkit-keyframes primary-keyframe {
+  to {
+    font-weight: 900;
+    transition-property: color;
+    color: green;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+}
+@keyframes primary-keyframe {
+  to {
+    font-weight: 900;
+    transition-property: color;
+    color: green;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+}
+@-webkit-keyframes secondary-keyframe {
+  from {
+    color: #FFFFFF;
+  }
+  to {
+    transition-property: color;
+    color: #FFFFFF;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+}
+@keyframes secondary-keyframe {
+  from {
+    color: #FFFFFF;
+  }
+  to {
+    transition-property: color;
+    color: #FFFFFF;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+}
 /* General */
 :root {
   max-width: 767px;
@@ -34,7 +86,9 @@ body {
   max-width: 767px;
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
   margin-left: 20px;
 }
 
@@ -135,8 +189,14 @@ header {
   margin-right: 23px;
 }
 
-a {
-  color: #000000;
+a:active {
+  transition-property: color;
+  color: #FFFFFF;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .navigation-button {
@@ -206,7 +266,6 @@ img {
   display: block;
   -o-object-fit: cover;
   object-fit: cover;
-  max-width: 90%;
   max-height: 243px;
   border-radius: 15px;
 }
@@ -215,8 +274,13 @@ img {
   display: flex;
   justify-content: flex-end;
   margin-right: 25px;
+  margin-left: 89%;
+  font-weight: 400;
 }
 
+.heart-icon {
+  font-weight: 400;
+}
 footer {
   background-color: #353535;
   padding: 20px 0px 35px 25px;

@@ -4,3 +4,26 @@
     display: flex;
     justify-content: center;
 }
+
+@mixin setting-primary-keyframe {
+    font-weight: 900;
+    transition-property: color;
+    color: green;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    animation-fill-mode: forwards;
+}
+
+
+@mixin setting-secondary-keyframe {
+
+    transition-property: color;
+    color: $white-color;
+
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    animation-fill-mode: forwards;
+
+}

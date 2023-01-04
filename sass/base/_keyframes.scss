@@ -1,0 +1,22 @@
+@keyframes primary-keyframe {
+   from {
+
+   }
+
+   to {
+    @include setting-primary-keyframe
+   }
+}
+
+
+
+@keyframes secondary-keyframe {
+    from {
+        color: $white-color;
+    }
+ 
+    to {
+     @include setting-secondary-keyframe
+    }
+ }
+ 
