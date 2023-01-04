@@ -5,6 +5,12 @@
     justify-content: center;
 }
 
+
+@mixin primary-keyframe-original-style {
+    font-weight: 400;
+    color: red;
+}
+
 @mixin setting-primary-keyframe {
     font-weight: 900;
     transition-property: color;

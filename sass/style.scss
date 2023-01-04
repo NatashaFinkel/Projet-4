@@ -220,7 +220,7 @@ img {
 .heart-icon {
   font-weight: 400;
   &:active {
-    @extend setting-primary-keyframe !optional;
+    @import first-keyframe;
   }
 
 }

@@ -1,10 +1,10 @@
-@keyframes primary-keyframe {
+@keyframes first-keyframe {
    from {
-
+    @include primary-keyframe-original-style;
    }
 
    to {
-    @include setting-primary-keyframe
+    @include setting-primary-keyframe;
    }
 }
 
