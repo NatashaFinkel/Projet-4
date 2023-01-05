@@ -1,3 +1,19 @@
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* General */
 :root {
   max-width: 767px;
@@ -107,6 +123,29 @@ header {
 .pink-button:hover {
   filter: brightness(115%);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+}
+
+.loader {
+  border-top: 16px solid #FF79DA;
+  border-bottom: solid 16px #FF79DA;
+  border-left: solid 16px #9356DC;
+  border-right: 16px solid #9356DC;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 3s linear infinite;
+          animation: spin 3s linear infinite;
+  display: flex;
+}
+
+.loader-background {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.loader-background h1 {
+  width: 100%;
 }
 
 .second-section {

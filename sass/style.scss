@@ -115,6 +115,30 @@ header {
   @include pink-button;
 }
 
+
+.loader {
+  border-top: 16px solid   #FF79DA; 
+  border-bottom: solid 16px #FF79DA;
+  border-left: solid 16px #9356DC;
+  border-right: 16px solid #9356DC;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 3s linear infinite;
+  display: flex;
+
+}
+
+.loader-background {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.loader-background h1 {
+  width: 100%;
+}
+
 .second-section {
   margin: 0px 20px;
 }
