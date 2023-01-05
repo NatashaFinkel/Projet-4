@@ -10,6 +10,11 @@
   flex-direction: $secondary-direction;
 }
 
+@mixin tertiary-layout {
+  display: $primary-display;
+ flex-direction: $primary-direction;
+}
+
 // Text-style
 @mixin secondary-text-style {
   font-family: $secondary-font;

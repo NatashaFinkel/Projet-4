@@ -227,12 +227,11 @@ footer h1 {
 }
 
 .footer-links {
-display: flex;
-flex-direction: column;
+  @include secondary-layout;
 }
 
 li {
-  @include secondary-layout;
+  @include tertiary-layout;
   align-items: baseline;
 }
 footer a {
