@@ -234,6 +234,7 @@ flex-direction: column;
 li {
   display: flex;
   flex-direction: row;
+  align-items: baseline;
 }
 footer a {
   color: $white-color;
