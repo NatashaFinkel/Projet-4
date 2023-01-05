@@ -239,6 +239,12 @@ footer h1 {
 
 .footer-links {
   display: flex;
+  flex-direction: column;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
 }
 
 footer a {

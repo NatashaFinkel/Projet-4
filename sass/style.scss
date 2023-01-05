@@ -227,9 +227,14 @@ footer h1 {
 }
 
 .footer-links {
-  display: $primary-display;
+display: flex;
+flex-direction: column;
 }
 
+li {
+  display: flex;
+  flex-direction: row;
+}
 footer a {
   color: $white-color;
   text-decoration: none;
