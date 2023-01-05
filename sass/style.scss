@@ -1,4 +1,4 @@
-@import "./utils/variables";
+
 @import "./utils/colors";
 @import "./utils/box-shadow";
 @import "./utils/functions";
@@ -144,13 +144,6 @@ header {
   margin-right: 23px;
 }
 
-a {
-
-
-  &:active {
-    @include setting-secondary-keyframe;
-  }
-}
 
 .navigation-button {
   @include navigation-button;
@@ -219,10 +212,6 @@ img {
 
 .heart-icon {
   font-weight: 400;
-  &:active {
-    @import first-keyframe;
-  }
-
 }
 
 
@@ -231,12 +220,11 @@ footer {
   padding: 20px 0px 35px 25px;
   color: $white-color;
   font-size: $the-smallest-font-size;
+  @include secondary-layout;
 }
 
-footer img {
-  filter: invert(100%);
-  border-radius: 0px;
-  margin: 22px 0px 16px 0px;
+footer h1 {
+  @include secondary-text-style;
 }
 
 .footer-links {
