@@ -244,7 +244,7 @@ footer h1 {
 
 li {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: baseline;
 }
 
