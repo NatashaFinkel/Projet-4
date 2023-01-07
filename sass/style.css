@@ -14,6 +14,69 @@
     transform: rotate(360deg);
   }
 }
+@-webkit-keyframes stop-spin {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+@keyframes stop-spin {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+@-webkit-keyframes fill-in {
+  from {
+    color: #000000;
+    font-weight: 400;
+  }
+  to {
+    color: #FF79DA;
+    font-weight: 900;
+  }
+}
+@keyframes fill-in {
+  from {
+    color: #000000;
+    font-weight: 400;
+  }
+  to {
+    color: #FF79DA;
+    font-weight: 900;
+  }
+}
+footer {
+  background-color: #353535;
+  padding: 20px 0px 35px 25px;
+  color: #FFFFFF;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+footer h1 {
+  font-family: "Shrikhand";
+  font-weight: 400;
+  font-size: 18px;
+  color: #FFFFFF;
+  font-style: italic;
+}
+
 /* General */
 :root {
   max-width: 767px;
@@ -44,6 +107,60 @@
 body {
   font-family: "Roboto", sans-serif;
   margin: 0 auto;
+}
+
+#preloader {
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%) no-repeat center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#preloader {
+  -webkit-animation: stop-spin 1s ease 1s 1 alternate forwards;
+          animation: stop-spin 1s ease 1s 1 alternate forwards;
+}
+#preloader h1 {
+  position: fixed;
+  color: #000000;
+  font-family: "Shrikhand";
+  font-weight: 900;
+  font-size: 65px;
+  font-style: italic;
+  background-position: center;
+  top: 50%;
+  z-index: 2;
+  letter-spacing: 6px;
+  margin: 0px;
+}
+#preloader p {
+  font-size: 25px;
+  font-weight: 600;
+  color: black;
+  font-style: italic;
+  font-family: "Shrikhand";
+  margin-top: 415px;
+}
+
+#loader {
+  position: fixed;
+  left: 50%;
+  top: 56%;
+  width: 160px;
+  height: 160px;
+  margin: -76px 0 0 -76px;
+  border-top: 35px solid #89C8FA;
+  border-right: 35px solid #89C8FA;
+  border-bottom: 35px solid #99E2D0;
+  border-left: 35px solid #99E2D0;
+  border-radius: 50%;
+  -webkit-animation: spin 1000ms ease-in-out 1ms 1 normal;
+          animation: spin 1000ms ease-in-out 1ms 1 normal;
+  z-index: -1;
 }
 
 .root {
@@ -112,7 +229,7 @@ header {
   justify-content: center;
   color: #FFFFFF;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  background: linear-gradient(#9356DC, #FF79DA);
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   padding: 13px 16px;
   border-radius: 25px;
   margin-bottom: 45px;
@@ -123,44 +240,6 @@ header {
 .pink-button:hover {
   filter: brightness(115%);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
-}
-
-.loader {
-  border-top: 16px solid #99E2D0;
-  border-bottom: solid 16px #FF79DA;
-  border-left: solid 16px #FF79DA;
-  border-right: 16px solid #99E2D0;
-  border-radius: 50%;
-  width: 300px;
-  height: 300px;
-  -webkit-animation: spin 3s linear 5s infinite normal;
-          animation: spin 3s linear 5s infinite normal;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  display: flex;
-  z-index: -1;
-}
-
-.loader-background {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  align-items: center;
-}
-
-.loader-background h1 {
-  font-family: "Shrikhand";
-  font-weight: 400;
-  font-size: 18px;
-  color: #FFFFFF;
-  font-style: italic;
-  color: #000000;
-  width: 100%;
 }
 
 .second-section {
@@ -240,6 +319,28 @@ header {
   background-color: #FFFFFF;
   margin-left: 35px;
 }
+.card i {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 25px;
+  font-weight: 400;
+  font-size: 38px;
+  margin-top: -25px;
+}
+.card h2 {
+  margin-bottom: 5px;
+}
+.card a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.animated-heart-icon:active {
+  -webkit-animation: fill-in 2s ease 1ms 1 normal forwards;
+          animation: fill-in 2s ease 1ms 1 normal forwards;
+}
 
 .label-new {
   background-color: #99E2D0;
@@ -260,18 +361,6 @@ img {
   object-fit: cover;
   max-height: 243px;
   border-radius: 15px;
-}
-
-.card i {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 25px;
-  margin-left: 89%;
-  font-weight: 400;
-}
-
-.heart-icon {
-  font-weight: 400;
 }
 
 footer {

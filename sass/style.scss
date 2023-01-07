@@ -52,6 +52,65 @@ body {
   margin: $margin;
 }
 
+#preloader {
+  background: $gradient-color no-repeat center;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & {
+    animation: stop-spin 1s ease 1s 1 alternate forwards;
+
+  }
+
+  h1 {
+    position: fixed;
+    color: $text-color;
+    font-family: $secondary-font;
+    font-weight: 900;
+    font-size: 65px;
+    font-style: $secondary-font-style;
+    background-position: center;
+    top: 50%;
+    z-index: 2;
+    letter-spacing: 6px;
+    margin: 0px;
+  }
+
+  p {
+    font-size: 25px;
+    font-weight: 600;
+    color: black;
+    font-style: italic;
+    font-family: $secondary-font;
+    margin-top: 415px;
+  }
+
+}
+
+#loader {
+  position: fixed;
+  left: 50%;
+  top: 56%;
+  width: 160px;
+  height: 160px;
+  margin: -76px 0 0 -76px;
+  border-top: 35px solid #89C8FA;
+  border-right: 35px solid #89C8FA;
+  border-bottom: 35px solid $light-vivid-color;
+  border-left: 35px solid $light-vivid-color;
+  border-radius: 50%;
+
+  animation: spin 1000ms ease-in-out 1ms 1 normal;
+  z-index: -1;
+}
+
+
 .root {
   max-width: $max-width;
 }
@@ -112,42 +171,9 @@ header {
 }
 
 .pink-button {
-  @include pink-button;
+  @include pink-button; 
 }
 
-
-.loader {
-  border-top: 16px solid  $tertiary-color;
-  border-bottom: solid 16px #FF79DA;
-  border-left: solid 16px #FF79DA;
-  border-right: 16px solid $tertiary-color;
-  border-radius: 50%;
-  width: 300px;
-  height: 300px;
-  animation: spin 3s linear 5s infinite normal;
-  animation-fill-mode: forwards;
-  display: flex;
-  z-index: -1;
-
-}
-
-.loader-background {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  align-items: center;
-}
-
-.loader-background h1 {
-@include secondary-text-style;
-  color: $text-color;
-  width: 100%;
-}
 
 .second-section {
   margin: 0px 20px;
@@ -211,6 +237,33 @@ header {
   border-radius: 15px;
   background-color: $white-color;
   margin-left: 35px;
+
+  i {
+    display: $primary-display;
+    justify-content: flex-end;
+    margin-right: 25px;
+    font-weight: 400;
+    font-size: 38px;
+    margin-top: -25px;
+  }
+
+
+  h2 {
+    margin-bottom: 5px;
+
+  }
+
+  a {
+    text-decoration: none;
+    font-size: $medium-font-size;
+    font-weight: $tertiary-font-weight;
+    color: $text-color;
+  }
+
+}
+
+.animated-heart-icon:active {
+  animation: fill-in 2s ease 1ms 1 normal forwards;
 }
 
 .label-new {
@@ -235,18 +288,6 @@ img {
 }
 
 
-.card i {
-  display: $primary-display;
-  justify-content: flex-end;
-  margin-right: 25px;
-  margin-left: 89%;
-  font-weight: 400;
-}
-
-.heart-icon {
-  font-weight: 400;
-}
-
 
 footer {
   background-color: $the-darkest-dull-color;
@@ -268,15 +309,16 @@ li {
   @include tertiary-layout;
   align-items: baseline;
 }
+
 footer a {
   color: $white-color;
   text-decoration: none;
 }
 
 .footer-icon {
-width: 11px;
-height: 13px;
-margin-right: 11px;
+  width: 11px;
+  height: 13px;
+  margin-right: 11px;
 }
 
 h3 {
