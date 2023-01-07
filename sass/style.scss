@@ -126,7 +126,7 @@ p {
 }
 
 h1 {
-  font-size: $the-largest-font-size;
+  font-size: $big-font-size;
 }
 
 h2 {
@@ -324,4 +324,67 @@ footer a {
 h3 {
   font-weight: $primary-font-weight;
   font-size: $the-smallest-font-size;
+}
+
+.dish-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #89C8FA;
+}
+
+.dish-card {
+background-color: chartreuse;
+margin-top: 12px;
+}
+
+.menu-style { 
+
+  h1 {
+    font-family: $secondary-font;
+    font-size: $bigger-font-size;
+    font-style: $secondary-font-style;
+    font-weight: $secondary-font-weight;
+    line-height: 41px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  h2 {
+    font-family: Roboto;
+font-size: 16px;
+font-weight: 300;
+line-height: 19px;
+letter-spacing: 0em;
+text-align: left;
+
+  }
+
+//styleName: Menu/Plate/Title;
+font-family: Roboto;
+font-size: 18px;
+font-weight: 500;
+line-height: 21px;
+letter-spacing: 0em;
+text-align: left;
+
+h3 {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  
+}
+p {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  
+}
+
+
 }

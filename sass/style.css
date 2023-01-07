@@ -405,4 +405,57 @@ footer a {
 h3 {
   font-weight: 500;
   font-size: 16px;
+}
+
+.dish-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #89C8FA;
+}
+
+.dish-card {
+  background-color: chartreuse;
+  margin-top: 12px;
+}
+
+.menu-style {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.menu-style h1 {
+  font-family: "Shrikhand";
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 41px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.menu-style h2 {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.menu-style h3 {
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.menu-style p {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
 }/*# sourceMappingURL=style.css.map */
