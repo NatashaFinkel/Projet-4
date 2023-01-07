@@ -53,15 +53,15 @@ body {
 }
 
 #preloader {
-  background: $gradient-color no-repeat center;
+  background: $gradient-color no-repeat $primary-position;
   height: 100%;
   width: 100%;
   position: fixed;
   z-index: 2;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: $primary-position;
+  justify-content: $primary-position;
 
   & {
     animation: stop-spin 1s ease 1s 1 alternate forwards;
@@ -72,10 +72,10 @@ body {
     position: fixed;
     color: $text-color;
     font-family: $secondary-font;
-    font-weight: 900;
+    font-weight: $the-largest-font-weight;
     font-size: 65px;
     font-style: $secondary-font-style;
-    background-position: center;
+    background-position: $primary-position;
     top: 50%;
     z-index: 2;
     letter-spacing: 6px;
