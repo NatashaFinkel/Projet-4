@@ -333,16 +333,16 @@ h3 {
 }
 
 .dish-card {
-background-color: chartreuse;
+  background-color: chartreuse;
 
-margin: 12px 13px;
-border-radius: 15px;
+  margin: 12px 13px;
+  border-radius: 15px;
 }
 
-.menu-style { 
+.menu-style {
 
-background-color: $the-lightest-dull-color;
-margin: 0 13px;
+  background-color: $the-lightest-dull-color;
+  margin: 0 13px;
 
   h1 {
     font-family: $secondary-font;
@@ -351,38 +351,34 @@ margin: 0 13px;
     font-weight: $secondary-font-weight;
     line-height: 41px;
     letter-spacing: 0em;
-    text-align: left;
+
     margin: 32px 17px 42px;
   }
 
   h2 {
-    font-family: $primary-font;
-font-size: $the-smallest-font-size;
-font-weight: 300;
-line-height: 19px;
-letter-spacing: 0em;
-text-align: left;
+    font-size: $the-smallest-font-size;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0em;
+
 
   }
 
-h3 { 
-font-family: $primary-font;
-font-size: 18px;
-font-weight: 500;
-line-height: 21px;
-letter-spacing: 0em;
-text-align: left;
-}
+  h3 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0em;
+    margin-left: 11px;
+  }
 
 
-p {
-  font-family: $primary-font;
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 18px;
-  letter-spacing: 0em;
-  text-align: left;
-  
-}
+  p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0em;
+    margin-left: 11px;
+  }
 
 }
