@@ -340,6 +340,7 @@ margin-top: 12px;
 .menu-style { 
 
 background-color: $the-lightest-dull-color;
+margin: 0 13px;
 
   h1 {
     font-family: $secondary-font;
@@ -362,15 +363,17 @@ text-align: left;
 
   }
 
-//styleName: Menu/Plate/Title;
+h3 { 
 font-family: $primary-font;
 font-size: 18px;
 font-weight: 500;
 line-height: 21px;
 letter-spacing: 0em;
 text-align: left;
+}
 
-h3 {
+
+p {
   font-family: $primary-font;
   font-size: 15px;
   font-weight: 300;
@@ -379,15 +382,5 @@ h3 {
   text-align: left;
   
 }
-p {
-  font-family: $primary-font;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 19px;
-  letter-spacing: 0em;
-  text-align: left;
-  
-}
-
 
 }
