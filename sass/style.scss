@@ -164,11 +164,13 @@ header {
   flex-direction: $secondary-direction;
   align-items: $primary-position;
   background-color: $the-lightest-dull-color;
-}
 
-.the-darkest-dull-color {
+p {
   color: $the-darkest-dull-color;
 }
+
+}
+
 
 .pink-button {
   @include pink-button; 
@@ -284,10 +286,12 @@ img {
   -o-object-fit: cover;
   object-fit: cover;
   max-height: 243px;
-  border-radius: 15px;
+  width: 100%;
 }
 
-
+.first-page-picture {
+  border-radius: 15px 0px;
+}
 
 footer {
   background-color: $the-darkest-dull-color;
@@ -327,7 +331,6 @@ h3 {
 }
 
 .menu-style {
-
   background-color: $the-lightest-dull-color;
   margin: 0 13px;
 
@@ -338,7 +341,6 @@ h3 {
     font-weight: $secondary-font-weight;
     line-height: 41px;
     letter-spacing: 0em;
-
     margin: 32px 17px 0px;
   }
 
@@ -353,8 +355,8 @@ h3 {
   }
 
   h3 {
+    font-weight: $primary-font-weight;
     font-size: 18px;
-    font-weight: 500;
     line-height: 21px;
     letter-spacing: 0em;
     margin-left: 11px;
@@ -369,6 +371,11 @@ h3 {
     margin-left: 11px;
   }
 
+img .picture {
+    width: 100%;
+  }
+
+}
 .title-container {
   border-bottom: 3px solid #99E2D0;
 
@@ -380,14 +387,11 @@ h3 {
 .dish-container {
   display: flex;
   flex-direction: column;
-  background-color: #89C8FA;
 }
 
 .dish-card {
-  background-color: chartreuse;
-
+  background-color: $white-color;
   margin: 12px 13px;
   border-radius: 15px;
-}
-
+  border: solid;
 }

@@ -219,8 +219,7 @@ header {
   align-items: center;
   background-color: #F6F6F6;
 }
-
-.the-darkest-dull-color {
+.vertical-and-centered p {
   color: #353535;
 }
 
@@ -360,7 +359,11 @@ img {
   -o-object-fit: cover;
   object-fit: cover;
   max-height: 243px;
-  border-radius: 15px;
+  width: 100%;
+}
+
+.first-page-picture {
+  border-radius: 15px 0px;
 }
 
 footer {
@@ -430,8 +433,8 @@ h3 {
   margin: 42px 0px 12px;
 }
 .menu-style h3 {
-  font-size: 18px;
   font-weight: 500;
+  font-size: 18px;
   line-height: 21px;
   letter-spacing: 0em;
   margin-left: 11px;
@@ -443,18 +446,24 @@ h3 {
   letter-spacing: 0em;
   margin-left: 11px;
 }
-.menu-style .title-container {
+.menu-style img .picture {
+  width: 100%;
+}
+
+.title-container {
   border-bottom: 3px solid #99E2D0;
   margin: 0px 0px 13px 13px;
   width: 5%;
 }
-.menu-style .dish-container {
+
+.dish-container {
   display: flex;
   flex-direction: column;
-  background-color: #89C8FA;
 }
-.menu-style .dish-card {
-  background-color: chartreuse;
+
+.dish-card {
+  background-color: #FFFFFF;
   margin: 12px 13px;
   border-radius: 15px;
+  border: solid;
 }/*# sourceMappingURL=style.css.map */
