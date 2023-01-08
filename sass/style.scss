@@ -326,19 +326,6 @@ h3 {
   font-size: $the-smallest-font-size;
 }
 
-.dish-container {
-  display: flex;
-  flex-direction: column;
-  background-color: #89C8FA;
-}
-
-.dish-card {
-  background-color: chartreuse;
-
-  margin: 12px 13px;
-  border-radius: 15px;
-}
-
 .menu-style {
 
   background-color: $the-lightest-dull-color;
@@ -387,6 +374,20 @@ h3 {
 
   margin: 0px 0px 13px 13px;
   width: 5%;
+}
+
+
+.dish-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #89C8FA;
+}
+
+.dish-card {
+  background-color: chartreuse;
+
+  margin: 12px 13px;
+  border-radius: 15px;
 }
 
 }
