@@ -419,7 +419,8 @@ h3 {
 }
 
 .menu-style {
-  font-family: Roboto;
+  background-color: #F6F6F6;
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 21px;
@@ -436,7 +437,7 @@ h3 {
   text-align: left;
 }
 .menu-style h2 {
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 300;
   line-height: 19px;
@@ -444,7 +445,7 @@ h3 {
   text-align: left;
 }
 .menu-style h3 {
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 300;
   line-height: 18px;
@@ -452,7 +453,7 @@ h3 {
   text-align: left;
 }
 .menu-style p {
-  font-family: Roboto;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;
