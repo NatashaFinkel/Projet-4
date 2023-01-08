@@ -53,15 +53,15 @@ body {
 }
 
 #preloader {
-  background: $gradient-color no-repeat center;
+  background: $gradient-color no-repeat $primary-position;
   height: 100%;
   width: 100%;
   position: fixed;
   z-index: 2;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: $primary-position;
+  justify-content: $primary-position;
 
   & {
     animation: stop-spin 1s ease 1s 1 alternate forwards;
@@ -72,10 +72,10 @@ body {
     position: fixed;
     color: $text-color;
     font-family: $secondary-font;
-    font-weight: 900;
+    font-weight: $the-largest-font-weight;
     font-size: 65px;
     font-style: $secondary-font-style;
-    background-position: center;
+    background-position: $primary-position;
     top: 50%;
     z-index: 2;
     letter-spacing: 6px;
@@ -126,7 +126,7 @@ p {
 }
 
 h1 {
-  font-size: $the-largest-font-size;
+  font-size: $big-font-size;
 }
 
 h2 {
@@ -324,4 +324,69 @@ footer a {
 h3 {
   font-weight: $primary-font-weight;
   font-size: $the-smallest-font-size;
+}
+
+.dish-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #89C8FA;
+}
+
+.dish-card {
+  background-color: chartreuse;
+
+  margin: 12px 13px;
+  border-radius: 15px;
+}
+
+.menu-style {
+
+  background-color: $the-lightest-dull-color;
+  margin: 0 13px;
+
+  h1 {
+    font-family: $secondary-font;
+    font-size: $bigger-font-size;
+    font-style: $secondary-font-style;
+    font-weight: $secondary-font-weight;
+    line-height: 41px;
+    letter-spacing: 0em;
+
+    margin: 32px 17px 0px;
+  }
+
+  h2 {
+    font-size: $the-smallest-font-size;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-transform: uppercase;
+    margin-left: 0px;
+    margin: 42px 0px 12px;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0em;
+    margin-left: 11px;
+  }
+
+
+  p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0em;
+    margin-left: 11px;
+  }
+
+.title-container {
+  border-bottom: 3px solid #99E2D0;
+
+  margin: 0px 0px 13px 13px;
+  width: 5%;
+}
+
 }
