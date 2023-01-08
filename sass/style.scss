@@ -352,7 +352,7 @@ h3 {
     line-height: 41px;
     letter-spacing: 0em;
 
-    margin: 32px 17px 42px;
+    margin: 32px 17px 0px;
   }
 
   h2 {
@@ -361,6 +361,8 @@ h3 {
     line-height: 19px;
     letter-spacing: 0em;
     text-transform: uppercase;
+    margin-left: 0px;
+    margin: 42px 0px 12px;
   }
 
   h3 {
@@ -380,9 +382,10 @@ h3 {
     margin-left: 11px;
   }
 
-.colored-border {
-  border: 3px solid #99E2D0;
-  margin-left: 13px;
+.title-container {
+  border-bottom: 3px solid #99E2D0;
+
+  margin: 0px 0px 13px 13px;
   width: 5%;
 }
 
