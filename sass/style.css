@@ -60,23 +60,6 @@
     font-weight: 900;
   }
 }
-footer {
-  background-color: #353535;
-  padding: 22px 0px 35px 25px;
-  color: #FFFFFF;
-  font-size: 16px;
-  display: flex;
-  flex-direction: column;
-}
-
-footer h1 {
-  font-family: "Shrikhand";
-  font-weight: 400;
-  font-size: 18px;
-  color: #FFFFFF;
-  font-style: italic;
-}
-
 /* General */
 :root {
   max-width: 767px;
