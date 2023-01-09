@@ -1,7 +1,7 @@
 
 footer {
     background-color: $the-darkest-dull-color;
-    padding: 20px 0px 35px 25px;
+    padding: 22px 0px 35px 25px;
     color: $white-color;
     font-size: $the-smallest-font-size;
     @include secondary-layout;
@@ -9,4 +9,5 @@ footer {
   
   footer h1 {
     @include secondary-text-style;
+    
   }

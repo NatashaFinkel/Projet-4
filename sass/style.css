@@ -62,7 +62,7 @@
 }
 footer {
   background-color: #353535;
-  padding: 20px 0px 35px 25px;
+  padding: 22px 0px 35px 25px;
   color: #FFFFFF;
   font-size: 16px;
   display: flex;
@@ -418,6 +418,14 @@ h3 {
   font-size: 16px;
 }
 
+.menu-header {
+  justify-content: space-between;
+  padding: 4% 30% 2% 5%;
+}
+.menu-header img {
+  width: 50%;
+}
+
 .menu-style {
   background-color: #F6F6F6;
   margin: 0 13px;
@@ -441,7 +449,6 @@ h3 {
   margin: 42px 0px 12px;
 }
 .menu-style h3 {
-  font-weight: 500;
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0em;
@@ -456,9 +463,6 @@ h3 {
 }
 .menu-style img {
   width: 100%;
-}
-.menu-style header img {
-  width: 30%;
 }
 
 .title-container {
