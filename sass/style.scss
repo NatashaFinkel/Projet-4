@@ -115,6 +115,10 @@ body {
   max-width: $max-width;
 }
 
+img {
+  width: 100%;
+}
+
 h1,
 h2,
 p {
@@ -143,6 +147,10 @@ header {
   box-shadow: $tertiary-box-shadow;
   padding: 20px 0px 15px 0px;
 }
+
+header img {
+  width: 30%;
+  }
 
 #search-form {
   @include primary-layout;
@@ -286,11 +294,10 @@ img {
   -o-object-fit: cover;
   object-fit: cover;
   max-height: 243px;
-  width: 100%;
 }
 
 .first-page-picture {
-  border-radius: 15px 0px;
+  border-radius: 15px 15px 0px 0px; 
 }
 
 footer {
@@ -371,9 +378,13 @@ h3 {
     margin-left: 11px;
   }
 
-img .picture {
+img {
     width: 100%;
   }
+header img {
+  width: 30%;
+}
+
 
 }
 .title-container {
