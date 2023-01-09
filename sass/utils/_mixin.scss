@@ -24,6 +24,7 @@
   font-style: $secondary-font-style;
 }
 
+// Loader
 @mixin loader {
   position: absolute;
   left: 50%;
@@ -34,5 +35,10 @@
   margin: -76px 0 0 -76px;
   border: 20px solid #FF79DA;
   border-radius: 50%;
+}
 
+@mixin vertical-and-centered {
+  display: $primary-display;
+  flex-direction: $secondary-direction;
+  align-items: $primary-position;
 }

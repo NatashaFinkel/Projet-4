@@ -8,6 +8,7 @@
     border-radius: 25px;
     margin-bottom: 45px;
     height: 50px;
+    width: 206px;
     font-size: $the-smallest-font-size;
     font-weight: $primary-font-weight;
 
@@ -37,4 +38,10 @@
         }
 
     }
+}
+
+@mixin order-button {
+    
+    @include pink-button;
+    @include vertical-and-centered;
 }

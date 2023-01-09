@@ -167,10 +167,9 @@ header img {
   outline: none;
 }
 
-.vertical-and-centered {
-  display: $primary-display;
-  flex-direction: $secondary-direction;
-  align-items: $primary-position;
+.welcome-section {
+
+  @include vertical-and-centered;
   background-color: $the-lightest-dull-color;
 
 p {
@@ -405,4 +404,14 @@ header img {
   margin: 12px 13px;
   border-radius: 15px;
   border: solid;
+}
+
+.dish-order {
+display: flex;
+justify-content: center;
+margin-top: 40px;
+}
+
+.order-button {
+  @include order-button; 
 }
