@@ -164,10 +164,6 @@ p {
   margin: 0px;
 }
 
-h1 {
-  font-size: 24px;
-}
-
 h2 {
   margin-bottom: 0px;
 }
@@ -412,19 +408,25 @@ h3 {
   width: 50%;
 }
 
+.image-menu {
+  position: relative;
+  z-index: -1;
+  margin-bottom: -55px;
+  max-height: 405px;
+}
+
 .menu-style {
   background-color: #F6F6F6;
-  margin: 0 13px;
   border-radius: 40px 40px 0px 0px;
 }
 .menu-style h1 {
   font-family: "Shrikhand";
-  font-size: 28px;
+  font-weight: 900;
   font-style: italic;
-  font-weight: 400;
   line-height: 41px;
   letter-spacing: 0em;
-  margin: 0px 17px 0px;
+  margin: 0px;
+  padding-left: 17px;
 }
 .menu-style h2 {
   font-size: 16px;
