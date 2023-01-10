@@ -341,6 +341,7 @@ footer a {
 h3 {
   font-weight: $primary-font-weight;
   font-size: $the-smallest-font-size;
+  margin: 5px;
 }
 
 .menu-header {
@@ -374,14 +375,6 @@ h3 {
     text-transform: uppercase;
     margin-left: 0px;
     margin: 42px 0px 12px;
-  }
-
-  h3 {
-
-    font-size: 18px;
-    line-height: 21px;
-    letter-spacing: 0em;
-    margin-left: 11px;
   }
 
 
@@ -424,7 +417,12 @@ img {
 
   h3 {
     font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0em;
+    margin-left: 11px;
   }
+
 
 }
 

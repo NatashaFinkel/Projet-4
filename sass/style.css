@@ -402,6 +402,7 @@ footer a {
 h3 {
   font-weight: 500;
   font-size: 16px;
+  margin: 5px;
 }
 
 .menu-header {
@@ -434,12 +435,6 @@ h3 {
   margin-left: 0px;
   margin: 42px 0px 12px;
 }
-.menu-style h3 {
-  font-size: 18px;
-  line-height: 21px;
-  letter-spacing: 0em;
-  margin-left: 11px;
-}
 .menu-style p {
   font-size: 15px;
   font-weight: 300;
@@ -471,6 +466,10 @@ h3 {
 }
 .dish-card h3 {
   font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0em;
+  margin-left: 11px;
 }
 
 .dish-order {
