@@ -443,6 +443,8 @@ h3 {
   line-height: 18px;
   letter-spacing: 0em;
   margin-left: 11px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu-style img {
   width: 100%;
