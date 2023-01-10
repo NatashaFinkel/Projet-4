@@ -310,11 +310,18 @@ footer {
 
 footer h1 {
   @include secondary-text-style;
+  margin: 0px;
 }
 
 .footer-links {
   @include secondary-layout;
+
+  ul {
+    padding-left: 0px;
+    margin: 16px 0px 33px 0px;
+  }
 }
+
 
 li {
   @include tertiary-layout;
@@ -327,7 +334,6 @@ footer a {
 }
 
 .footer-icon {
-  width: 11px;
   height: 13px;
   margin-right: 11px;
 }
@@ -357,7 +363,7 @@ h3 {
     font-weight: $secondary-font-weight;
     line-height: 41px;
     letter-spacing: 0em;
-    margin: 32px 17px 0px;
+    margin: 0px 17px 0px;
   }
 
   h2 {
