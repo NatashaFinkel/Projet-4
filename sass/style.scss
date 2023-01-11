@@ -22,417 +22,437 @@
 
 
 :root {
-  max-width: $max-width;
+    max-width: $max-width;
 }
 
+
+
 /* Used to simplify the sizing process 
-  of a couple of elements inside a box :
-  
-  Each element will be automatically resized
-  to fit into the box (here, the box's total 
-  size includes automatically every margin, 
-  border, and padding of all of its elements).
-  
-  If those elements are too wide for 
-  the size of the box, they will 
-  squeeze up to each other
-  (the size of the box itself will remain the same).
-  
-  The star (*) selects all the elements 
-  (in this case, before AND after the css properties 
-  are declared) */
+    of a couple of elements inside a box :
+    
+    Each element will be automatically resized
+    to fit into the box (here, the box's total 
+    size includes automatically every margin, 
+    border, and padding of all of its elements).
+    
+    If those elements are too wide for 
+    the size of the box, they will 
+    squeeze up to each other
+    (the size of the box itself will remain the same).
+    
+    The star (*) selects all the elements 
+    (in this case, before AND after the css properties 
+   are declared) */
 *,
 *::before,
 *::after {
-  box-sizing: $box-sizing;
+    box-sizing: $box-sizing;
 }
+
+// Body
 
 body {
-  font-family: $primary-font;
-  margin: $margin;
+    font-family: $primary-font;
+    margin: $margin;
 }
 
-#preloader {
-  background: $gradient-color no-repeat $primary-position;
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: $primary-position;
-  justify-content: $primary-position;
-
-  & {
-    animation: stop-spin 1s ease 1s 1 alternate forwards;
-
-  }
-
-  h1 {
-    position: fixed;
-    color: $text-color;
-    font-family: $secondary-font;
-    font-weight: $the-largest-font-weight;
-    font-size: 65px;
-    font-style: $secondary-font-style;
-    background-position: $primary-position;
-    top: 50%;
-    z-index: 2;
-    letter-spacing: 6px;
-    margin: 0px;
-  }
-
-  p {
-    font-size: 25px;
-    font-weight: 600;
-    color: black;
-    font-style: italic;
-    font-family: $secondary-font;
-    margin-top: 415px;
-  }
-
-}
-
-#loader {
-  
-  position: fixed;
-  left: 50%;
-  top: 56%;
-  width: 160px;
-  height: 160px;
-  margin: -76px 0 0 -76px;
-  border-top: 35px solid #89C8FA;
-  border-right: 35px solid #89C8FA;
-  border-bottom: 35px solid $light-vivid-color;
-  border-left: 35px solid $light-vivid-color;
-  border-radius: 50%;
-
-  animation: spin 1000ms ease-in-out 1ms 1 normal;
-  z-index: -1;
-}
-
-
-.root {
-  max-width: $max-width;
-}
-
-img {
-  width: 100%;
-}
 
 h1,
 h2,
 p {
-  margin-left: 20px;
+    margin-left: 20px;
+    margin: 0px 0px 0px 20px;
 }
 
-.no-margin {
-  margin: 0px;
+
+h3 {
+    margin: 5px;
 }
 
-h2 {
-  margin-bottom: 0px;
+
+img {
+    display: $secondary-display;
+    -o-object-fit: cover;
+    object-fit: cover;
+    max-height: 243px;
+    width: 100%;
 }
 
-p {
-  margin-top: 0px;
+// Preloader 
+
+#preloader {
+    background: $gradient-color no-repeat $primary-position;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: $primary-position;
+    justify-content: $primary-position;
+
+    & {
+        animation: stop-spin 1s ease 1s 1 alternate forwards;
+
+    }
+
+    h1 {
+        position: fixed;
+        color: $text-color;
+        font-family: $secondary-font;
+        font-weight: $the-largest-font-weight;
+        font-size: 65px;
+        font-style: $secondary-font-style;
+        background-position: $primary-position;
+        top: 50%;
+        z-index: 2;
+        letter-spacing: 6px;
+        margin: 0px;
+    }
+
+    p {
+        font-size: 25px;
+        font-weight: 600;
+        color: black;
+        font-style: italic;
+        font-family: $secondary-font;
+        margin-top: 415px;
+    }
+
 }
+
+
+#loader {
+
+    position: fixed;
+    left: 50%;
+    top: 56%;
+    width: 160px;
+    height: 160px;
+    margin: -76px 0 0 -76px;
+    border-top: 35px solid #89C8FA;
+    border-right: 35px solid #89C8FA;
+    border-bottom: 35px solid $light-vivid-color;
+    border-left: 35px solid $light-vivid-color;
+    border-radius: 50%;
+
+    animation: spin 1000ms ease-in-out 1ms 1 normal;
+    z-index: -1;
+}
+
 
 /*HEADER*/
+
 header {
-  @include primary-layout;
-  box-shadow: $tertiary-box-shadow;
-  padding: 20px 0px 15px 0px;
+    @include primary-layout;
+    box-shadow: $tertiary-box-shadow;
+    padding: 20px 0px 15px 0px;
 }
+
+
+.root {
+    max-width: $max-width;
+}
+
 
 header img {
-  width: 30%;
-  }
-
-#search-form {
-  @include primary-layout;
-  padding: 15px;
-  background-color: $medium-light-dull-color;
+    width: 30%;
 }
 
+
+#search-form {
+    @include primary-layout;
+    padding: 15px;
+    background-color: $medium-light-dull-color;
+}
+
+
 .location-search-bar {
-  border-width: 0px;
-  background-color: $medium-light-dull-color;
-  font-weight: $primary-font-weight;
-  margin-left: 17px;
-  color: $the-darkest-dull-color;
-  outline: none;
+    border-width: 0px;
+    background-color: $medium-light-dull-color;
+    font-weight: $primary-font-weight;
+    margin-left: 17px;
+    color: $the-darkest-dull-color;
+    outline: none;
 }
 
 .welcome-section {
 
-  @include vertical-and-centered;
-  background-color: $the-lightest-dull-color;
+    @include vertical-and-centered;
+    background-color: $the-lightest-dull-color;
 
-p {
-  color: $the-darkest-dull-color;
-}
+    p {
+        color: $the-darkest-dull-color;
+    }
 
 }
 
 
 .pink-button {
-  @include pink-button; 
+    @include pink-button;
 }
-
 
 .second-section {
-  margin: 0px 20px;
+    margin: 0px 20px;
 }
+
 
 .user-guide-section {
-  display: $primary-display;
-  flex-direction: $secondary-direction;
-  justify-items: $primary-position;
-  gap: 25px;
+    display: $primary-display;
+    flex-direction: $secondary-direction;
+    justify-items: $primary-position;
+    gap: 25px;
 }
 
-.purple-circle {
-  height: 24px;
-  width: 24px;
-  border-radius: 20px;
-  background-color: $primary-color;
-  margin: 0px;
-  position: absolute;
-  z-index: 1;
-  left: 10px;
-  border: none;
-  color: $white-color;
-}
-
-.margins-for-navigation-buttons-icon {
-  margin-right: 23px;
-}
 
 
 .navigation-button {
-  @include navigation-button;
+    @include navigation-button;
 
-  i {
-    color: $the-darkest-dull-color;
-  }
+    i {
+        color: $the-darkest-dull-color;
+    }
 }
+
+
+.purple-circle {
+    height: 24px;
+    width: 24px;
+    border-radius: 20px;
+    background-color: $primary-color;
+    margin: 0px;
+    position: absolute;
+    z-index: 1;
+    left: 10px;
+    border: none;
+    color: $white-color;
+}
+
 
 .center {
-  @include primary-layout;
+    @include primary-layout;
 }
+
+
+.margins-for-navigation-buttons-icon {
+    margin-right: 23px;
+}
+
 
 .all-restaurants {
-  background-color: $the-lightest-dull-color;
-  padding-top: 45px;
-  margin-top: 40px;
+    background-color: $the-lightest-dull-color;
+    padding-top: 45px;
+    margin-top: 40px;
 }
 
+
 .card-container {
-  padding-bottom: 55px;
-  display: $primary-display;
-  flex-direction: $secondary-direction;
-  gap: 30px;
+    padding-bottom: 55px;
+    display: $primary-display;
+    flex-direction: $secondary-direction;
+    gap: 30px;
 }
 
 .card {
-  max-width: 90%;
-  border: solid;
-  display: $primary-display;
-  flex-direction: $secondary-direction;
-  border-radius: 15px;
-  background-color: $white-color;
-  margin-left: 35px;
-
-  i {
+    max-width: 90%;
+    border: solid;
     display: $primary-display;
-    justify-content: flex-end;
-    margin-right: 25px;
-    font-weight: 400;
-    font-size: 38px;
-    margin-top: -25px;
-  }
+    flex-direction: $secondary-direction;
+    border-radius: 15px;
+    background-color: $white-color;
+    margin-left: 35px;
+
+    i {
+        display: $primary-display;
+        justify-content: flex-end;
+        margin-right: 25px;
+        font-weight: 400;
+        font-size: 38px;
+        margin-top: -25px;
+    }
 
 
-  h2 {
-    margin-bottom: 5px;
+    h2 {
+        margin-bottom: 5px;
 
-  }
+    }
 
-  a {
-    text-decoration: none;
-    font-size: $medium-font-size;
-    font-weight: $tertiary-font-weight;
-    color: $text-color;
-  }
+    a {
+        text-decoration: none;
+        font-size: $medium-font-size;
+        font-weight: $tertiary-font-weight;
+        color: $text-color;
+    }
 
 }
 
-.animated-heart-icon:active {
-  animation: fill-in 2s ease 1ms 1 normal forwards;
-}
 
 .label-new {
-  background-color: $light-vivid-color;
-  border-radius: 2px;
-  box-shadow: $tertiary-box-shadow;
-  color: $dark-vivid-color;
-  position: absolute;
-  z-index: 1;
-  margin: 20px 60px 0px 0px;
-  right: 15px;
-  display: flex;
-  padding: 7px 10px;
+    background-color: $light-vivid-color;
+    border-radius: 2px;
+    box-shadow: $tertiary-box-shadow;
+    color: $dark-vivid-color;
+    position: absolute;
+    z-index: 1;
+    margin: 20px 60px 0px 0px;
+    right: 15px;
+    display: flex;
+    padding: 7px 10px;
 }
 
-img {
-  display: $secondary-display;
-  -o-object-fit: cover;
-  object-fit: cover;
-  max-height: 243px;
-}
 
 .first-page-picture {
-  border-radius: 15px 15px 0px 0px; 
+    border-radius: 15px 15px 0px 0px;
 }
+
+
+.animated-heart-icon:active {
+    animation: fill-in 2s ease 1ms 1 normal forwards;
+}
+
+
+// Footer
 
 footer {
-  background-color: $the-darkest-dull-color;
-  padding: 20px 0px 35px 25px;
-  color: $white-color;
-  font-size: $the-smallest-font-size;
-  @include secondary-layout;
+    @include secondary-layout;
+    background-color: $the-darkest-dull-color;
+    padding: 20px 0px 35px 25px;
+    color: $white-color;
+
+
+    h1 {
+        @include secondary-text-style;
+        margin: 0px;
+    }
+
+    a {
+        color: $white-color;
+        text-decoration: none;
+    }
+
 }
 
-footer h1 {
-  @include secondary-text-style;
-  margin: 0px;
-}
 
 .footer-links {
-  @include secondary-layout;
+    @include secondary-layout;
 
-  ul {
-    padding-left: 0px;
-    margin: 16px 0px 33px 0px;
-  }
+    ul {
+        padding-left: 0px;
+        margin: 16px 0px 33px 0px;
+    }
+
+    li {
+        @include tertiary-layout;
+        align-items: baseline;
+    }
+
 }
 
-
-li {
-  @include tertiary-layout;
-  align-items: baseline;
-}
-
-footer a {
-  color: $white-color;
-  text-decoration: none;
-}
 
 .footer-icon {
-  height: 13px;
-  margin-right: 11px;
+    height: 13px;
+    margin-right: 11px;
 }
 
-h3 {
-  font-weight: $primary-font-weight;
-  font-size: $the-smallest-font-size;
-  margin: 5px;
-}
+
+// Pages Restaurant
 
 .menu-header {
-  justify-content: space-between;
-  padding: 4% 30% 2% 5%;
-  
-  img {
-    width: 50%;
-  }
+    justify-content: space-between;
+    padding: 4% 30% 2% 5%;
+
+    img {
+        width: 50%;
+    }
 }
 
+
 .image-menu {
-  position: relative;
-  z-index: -1;
-  margin-bottom: -55px;
-  max-height: 405px;
+    position: relative;
+    z-index: -1;
+    margin-bottom: -55px;
+    max-height: 405px;
 }
 
 .menu-style {
-  background-color: $the-lightest-dull-color;
-  border-radius: 40px 40px 0px 0px;
+    background-color: $the-lightest-dull-color;
+    border-radius: 40px 40px 0px 0px;
 
-  h1 {
-    @include secondary-text-style;
-  
-    line-height: 41px;
-    letter-spacing: 0em;
-    margin: 0px;
-    padding-left: 17px;
-  }
+    h1 {
+        @include secondary-text-style;
 
-  h2 {
-    font-size: $the-smallest-font-size;
-    font-weight: 300;
-    line-height: 19px;
-    letter-spacing: 0em;
-    text-transform: uppercase;
-    margin-left: 0px;
-    margin: 42px 0px 12px;
-  }
+        line-height: 41px;
+        letter-spacing: 0em;
+        margin: 0px;
+        padding-left: 17px;
+    }
+
+    h2 {
+        font-size: $the-smallest-font-size;
+        font-weight: 300;
+        line-height: 19px;
+        letter-spacing: 0em;
+        text-transform: uppercase;
+        margin-left: 0px;
+        margin: 42px 0px 12px;
+    }
 
 
-  p {
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 18px;
-    letter-spacing: 0em;
-    margin-left: 11px;
+    p {
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 18px;
+        letter-spacing: 0em;
+        margin-left: 11px;
 
-    //il faudra peut-être ajouter ici width en pixels !
-    overflow: hidden;
-    text-overflow: ellipsis; 
-    
-  }
+        //il faudra peut-être ajouter ici width en pixels !
+        overflow: hidden;
+        text-overflow: ellipsis;
 
-img {
-    width: 100%;
+    }
+
+    img {
+        width: 100%;
+    }
+
+
 }
 
-
-}
 .title-container {
-  border-bottom: 3px solid #99E2D0;
+    border-bottom: 3px solid #99E2D0;
 
-  margin: 0px 0px 13px 13px;
-  width: 5%;
+    margin: 0px 0px 13px 13px;
+    width: 5%;
 }
 
 
 .dish-container {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .dish-card {
-  background-color: $white-color;
-  margin: 12px 13px;
-  border-radius: 15px;
+    background-color: $white-color;
+    margin: 12px 13px;
+    border-radius: 15px;
 
-  h3 {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 21px;
-    letter-spacing: 0em;
-    margin-left: 11px;
-  }
+    h3 {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 0em;
+        margin-left: 11px;
+    }
 
 }
 
+
 .dish-order {
-display: flex;
-justify-content: center;
-margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
 }
 
 .order-button {
-  @include order-button; 
+    @include order-button;
 }
