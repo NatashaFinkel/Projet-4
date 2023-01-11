@@ -1,8 +1,13 @@
+@mixin button {
+    box-shadow: $primary-box-shadow;
+}
+
 @mixin pink-button {
 
     @include primary-layout;
+    @include button;
     color: $white-color;
-    box-shadow: $primary-box-shadow;
+
     background: $gradient-color;
     padding: 13px 16px;
     border-radius: 25px;
@@ -22,6 +27,8 @@
 @mixin navigation-button {
 
     @include primary-layout;
+    @include button;
+
     border: solid;
     text-decoration: none;
     -webkit-text-decoration-color: $text-color;
@@ -42,7 +49,7 @@
 }
 
 @mixin order-button {
-    
+    @include button;
     @include pink-button;
     @include vertical-and-centered;
 }
