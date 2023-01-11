@@ -92,13 +92,6 @@ body {
   margin: 0 auto;
 }
 
-h1,
-h2,
-p {
-  margin-left: 20px;
-  margin: 0px 0px 0px 20px;
-}
-
 h3 {
   margin: 5px;
 }
@@ -215,6 +208,7 @@ header img {
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   padding: 13px 16px;
   border-radius: 25px;
+  margin: 27px 0px 45px 0px;
   margin-bottom: 45px;
   height: 50px;
   width: 206px;
@@ -285,6 +279,14 @@ header img {
   background-color: #F6F6F6;
   padding-top: 45px;
   margin-top: 40px;
+}
+.all-restaurants h1,
+.all-restaurants h2,
+.all-restaurants p {
+  margin-left: 20px;
+}
+.all-restaurants p {
+  margin-top: 5px;
 }
 
 .card-container {
@@ -468,6 +470,7 @@ footer a {
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   padding: 13px 16px;
   border-radius: 25px;
+  margin: 27px 0px 45px 0px;
   margin-bottom: 45px;
   height: 50px;
   width: 206px;
