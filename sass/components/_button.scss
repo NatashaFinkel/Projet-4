@@ -49,6 +49,17 @@
     }
 }
 
+/* 
+@mixin heart-button {  
+   border: 1px solid #101010;
+
+heart-icon:active {
+    animation: fill-in 2s ease 1ms 1 normal forwards red;
+}
+}
+
+ */
+
 @mixin order-button {
     @include button;
     @include pink-button;

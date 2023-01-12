@@ -266,15 +266,6 @@ header img {
     margin-left: 35px;
     box-shadow: $quinary-box-shadow;
 
-    i {
-        display: $primary-display;
-        justify-content: flex-end;
-        margin-right: 25px;
-        font-weight: 400;
-        font-size: 38px;
-        margin-top: -25px;
-    }
-
 
     h2 {
         margin-bottom: 5px;
@@ -287,6 +278,8 @@ header img {
         font-weight: $tertiary-font-weight;
         color: $text-color;
     }
+
+
 
 }
 
@@ -310,10 +303,21 @@ header img {
 }
 
 
-.animated-heart-icon:active {
-    animation: fill-in 2s ease 1ms 1 normal forwards;
-}
+a i:active {
+    @include heart-animation;
+    }
 
+
+
+
+/* 
+.heart-button {
+
+    i {
+        @include heart-button;
+    }
+}
+ */
 
 // Footer
 

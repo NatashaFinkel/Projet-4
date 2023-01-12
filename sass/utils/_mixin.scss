@@ -12,7 +12,7 @@
 
 @mixin tertiary-layout {
   display: $primary-display;
- flex-direction: $primary-direction;
+  flex-direction: $primary-direction;
 }
 
 // Text-style
@@ -39,4 +39,15 @@
   display: $primary-display;
   flex-direction: $secondary-direction;
   align-items: $primary-position;
+}
+
+@mixin heart-animation {
+
+  animation-name: fill-in;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+
+
 }
