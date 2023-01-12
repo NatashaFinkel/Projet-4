@@ -264,6 +264,7 @@ header img {
     border-radius: 15px;
     background-color: $white-color;
     margin-left: 35px;
+    box-shadow: $quinary-box-shadow;
 
     i {
         display: $primary-display;
@@ -438,6 +439,7 @@ footer {
     background-color: $white-color;
     margin: 12px 13px;
     border-radius: 15px;
+    box-shadow: $quinary-box-shadow;
 
     h3 {
         font-weight: 700;

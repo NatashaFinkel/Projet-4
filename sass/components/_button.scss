@@ -6,8 +6,8 @@
 
     @include primary-layout;
     @include button;
-    color: $white-color;
 
+    color: $white-color;
     background: $gradient-color;
     padding: 13px 16px;
     border-radius: 25px;
@@ -37,6 +37,7 @@
     padding: 16px;
     padding-left: 0px;
     background-color: $the-lightest-dull-color;
+    box-shadow: $quaternary-box-shadow;
 
     &:hover {
         background-color: $lighter-primary-color;
