@@ -271,8 +271,19 @@ header img {
         justify-content: flex-end;
         margin-right: 25px;
         font-weight: 400;
-        font-size: 38px;
         margin-top: -25px;
+        font-size: 22px;
+
+        &:active {
+            font-weight: 900;
+    
+            background: linear-gradient(200.64deg, #9356DC 100%, #FF79DA 100%);
+            background: #9356DC;
+            background-clip: border-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
     }
 
 
@@ -309,10 +320,6 @@ header img {
     border-radius: 15px 15px 0px 0px;
 }
 
-
-.animated-heart-icon:active {
-    animation: fill-in 2s ease 1ms 1 normal forwards;
-}
 
 
 // Footer

@@ -40,26 +40,12 @@
     transform: scale(0);
   }
 }
-@-webkit-keyframes fill-in {
-  from {
-    color: #000000;
-    font-weight: 400;
-  }
-  to {
-    color: #FF79DA;
-    font-weight: 900;
-  }
-}
+/* 
 @keyframes fill-in {
-  from {
-    color: #000000;
-    font-weight: 400;
-  }
-  to {
-    color: #FF79DA;
-    font-weight: 900;
-  }
-}
+  from {color: $text-color; font-weight: 400}
+
+  to {color: $secondary-color; font-weight: $the-largest-font-weight}
+} */
 /* General */
 :root {
   max-width: 767px;
@@ -313,8 +299,16 @@ header img {
   justify-content: flex-end;
   margin-right: 25px;
   font-weight: 400;
-  font-size: 38px;
   margin-top: -25px;
+  font-size: 22px;
+}
+.card i:active {
+  font-weight: 900;
+  background: linear-gradient(200.64deg, #9356DC 100%, #FF79DA 100%);
+  background: #9356DC;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .card h2 {
   margin-bottom: 5px;
@@ -341,11 +335,6 @@ header img {
 
 .first-page-picture {
   border-radius: 15px 15px 0px 0px;
-}
-
-.animated-heart-icon:active {
-  -webkit-animation: fill-in 2s ease 1ms 1 normal forwards;
-          animation: fill-in 2s ease 1ms 1 normal forwards;
 }
 
 footer {
