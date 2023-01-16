@@ -431,13 +431,8 @@ footer {
     p {
         font-size: 15px;
         font-weight: 300;
-        line-height: 18px;
-        letter-spacing: 0em;
-        margin-left: 11px;
-
-        //il faudra peut-être ajouter ici width en pixels !
-        overflow: hidden;
-        text-overflow: ellipsis;
+        margin-left: 0px;
+        margin-bottom: 0px;
     }
 
     img {
@@ -447,10 +442,9 @@ footer {
 }
 
 .title-container {
-    border-bottom: 3px solid #99E2D0;
 
-    margin: 0px 0px 13px 13px;
-    width: 5%;
+    border-bottom: 3px solid #99E2D0;
+    width: 7%;
 }
 
 
@@ -461,20 +455,43 @@ footer {
 
 .dish-card {
     background-color: $white-color;
-    margin: 12px 13px;
     border-radius: 15px;
     box-shadow: $quinary-box-shadow;
+    margin: 3% 3% 0% 0%;
+    padding-left: 11px;
 
     h3 {
         font-weight: 700;
         font-size: 18px;
         line-height: 21px;
         letter-spacing: 0em;
-        margin-left: 11px;
+        margin-top: 3%;
+        margin-right: 0%;
+        margin-bottom: 1%;
+        margin-left: 0%;
     }
 
 }
 
+.dish-description-box {
+   
+        // Pour couper le texte et 
+        // ajouter des points de suspension 
+        // si le texte est trop long
+        max-width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+}
+
+.price {
+    font-weight: 700;
+    font-size: 15px;
+    margin-top: 0%;
+    margin-right: 4%;
+    margin-bottom: 2%;
+    margin-left: 91%;
+}
 
 .dish-order {
     display: flex;
