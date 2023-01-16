@@ -24,22 +24,21 @@
   }
 }
 
-/* 
+
 @keyframes first-animation {
+  
+  0% { 
+    
+  }
 
+25% { transform: color;}
 
-  from { color: black }
+50% {transform: color; }
 
+75% {transform: color; }
 
+99% { transform: color;}
 
-  to {color: linear-gradient(200.64deg, #9356DC 100%, #FF79DA 100%);}
+100% {color: #89C8FA; }
+
 }
-
-
- */
-/* 
-@keyframes fill-in {
-  from {color: $text-color; font-weight: 400}
-
-  to {color: $secondary-color; font-weight: $the-largest-font-weight}
-} */

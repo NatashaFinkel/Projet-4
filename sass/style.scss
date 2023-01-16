@@ -196,7 +196,7 @@ header img {
 
         margin: 48px 0px 26px 0px;
     }
-    
+
 }
 
 
@@ -256,7 +256,7 @@ header img {
     }
 
     p {
-        margin-top: 5px;
+        margin-top: 0px;
     }
 }
 
@@ -281,24 +281,16 @@ header img {
 
     i {
         display: $primary-display;
-        justify-content: flex-end;
-        margin-right: 25px;
-        font-weight: 400;
-        margin-top: -25px;
-        font-size: 22px;
+        font-size: 25px;
+        margin-left: 88%;
+        margin-top: -29px;
+
 
         &:active {
-        @include first-animation; 
+            @include first-animation;
 
-
-            // Pour avoir un effet "rempli"
+            color: #89C8FA;
             font-weight: 900;
-    
-            // Pour que la couleur soit uniquement dans l'icône
-            background: linear-gradient(200.64deg, #9356DC 100%, #FF79DA 100%);
-            background-clip: border-box;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
 
     }
@@ -351,7 +343,7 @@ footer {
     h1 {
         @include secondary-text-style;
         margin: 22px 0px 16px 0px;
- 
+
     }
 
     a {
@@ -474,14 +466,14 @@ footer {
 }
 
 .dish-description-box {
-   
-        // Pour couper le texte et 
-        // ajouter des points de suspension 
-        // si le texte est trop long
-        max-width: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+
+    // Pour couper le texte et 
+    // ajouter des points de suspension 
+    // si le texte est trop long
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .price {
@@ -492,6 +484,7 @@ footer {
     margin-bottom: 2%;
     margin-left: 91%;
 }
+
 
 .dish-order {
     display: flex;

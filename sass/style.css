@@ -40,25 +40,40 @@
     transform: scale(0);
   }
 }
-/* 
-@keyframes first-animation {
-
-
-  from { color: black }
-
-
-
-  to {color: linear-gradient(200.64deg, #9356DC 100%, #FF79DA 100%);}
+@-webkit-keyframes first-animation {
+  25% {
+    transform: color;
+  }
+  50% {
+    transform: color;
+  }
+  75% {
+    transform: color;
+  }
+  99% {
+    transform: color;
+  }
+  100% {
+    color: #89C8FA;
+  }
 }
-
-
- */
-/* 
-@keyframes fill-in {
-  from {color: $text-color; font-weight: 400}
-
-  to {color: $secondary-color; font-weight: $the-largest-font-weight}
-} */
+@keyframes first-animation {
+  25% {
+    transform: color;
+  }
+  50% {
+    transform: color;
+  }
+  75% {
+    transform: color;
+  }
+  99% {
+    transform: color;
+  }
+  100% {
+    color: #89C8FA;
+  }
+}
 /* General */
 :root {
   max-width: 767px;
@@ -296,7 +311,7 @@ header img {
   margin-left: 20px;
 }
 .all-restaurants p {
-  margin-top: 5px;
+  margin-top: 0px;
 }
 
 .card-container {
@@ -319,11 +334,9 @@ header img {
 }
 .card i {
   display: flex;
-  justify-content: flex-end;
-  margin-right: 25px;
-  font-weight: 400;
-  margin-top: -25px;
-  font-size: 22px;
+  font-size: 25px;
+  margin-left: 88%;
+  margin-top: -29px;
 }
 .card i:active {
   -webkit-animation-name: first-animation;
@@ -332,19 +345,16 @@ header img {
           animation-duration: 4s;
   -webkit-animation-timing-function: ease;
           animation-timing-function: ease;
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  -webkit-animation-delay: 0, 1ms;
+          animation-delay: 0, 1ms;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
   -webkit-animation-direction: normal;
           animation-direction: normal;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+  color: #89C8FA;
   font-weight: 900;
-  background: linear-gradient(200.64deg, #9356DC 100%, #FF79DA 100%);
-  background-clip: border-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .card h2 {
   margin-bottom: 5px;
