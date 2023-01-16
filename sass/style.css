@@ -41,6 +41,19 @@
   }
 }
 /* 
+@keyframes first-animation {
+
+
+  from { color: black }
+
+
+
+  to {color: linear-gradient(200.64deg, #9356DC 100%, #FF79DA 100%);}
+}
+
+
+ */
+/* 
 @keyframes fill-in {
   from {color: $text-color; font-weight: 400}
 
@@ -78,8 +91,12 @@ body {
   margin: 0 auto;
 }
 
+h1 {
+  margin: 0% 8%;
+}
+
 h3 {
-  margin: 5px;
+  margin: 7px;
 }
 
 img {
@@ -116,7 +133,6 @@ img {
   top: 50%;
   z-index: 2;
   letter-spacing: 6px;
-  margin: 0px;
 }
 #preloader p {
   font-size: 25px;
@@ -207,7 +223,10 @@ header img {
 }
 
 .second-section {
-  margin: 0px 20px;
+  margin: 0px 33px;
+}
+.second-section h1 {
+  margin: 48px 0px 26px 0px;
 }
 
 .user-guide-section {
@@ -230,6 +249,7 @@ header img {
   padding-left: 0px;
   background-color: #F6F6F6;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  margin-left: 12px;
 }
 .navigation-button:hover {
   background-color: #F5EDFF;
@@ -246,12 +266,12 @@ header img {
   width: 24px;
   border-radius: 20px;
   background-color: #9356DC;
-  margin: 0px;
   position: absolute;
   z-index: 1;
-  left: 10px;
+  left: 24px;
   border: none;
   color: #FFFFFF;
+  margin-left: 10px;
 }
 
 .center {
@@ -265,8 +285,8 @@ header img {
 
 .all-restaurants {
   background-color: #F6F6F6;
-  padding-top: 45px;
-  margin-top: 40px;
+  padding-top: 55px;
+  margin-top: 68px;
 }
 .all-restaurants h1,
 .all-restaurants h2,
@@ -282,6 +302,7 @@ header img {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  margin-top: 35px;
 }
 
 .card {
@@ -303,9 +324,22 @@ header img {
   font-size: 22px;
 }
 .card i:active {
+  -webkit-animation-name: first-animation;
+          animation-name: first-animation;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   font-weight: 900;
   background: linear-gradient(200.64deg, #9356DC 100%, #FF79DA 100%);
-  background: #9356DC;
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -348,7 +382,7 @@ footer h1 {
   font-family: "Shrikhand";
   font-weight: 900;
   font-style: italic;
-  margin: 0px;
+  margin: 22px 0px 16px 0px;
 }
 footer a {
   color: #FFFFFF;
@@ -361,7 +395,7 @@ footer a {
 }
 .footer-links ul {
   padding-left: 0px;
-  margin: 16px 0px 33px 0px;
+  margin: 0px;
 }
 .footer-links li {
   display: flex;
@@ -399,7 +433,6 @@ footer a {
   font-style: italic;
   line-height: 41px;
   letter-spacing: 0em;
-  margin: 0px;
   padding-left: 17px;
 }
 .menu-style h2 {

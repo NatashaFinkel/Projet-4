@@ -1,8 +1,12 @@
-
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
   }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 @keyframes stop-spin {
   0% {
@@ -11,15 +15,28 @@
 
   99% {
     opacity: 0;
-        transform: scale(1);
+    transform: scale(1);
   }
 
   100% {
     opacity: 0;
     transform: scale(0);
-}
+  }
 }
 
+/* 
+@keyframes first-animation {
+
+
+  from { color: black }
+
+
+
+  to {color: linear-gradient(200.64deg, #9356DC 100%, #FF79DA 100%);}
+}
+
+
+ */
 /* 
 @keyframes fill-in {
   from {color: $text-color; font-weight: 400}

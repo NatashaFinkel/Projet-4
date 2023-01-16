@@ -40,3 +40,15 @@
   flex-direction: $secondary-direction;
   align-items: $primary-position;
 }
+
+
+@mixin first-animation {
+
+animation-name: first-animation;
+animation-duration: 4s;
+animation-timing-function: ease;
+animation-delay: 0s;
+animation-iteration-count: 1;
+animation-direction: normal;
+animation-fill-mode: forwards;
+}
