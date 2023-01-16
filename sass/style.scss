@@ -175,9 +175,11 @@ header img {
 
     @include vertical-and-centered;
     background-color: $the-lightest-dull-color;
+    padding-top: 8%;
 
     p {
         color: $the-darkest-dull-color;
+        margin: 3% 5% 0%;
     }
 
 }
@@ -404,13 +406,15 @@ footer {
 .menu-style {
     background-color: $the-lightest-dull-color;
     border-radius: 40px 40px 0px 0px;
+    padding-left: 5%;
 
     h1 {
         @include secondary-text-style;
 
         line-height: 41px;
         letter-spacing: 0em;
-        padding-left: 17px;
+        padding-top: 5%;
+        margin-left: 0px;
     }
 
     h2 {

@@ -197,9 +197,11 @@ header img {
   flex-direction: column;
   align-items: center;
   background-color: #F6F6F6;
+  padding-top: 8%;
 }
 .welcome-section p {
   color: #353535;
+  margin: 3% 5% 0%;
 }
 
 .pink-button {
@@ -426,6 +428,7 @@ footer a {
 .menu-style {
   background-color: #F6F6F6;
   border-radius: 40px 40px 0px 0px;
+  padding-left: 5%;
 }
 .menu-style h1 {
   font-family: "Shrikhand";
@@ -433,7 +436,8 @@ footer a {
   font-style: italic;
   line-height: 41px;
   letter-spacing: 0em;
-  padding-left: 17px;
+  padding-top: 5%;
+  margin-left: 0px;
 }
 .menu-style h2 {
   font-size: 16px;
