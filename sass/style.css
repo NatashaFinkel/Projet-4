@@ -463,6 +463,7 @@ footer a {
   font-weight: 300;
   margin-left: 0px;
   margin-bottom: 0px;
+  max-width: 44%;
 }
 .menu-style img {
   width: 100%;
@@ -486,7 +487,7 @@ footer a {
   padding-left: 11px;
 }
 .dish-card h3 {
-  font-weight: 700;
+  font-weight: 900;
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0em;
