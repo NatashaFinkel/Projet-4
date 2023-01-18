@@ -1,3 +1,21 @@
+/* 
+@mixin check-box {
+
+  display: none;
+  width: 59px;
+  max-height: 106px;
+  border-radius: 0px 15px 15px 0px;
+  position: relative;
+  top: 1px;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@mixin check-icon {
+  display: none;
+  color: white;
+} */
 @-webkit-keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -438,7 +456,7 @@ footer a {
 .menu-style {
   background-color: #F6F6F6;
   border-radius: 40px 40px 0px 0px;
-  padding-left: 5%;
+  padding: 0% 4%;
 }
 .menu-style h1 {
   font-family: "Shrikhand";
@@ -477,14 +495,33 @@ footer a {
 .dish-container {
   display: flex;
   flex-direction: column;
+  gap: 14px;
+}
+
+.one-dish {
+  display: flex;
+  margin: 3% 3% 0% 0%;
+  width: 120%;
+}
+.one-dish:active .price {
+  position: relative;
+  right: 20%;
+}
+.one-dish:active .check-box {
+  z-index: 1;
+  box-shadow: 0px 4px 15px;
+  background-color: #99E2D0;
+  right: 15%;
 }
 
 .dish-card {
-  background-color: #FFFFFF;
+  width: 100%;
+  border-radius: 15px 0px 0px 15px;
   border-radius: 15px;
+  background-color: #FFFFFF;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  margin: 3% 3% 0% 0%;
-  padding-left: 11px;
+  padding-left: 2%;
+  max-height: 106px;
 }
 .dish-card h3 {
   font-weight: 900;
@@ -497,6 +534,23 @@ footer a {
   margin-left: 0%;
 }
 
+.check-box {
+  display: flex;
+  color: white;
+  width: 20%;
+  position: relative;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: white;
+  border-radius: 0px 15px 15px 0px;
+  right: 30%;
+}
+
+.check-icon {
+  font-size: 28px;
+}
+
 .dish-description-box {
   max-width: 100%;
   white-space: nowrap;
@@ -505,12 +559,14 @@ footer a {
 }
 
 .price {
-  font-weight: 700;
+  font-weight: 900;
   font-size: 15px;
   margin-top: 0%;
   margin-right: 4%;
   margin-bottom: 2%;
-  margin-left: 91%;
+  margin-left: 90%;
+  position: relative;
+  z-index: 4;
 }
 
 .dish-order {

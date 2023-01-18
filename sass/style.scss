@@ -397,7 +397,7 @@ footer {
 .menu-style {
     background-color: $the-lightest-dull-color;
     border-radius: 40px 40px 0px 0px;
-    padding-left: 5%;
+    padding: 0% 4%;
 
     h1 {
         @include secondary-text-style;
@@ -443,14 +443,41 @@ footer {
 .dish-container {
     display: flex;
     flex-direction: column;
+    gap: 14px;
 }
 
-.dish-card {
-    background-color: $white-color;
-    border-radius: 15px;
-    box-shadow: $quinary-box-shadow;
+.one-dish {
+    display: flex;
     margin: 3% 3% 0% 0%;
-    padding-left: 11px;
+    width: 120%;
+
+&:active {
+
+    .price {
+        position: relative;
+        right: 20%;
+    }
+
+    .check-box {
+        z-index: 1;
+        box-shadow: 0px 4px 15px;
+        background-color: #99E2D0;
+        right: 15%;
+    }
+
+}
+}
+
+
+.dish-card {
+
+    width: 100%;
+    border-radius: 15px 0px 0px 15px;
+    border-radius: 15px;
+    background-color: $white-color;
+    box-shadow: $quinary-box-shadow;
+    padding-left: 2%;
+    max-height: 106px;
 
     h3 {
         font-weight: 900;
@@ -465,6 +492,28 @@ footer {
 
 }
 
+
+.check-box {
+    display: flex;
+    color: white;
+    width: 20%;
+
+    position: relative;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 0px 15px 15px 0px;
+    right: 30%;
+}
+
+
+.check-icon {
+    font-size: 28px;
+}
+
+
+
 .dish-description-box {
 
     // Pour couper le texte et 
@@ -477,12 +526,14 @@ footer {
 }
 
 .price {
-    font-weight: 700;
+    font-weight: 900;
     font-size: 15px;
     margin-top: 0%;
     margin-right: 4%;
     margin-bottom: 2%;
-    margin-left: 91%;
+    margin-left: 90%;
+    position: relative;
+    z-index: 4;
 }
 
 
