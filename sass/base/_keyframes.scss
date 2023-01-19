@@ -24,26 +24,7 @@
   }
 }
 
-/* 
-@keyframes first-animation {
-  
-  0% { 
-    
-  }
-
-25% { transform: color;}
-
-50% {transform: color; }
-
-75% {transform: color; }
-
-99% { transform: color;}
-
-100% {color: #89C8FA; }
-
-} */
-
-
+// Pour faire coulisser vers la gauche
 @keyframes slide-in {
   0% {
     transform: translateX(0);
@@ -53,4 +34,34 @@
     transform: translateX((-75px));
   }
 
+}
+
+// Pour que l'élément reste au même endroit après avoir coulissé
+@keyframes stop-slide-in {
+  100% {
+    transform: translateX((-75px));
+  }
+}
+
+// Pour que l'élément apparaisse
+@keyframes visible {
+0% {
+  opacity: 0;
+}
+  100% {
+  opacity: 1;
+  }
+
+}
+
+
+// Pour que l'élément soit caché 
+@keyframes hidden {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }

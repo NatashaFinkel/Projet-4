@@ -59,24 +59,6 @@
     transform: scale(0);
   }
 }
-/* 
-@keyframes first-animation {
-
-  0% { 
-
-  }
-
-25% { transform: color;}
-
-50% {transform: color; }
-
-75% {transform: color; }
-
-99% { transform: color;}
-
-100% {color: #89C8FA; }
-
-} */
 @-webkit-keyframes slide-in {
   0% {
     transform: translateX(0);
@@ -91,6 +73,48 @@
   }
   100% {
     transform: translateX(-75px);
+  }
+}
+@-webkit-keyframes stop-slide-in {
+  100% {
+    transform: translateX(-75px);
+  }
+}
+@keyframes stop-slide-in {
+  100% {
+    transform: translateX(-75px);
+  }
+}
+@-webkit-keyframes visible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes visible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes hidden {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes hidden {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 /* General */
@@ -513,7 +537,7 @@ footer a {
         right: 20%;
     }
 
-    .check-box {
+    .check-box1 {
         z-index: 1;
         box-shadow: 0px 4px 15px;
         background-color: #99E2D0;
@@ -542,17 +566,37 @@ footer a {
   margin-bottom: 1%;
   margin-left: 0%;
 }
-.dish-card:hover .price {
+.dish-card:active .price {
   -webkit-animation: slide-in 190ms linear normal forwards;
           animation: slide-in 190ms linear normal forwards;
+  margin-left: 80%;
+}
+.dish-card:active .check-box {
+  -webkit-animation: visible 190ms linear normal forwards;
+          animation: visible 190ms linear normal forwards;
+}
+
+.check-box {
+  display: flex;
+  background-color: #99E2D0;
+  color: #FFFFFF;
+  align-content: center;
+  justify-content: center;
+  border-radius: 0px 15px 15px 0px;
+  flex-wrap: wrap;
+  position: relative;
+  -webkit-animation: hidden 190ms linear normal forwards;
+          animation: hidden 190ms linear normal forwards;
+  width: 25%;
+  left: 75%;
+  top: -63px;
 }
 
 /* 
-.check-box {
+.check-box1 {
     display: flex;
     color: white;
     width: 20%;
-
     position: relative;
     align-content: center;
     justify-content: center;
@@ -563,7 +607,7 @@ footer a {
 }
 
 
-.check-icon {
+.check-icon1 {
     font-size: 28px;
 }
 
