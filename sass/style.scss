@@ -444,8 +444,10 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 14px;
+    margin: 3% 3% 0% 0%;
 }
 
+/* 
 .one-dish {
     display: flex;
     margin: 3% 3% 0% 0%;
@@ -467,7 +469,7 @@ footer {
 
 }
 }
-
+ */
 
 .dish-card {
 
@@ -490,9 +492,20 @@ footer {
         margin-left: 0%;
     }
 
+    &:hover {
+        .price {
+            animation: slide-in 190ms linear normal forwards;
+        }
+    }
+
+
+
+
+
 }
 
 
+/* 
 .check-box {
     display: flex;
     color: white;
@@ -512,7 +525,7 @@ footer {
     font-size: 28px;
 }
 
-
+ */
 
 .dish-description-box {
 
@@ -525,6 +538,7 @@ footer {
     text-overflow: ellipsis;
 }
 
+/*    Première version
 .price {
     font-weight: 900;
     font-size: 15px;
@@ -535,6 +549,19 @@ footer {
     position: relative;
     z-index: 4;
 }
+ */
+
+
+.price {
+    font-weight: 900;
+    font-size: 15px;
+    margin-top: 0%;
+    margin-right: 4%;
+    margin-bottom: 2%;
+    margin-left: 90%;
+    position: relative;
+}
+
 
 
 .dish-order {

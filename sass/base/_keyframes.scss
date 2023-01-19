@@ -24,7 +24,7 @@
   }
 }
 
-
+/* 
 @keyframes first-animation {
   
   0% { 
@@ -40,5 +40,17 @@
 99% { transform: color;}
 
 100% {color: #89C8FA; }
+
+} */
+
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX((-75px));
+  }
 
 }

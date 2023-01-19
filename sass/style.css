@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* 
 @mixin check-box {
 
@@ -58,38 +59,38 @@
     transform: scale(0);
   }
 }
-@-webkit-keyframes first-animation {
-  25% {
-    transform: color;
+/* 
+@keyframes first-animation {
+
+  0% { 
+
   }
-  50% {
-    transform: color;
-  }
-  75% {
-    transform: color;
-  }
-  99% {
-    transform: color;
+
+25% { transform: color;}
+
+50% {transform: color; }
+
+75% {transform: color; }
+
+99% { transform: color;}
+
+100% {color: #89C8FA; }
+
+} */
+@-webkit-keyframes slide-in {
+  0% {
+    transform: translateX(0);
   }
   100% {
-    color: #89C8FA;
+    transform: translateX(-75px);
   }
 }
-@keyframes first-animation {
-  25% {
-    transform: color;
-  }
-  50% {
-    transform: color;
-  }
-  75% {
-    transform: color;
-  }
-  99% {
-    transform: color;
+@keyframes slide-in {
+  0% {
+    transform: translateX(0);
   }
   100% {
-    color: #89C8FA;
+    transform: translateX(-75px);
   }
 }
 /* General */
@@ -496,24 +497,32 @@ footer a {
   display: flex;
   flex-direction: column;
   gap: 14px;
-}
-
-.one-dish {
-  display: flex;
   margin: 3% 3% 0% 0%;
-  width: 120%;
-}
-.one-dish:active .price {
-  position: relative;
-  right: 20%;
-}
-.one-dish:active .check-box {
-  z-index: 1;
-  box-shadow: 0px 4px 15px;
-  background-color: #99E2D0;
-  right: 15%;
 }
 
+/* 
+.one-dish {
+    display: flex;
+    margin: 3% 3% 0% 0%;
+    width: 120%;
+
+&:active {
+
+    .price {
+        position: relative;
+        right: 20%;
+    }
+
+    .check-box {
+        z-index: 1;
+        box-shadow: 0px 4px 15px;
+        background-color: #99E2D0;
+        right: 15%;
+    }
+
+}
+}
+ */
 .dish-card {
   width: 100%;
   border-radius: 15px 0px 0px 15px;
@@ -533,24 +542,32 @@ footer a {
   margin-bottom: 1%;
   margin-left: 0%;
 }
-
-.check-box {
-  display: flex;
-  color: white;
-  width: 20%;
-  position: relative;
-  align-content: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  background-color: white;
-  border-radius: 0px 15px 15px 0px;
-  right: 30%;
+.dish-card:hover .price {
+  -webkit-animation: slide-in 190ms linear normal forwards;
+          animation: slide-in 190ms linear normal forwards;
 }
+
+/* 
+.check-box {
+    display: flex;
+    color: white;
+    width: 20%;
+
+    position: relative;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 0px 15px 15px 0px;
+    right: 30%;
+}
+
 
 .check-icon {
-  font-size: 28px;
+    font-size: 28px;
 }
 
+ */
 .dish-description-box {
   max-width: 100%;
   white-space: nowrap;
@@ -558,6 +575,18 @@ footer a {
   text-overflow: ellipsis;
 }
 
+/*    Première version
+.price {
+    font-weight: 900;
+    font-size: 15px;
+    margin-top: 0%;
+    margin-right: 4%;
+    margin-bottom: 2%;
+    margin-left: 90%;
+    position: relative;
+    z-index: 4;
+}
+ */
 .price {
   font-weight: 900;
   font-size: 15px;
@@ -566,7 +595,6 @@ footer a {
   margin-bottom: 2%;
   margin-left: 90%;
   position: relative;
-  z-index: 4;
 }
 
 .dish-order {
