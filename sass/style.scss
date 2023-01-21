@@ -425,6 +425,7 @@ footer {
         margin-left: 0px;
         margin-bottom: 0px;
         max-width: 44%;
+        margin-bottom: 2%;
     }
 
     img {
@@ -478,25 +479,44 @@ footer {
     border-radius: 15px;
     background-color: $white-color;
     box-shadow: $quinary-box-shadow;
-    padding: 2%;
+    padding-left: 2%;
 
     h3 {
         font-weight: 900;
         font-size: 18px;
         line-height: 21px;
         letter-spacing: 0em;
+
+        margin-top: 2%;
         margin-right: 0%;
-        margin-bottom: 1%;
         margin-left: 0%;
+       
     }
 
+
+    p {
+        font-size: 15px;
+        font-weight: 300;
+        margin-left: 0px;
+        max-width: 44%;
+        padding-bottom: 5%;
+        margin-block: 0%;
+
+    }
+
+
+
     &:active {
+
+        
         .price {
+            margin-right: 0%;
             animation: slide-in 190ms linear normal forwards;
         }
 
         .check-box {
             animation: visible 190ms linear normal forwards;
+            padding-right: 0px;
         }
     }
 }
@@ -512,13 +532,16 @@ footer {
     flex-wrap: wrap;
     position: relative;
     animation: hidden 190ms linear normal forwards;
-    height: 106px;
 }
 
 
 .check-icon {
     font-size: 28px;
-    padding: 18px;
+
+    padding-top: 25px;
+    padding-right: 20px;
+    padding-bottom: 25px;
+    padding-left: 20px;
 }
 
 /* 
@@ -571,12 +594,13 @@ footer {
 .price {
     font-weight: 900;
     font-size: 15px;
-    margin-top: -11%;
-    margin-left: 95%;
+    margin-top: -14%;
+    margin-left: 90%;
     position: relative;
     display: flex;
-    align-items: flex-end;
-    gap: 20px;
+    align-items: baseline;
+    gap: 77%;
+
 }
 
 
