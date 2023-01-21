@@ -479,7 +479,11 @@ footer {
     border-radius: 15px;
     background-color: $white-color;
     box-shadow: $quinary-box-shadow;
-    padding-left: 2%;
+    padding-top: 12px;
+    padding-right: 1px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    height: 72px;
 
     h3 {
         font-weight: 900;
@@ -499,7 +503,7 @@ footer {
         font-weight: 300;
         margin-left: 0px;
         max-width: 44%;
-        padding-bottom: 5%;
+        padding-bottom: 20px;
         margin-block: 0%;
 
     }
@@ -510,7 +514,6 @@ footer {
 
         
         .price {
-            margin-right: 0%;
             animation: slide-in 190ms linear normal forwards;
         }
 
@@ -523,7 +526,6 @@ footer {
 
 .check-box {
 
-    display: flex;
     background-color: $tertiary-color;
     color: $white-color;
     align-content: center;
@@ -532,39 +534,20 @@ footer {
     flex-wrap: wrap;
     position: relative;
     animation: hidden 190ms linear normal forwards;
+    max-height: 100%;
 }
 
 
 .check-icon {
     font-size: 28px;
-
+    position: sticky;
     padding-top: 25px;
     padding-right: 20px;
     padding-bottom: 25px;
     padding-left: 20px;
+    top: 50px;
 }
 
-/* 
-.check-box1 {
-    display: flex;
-    color: white;
-    width: 20%;
-    position: relative;
-    align-content: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: white;
-    border-radius: 0px 15px 15px 0px;
-    right: 30%;
-}
-
-
-.check-icon1 {
-    font-size: 28px;
-    padding: 20px;
-}
-
- */
 
 .dish-description-box {
 
@@ -577,30 +560,16 @@ footer {
     text-overflow: ellipsis;
 }
 
-/*    Première version
-.price {
-    font-weight: 900;
-    font-size: 15px;
-    margin-top: 0%;
-    margin-right: 4%;
-    margin-bottom: 2%;
-    margin-left: 90%;
-    position: relative;
-    z-index: 4;
-}
- */
-
 
 .price {
     font-weight: 900;
     font-size: 15px;
-    margin-top: -14%;
-    margin-left: 90%;
+    top: -91px;
     position: relative;
     display: flex;
+    justify-content: end;
     align-items: baseline;
-    gap: 77%;
-
+    padding-bottom: 20px;
 }
 
 
