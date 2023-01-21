@@ -479,7 +479,6 @@ footer {
     background-color: $white-color;
     box-shadow: $quinary-box-shadow;
     padding-left: 2%;
-    max-height: 106px;
 
     h3 {
         font-weight: 900;
@@ -495,7 +494,6 @@ footer {
     &:active {
         .price {
             animation: slide-in 190ms linear normal forwards;
-            margin-left: 80%;
         }
 
         .check-box {
@@ -574,11 +572,12 @@ footer {
 .price {
     font-weight: 900;
     font-size: 15px;
-    margin-top: 0%;
-    margin-right: 4%;
-    margin-bottom: 2%;
-    margin-left: 90%;
+    margin-top: -11%;
+    margin-left: 95%;
     position: relative;
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
 }
 
 
