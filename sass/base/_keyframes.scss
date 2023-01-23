@@ -24,6 +24,45 @@
   }
 }
 
+// Effet de remplissage progressif
+
+@keyframes fill-in {
+  0% {
+
+    transform: translateY(color);
+    transform-style: preserve-3d;
+
+  }
+
+25% {
+  transform: translateY(font-weight);
+  transform: translateY(color);
+  transform-style: preserve-3d;
+}
+
+
+50% {
+  transform: translateY(font-weight);
+  transform: translateY(color);
+  transform-style: preserve-3d;
+}
+
+75% {
+  transform: translateY(font-weight);
+  transform: translateY(color);
+  transform-style: preserve-3d;
+}
+
+  100% {
+    transform: translateY(font-weight);
+    transform: translateY(color);
+    transform-style: preserve-3d;
+  }
+}
+
+
+
+
 // Pour faire coulisser vers la gauche
 @keyframes slide-in {
   0% {

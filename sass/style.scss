@@ -277,36 +277,21 @@ header img {
     background-color: $white-color;
     margin-left: 35px;
     box-shadow: $quinary-box-shadow;
-
-    i {
-        display: $primary-display;
-        font-size: 25px;
-        margin-left: 88%;
-        margin-top: -29px;
+}
 
 
-        &:active {
-            @include first-animation;
-            color: #89C8FA;
-            font-weight: 900;
-        }
-
-    }
-
-
-    h2 {
-        margin-bottom: 5px;
-
-    }
-
-    a {
-        text-decoration: none;
-        font-size: $medium-font-size;
-        font-weight: $tertiary-font-weight;
-        color: $text-color;
-    }
+h2 {
+    margin-bottom: 5px;
 
 }
+
+a {
+    text-decoration: none;
+    font-size: $medium-font-size;
+    font-weight: $tertiary-font-weight;
+    color: $text-color;
+}
+
 
 
 .label-new {
@@ -327,6 +312,43 @@ header img {
     border-radius: 15px 15px 0px 0px;
 }
 
+.heart {
+    display: flex;
+    height: fit-content;
+ font-size: 25px;
+ justify-content: flex-end;
+ padding-right: 30px;
+}
+
+.filled-heart, .empty-heart {
+    position: absolute;
+}
+
+.filled-heart {
+    opacity: 0;
+    transition-property: all;
+    transition-duration: 1s;
+
+    &:hover {
+        opacity: 1;
+        animation: fill-in 4s steps(4, end) backwards;
+        background-image: $gradient-color;
+        background-image: -webkit-linear-gradient($gradient-color);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+}
+
+.heart-animation {
+
+    &:active {
+        animation: fill-in 4s steps(4, end) backwards;
+        color: darkcyan;
+        font-weight: 900;
+    }
+}
 
 
 // Footer
@@ -476,10 +498,10 @@ footer {
 }
 
 .card-text {
-flex-direction: column;
+    flex-direction: column;
 
-padding-top: 12px;
-display: flex;
+    padding-top: 12px;
+    display: flex;
 
 
     h3 {
@@ -491,7 +513,7 @@ display: flex;
 
         margin-right: 0%;
         margin-left: 0px;
-       
+
     }
 
 
