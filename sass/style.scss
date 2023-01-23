@@ -107,8 +107,8 @@ img {
     p {
         font-size: 25px;
         font-weight: 600;
-        color: black;
-        font-style: italic;
+        color: $text-color;
+        font-style: $secondary-font-style;
         font-family: $secondary-font;
         margin-top: 415px;
     }
