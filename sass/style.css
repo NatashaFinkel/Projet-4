@@ -442,13 +442,15 @@ a {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  font-size: 25px;
   justify-content: flex-end;
   padding-right: 30px;
 }
 
-.filled-heart, .empty-heart {
+.filled-heart,
+.empty-heart {
   position: absolute;
+  width: 22px;
+  height: 21px;
 }
 
 .filled-heart {
@@ -465,6 +467,9 @@ a {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+.filled-heart:hover .empty-heart {
+  opacity: 0;
 }
 
 .heart-animation:active {
