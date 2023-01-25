@@ -413,6 +413,7 @@ footer {
 
 
 .image-menu {
+    width: 100%;
     position: relative;
     z-index: -1;
     margin-bottom: -55px;
@@ -602,3 +603,6 @@ h4 {
 .order-button {
     @include order-button;
 }
+
+
+
