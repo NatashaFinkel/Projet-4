@@ -299,10 +299,11 @@ a {
     border-radius: 2px;
     box-shadow: $tertiary-box-shadow;
     color: $dark-vivid-color;
-    position: absolute;
-    margin: 20px 60px 0px 0px;
     display: flex;
     padding: 7px 10px;
+    position: absolute;
+    width: 100px;
+    margin-top: 20px;
 }
 
 
@@ -310,41 +311,48 @@ a {
     border-radius: 15px 15px 0px 0px;
 }
 
-.heart {
+.flexible-heart-location {
     display: flex;
-    height: fit-content;
     justify-content: flex-end;
-    padding-right: 30px;
+    margin: 0 auto;
+    margin-right: 30px;
 }
 
-.filled-heart,
-.empty-heart {
+
+.heart-button {
+    display: flex;
+    border: 0px;
+    padding: 0px;
+    height: 21px;
+    width: 22px;
+    background-color: initial;
+    position: absolute;
+
+    &:active {
+    
+      .filled-heart {
+            @include first-animation;
+            opacity: 1;
+        }
+
+        .second-heart {
+            opacity: 0;
+        } 
+
+    }
+}
+
+
+.heart-icon {
     position: absolute;
     width: 22px;
     height: 21px;
 }
 
+
 .filled-heart {
     opacity: 0;
-    transition-property: background-image, opacity;
-
-    &:active {
-        opacity: 1;      
-        background-image: $gradient-color;
-        background-image: -webkit-linear-gradient($gradient-color);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-
-        transition-timing-function: ease;
-        transition-duration: 4s;
-
-        .empty-heart {
-            opacity: 0;
-        }
-    }
 }
-
 
 
 // Footer
@@ -465,8 +473,22 @@ footer {
     margin: 10px;
 }
 
+.clickable:active {
+
+    .price p {
+        animation-name: slide;
+        animation-duration: 190ms;
+        animation-fill-mode: forwards;
+    }
+
+    .check-box {
+        animation-name: detectable;
+        animation-duration: 190ms;
+        animation-fill-mode: forwards;
+    }
+}
+
 .dish-card {
-    border-radius: 15px 0px 0px 15px;
     border-radius: 15px;
     background-color: $white-color;
     box-shadow: $quinary-box-shadow;
@@ -478,20 +500,6 @@ footer {
 
     display: flex;
     justify-content: space-between;
-
-    &:active {
-
-        .price p {
-            animation: slide-in 190ms linear normal forwards;
-        }
-
-        .check-box {
-            animation: visible 190ms linear normal forwards;
-            padding-right: 0px;
-        }
-    }
-
-
 }
 
 .card-text {
@@ -595,6 +603,3 @@ h4 {
 .order-button {
     @include order-button;
 }
-
-
-

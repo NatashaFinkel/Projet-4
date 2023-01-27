@@ -1,3 +1,20 @@
+/* 
+@mixin heart-animation {
+  @include first-animation;
+  @include animated-heart;
+
+  @if(active:true) {
+
+   .empty-heart {
+    opacity: 0;
+   }
+
+  }
+
+  @else {
+
+  }
+} */
 @-webkit-keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -40,43 +57,83 @@
     transform: scale(0);
   }
 }
-@-webkit-keyframes slide-in {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-30px);
-  }
-}
-@keyframes slide-in {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-30px);
-  }
-}
-@-webkit-keyframes stop-slide-in {
-  100% {
-    transform: translateX(-20px);
-  }
-}
-@keyframes stop-slide-in {
-  100% {
-    transform: translateX(-20px);
-  }
-}
-@-webkit-keyframes visible {
+@-webkit-keyframes heart {
   0% {
     opacity: 0;
+  }
+  99% {
+    opacity: 1;
   }
   100% {
     opacity: 1;
   }
 }
-@keyframes visible {
+@keyframes heart {
   0% {
     opacity: 0;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-30px);
+  }
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-30px);
+  }
+}
+@-webkit-keyframes stop-slide {
+  0% {
+    transform: translateX(-20px);
+  }
+  99% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
+@keyframes stop-slide {
+  0% {
+    transform: translateX(-20px);
+  }
+  99% {
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
+@-webkit-keyframes detectable {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes detectable {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 1;
   }
   100% {
     opacity: 1;
@@ -86,6 +143,9 @@
   0% {
     opacity: 1;
   }
+  99% {
+    opacity: 0;
+  }
   100% {
     opacity: 0;
   }
@@ -93,6 +153,9 @@
 @keyframes hidden {
   0% {
     opacity: 1;
+  }
+  99% {
+    opacity: 0;
   }
   100% {
     opacity: 0;
@@ -373,47 +436,55 @@ a {
   border-radius: 2px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   color: #008766;
-  position: absolute;
-  margin: 20px 60px 0px 0px;
   display: flex;
   padding: 7px 10px;
+  position: absolute;
+  width: 100px;
+  margin-top: 20px;
 }
 
 .first-page-picture {
   border-radius: 15px 15px 0px 0px;
 }
 
-.heart {
+.flexible-heart-location {
   display: flex;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
   justify-content: flex-end;
-  padding-right: 30px;
+  margin: 0 auto;
+  margin-right: 30px;
 }
 
-.filled-heart,
-.empty-heart {
+.heart-button {
+  display: flex;
+  border: 0px;
+  padding: 0px;
+  height: 21px;
+  width: 22px;
+  background-color: initial;
+  position: absolute;
+}
+.heart-button:active .filled-heart {
+  -webkit-animation: heart 1s forwards;
+          animation: heart 1s forwards;
+  background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background-image: -webkit-linear-gradient(linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 900;
+  opacity: 1;
+}
+.heart-button:active .second-heart {
+  opacity: 0;
+}
+
+.heart-icon {
   position: absolute;
   width: 22px;
   height: 21px;
 }
 
 .filled-heart {
-  opacity: 0;
-  transition-property: background-image, opacity;
-}
-.filled-heart:active {
-  opacity: 1;
-  background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-  background-image: -webkit-linear-gradient(linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%));
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  transition-timing-function: ease;
-  transition-duration: 4s;
-}
-.filled-heart:active .empty-heart {
   opacity: 0;
 }
 
@@ -516,8 +587,24 @@ footer a {
   margin: 10px;
 }
 
+.clickable:active .price p {
+  -webkit-animation-name: slide;
+          animation-name: slide;
+  -webkit-animation-duration: 190ms;
+          animation-duration: 190ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.clickable:active .check-box {
+  -webkit-animation-name: detectable;
+          animation-name: detectable;
+  -webkit-animation-duration: 190ms;
+          animation-duration: 190ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
 .dish-card {
-  border-radius: 15px 0px 0px 15px;
   border-radius: 15px;
   background-color: #FFFFFF;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -527,15 +614,6 @@ footer a {
   padding-left: 12px;
   display: flex;
   justify-content: space-between;
-}
-.dish-card:active .price p {
-  -webkit-animation: slide-in 190ms linear normal forwards;
-          animation: slide-in 190ms linear normal forwards;
-}
-.dish-card:active .check-box {
-  -webkit-animation: visible 190ms linear normal forwards;
-          animation: visible 190ms linear normal forwards;
-  padding-right: 0px;
 }
 
 .card-text {

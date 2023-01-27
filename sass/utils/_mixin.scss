@@ -12,7 +12,7 @@
 
 @mixin tertiary-layout {
   display: $primary-display;
- flex-direction: $primary-direction;
+  flex-direction: $primary-direction;
 }
 
 // Text-style
@@ -41,13 +41,36 @@
   align-items: $primary-position;
 }
 
+/* 
+@mixin heart-animation {
+  @include first-animation;
+  @include animated-heart;
+
+  @if(active:true) {
+
+   .empty-heart {
+    opacity: 0;
+   }
+
+  }
+
+  @else {
+
+  }
+} */
+
+
 
 @mixin first-animation {
-animation-name: first-animation;
-animation-duration: 4s;
-animation-timing-function: ease;
-animation-delay: 0,1ms;
-animation-iteration-count: 1;
-animation-direction: normal;
-animation-fill-mode: forwards;
+  animation: heart 1s forwards;
+  background-image: $gradient-color;
+  background-image: -webkit-linear-gradient($gradient-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 900;
+}
+
+@mixin here {
+  @include detectable;
 }
