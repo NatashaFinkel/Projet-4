@@ -57,9 +57,10 @@ body {
     margin: $margin;
 }
 
+/* 
 h1 {
     margin: 0% 8%;
-}
+} */
 
 h3 {
     margin: 7px;
@@ -81,14 +82,14 @@ img {
     height: 100%;
     width: 100%;
     position: fixed;
-    z-index: 2;
+    z-index: 9;
     display: flex;
     flex-direction: column;
     align-items: $primary-position;
     justify-content: $primary-position;
 
     & {
-        animation: stop-spin 1s ease 1s 1 alternate forwards;
+        animation: stop-spin 500ms ease 1s 1 alternate forwards;
     }
 
     h1 {
@@ -96,11 +97,10 @@ img {
         color: $text-color;
         font-family: $secondary-font;
         font-weight: $the-largest-font-weight;
-        font-size: 65px;
+        font-size: 90px;
         font-style: $secondary-font-style;
         background-position: $primary-position;
-        top: 50%;
-        z-index: 2;
+        z-index: 9;
         letter-spacing: 6px;
 
     }
@@ -111,7 +111,7 @@ img {
         color: $text-color;
         font-style: $secondary-font-style;
         font-family: $secondary-font;
-        margin-top: 415px;
+        margin-top: 267px;
     }
 
 }
@@ -120,18 +120,15 @@ img {
 #loader {
 
     position: fixed;
-    left: 50%;
-    top: 56%;
-    width: 160px;
-    height: 160px;
-    margin: -76px 0 0 -76px;
-    border-top: 35px solid $primary-color;
-    border-right: 35px solid $light-vivid-color;
-    border-bottom: 35px solid $primary-color;
-    border-left: 35px solid $light-vivid-color;
+    width: 300px;
+    height: 300px;
+    border-top: 35px solid $light-vivid-color;
+    border-right: 35px solid $primary-color;
+    border-bottom: 35px solid $light-vivid-color;
+    border-left: 35px solid $primary-color;
     border-radius: 50%;
 
-    animation: spin 1000ms ease-in-out 1ms 1 normal;
+    animation: spin 750ms ease-in-out 1 normal;
     z-index: -1;
 }
 
@@ -213,13 +210,14 @@ header img {
     @include navigation-button;
     margin-left: 12px;
     height: 60px;
+
     i {
         color: $the-darkest-dull-color;
     }
 
     p {
-        font-size: $the-smallest-font-size;  
-        font-weight: $primary-font-weight; 
+        font-size: $the-smallest-font-size;
+        font-weight: $primary-font-weight;
         margin: -7px;
     }
 
@@ -278,7 +276,6 @@ header img {
 
 .card {
     max-width: 90%;
-    border: solid;
     display: $primary-display;
     flex-direction: $secondary-direction;
     border-radius: 15px;
@@ -322,8 +319,9 @@ a {
 .flexible-heart-location {
     display: flex;
     justify-content: flex-end;
-    margin: 0 auto;
-    margin-right: 30px;
+    margin-right: 25px;
+    position: relative;
+    z-index: 2;
 }
 
 
@@ -337,15 +335,15 @@ a {
     position: absolute;
 
     &:active {
-    
-      .filled-heart {
+
+        .filled-heart {
             @include first-animation;
             opacity: 1;
         }
 
         .second-heart {
             opacity: 0;
-        } 
+        }
 
     }
 }
@@ -623,23 +621,50 @@ h4 {
         max-width: $responsive-max-width;
     }
 
-.user-guide-section {
-    flex-direction: row;
-    height: 56px;
-    gap: 50px;
-}
+    .user-guide-section {
+        flex-direction: row;
+        height: 56px;
+        gap: 50px;
+    }
 
-.second-section {
-display: flex;
-flex-direction: column;
-flex-wrap: wrap;
-align-content: space-around;
-}
+    .second-section {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: space-around;
+    }
 
-.purple-circle {
-    position: relative;
-    left: -25px;
-}
+    .purple-circle {
+        position: relative;
+        left: -25px;
+    }
 
+
+
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        overflow: auto;
+        white-space: nowrap;
+    }
+
+
+    .card {
+        width: 335px;
+
+        a {
+            display: inline-block;
+        }
+    }
+
+    footer {
+        flex-direction: row;
+
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
 
 }
