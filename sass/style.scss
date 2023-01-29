@@ -212,7 +212,7 @@ header img {
 .navigation-button {
     @include navigation-button;
     margin-left: 12px;
-
+    height: 60px;
     i {
         color: $the-darkest-dull-color;
     }
@@ -220,6 +220,7 @@ header img {
     p {
         font-size: $the-smallest-font-size;  
         font-weight: $primary-font-weight; 
+        margin: -7px;
     }
 
 }
@@ -233,9 +234,9 @@ header img {
     position: absolute;
     z-index: 1;
     left: 24px;
-    border: none;
     color: $white-color;
-    margin: 12px 0px 0px 10px;
+    margin: 0px 0px 0px 10px;
+    padding: 10px;
 }
 
 
@@ -626,8 +627,8 @@ h4 {
     flex-direction: row;
     justify-content: center;
     height: 56px;
+    gap: 50px;
 }
-
 
 .purple-circle {
     position: relative;
