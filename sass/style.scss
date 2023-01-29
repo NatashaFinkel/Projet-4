@@ -461,7 +461,6 @@ footer {
 }
 
 .title-container {
-
     border-bottom: 3px solid #99E2D0;
     width: 7%;
 }
@@ -607,6 +606,18 @@ h4 {
 
 
 /*  Media queries : Tablet and Desktop */
-@media screen and (max-width: 1400px) {
+@media only screen and (min-width: $reponsive-min-width) and (max-width: $responsive-max-width) {
+
+    :root {
+        max-width: $responsive-max-width;
+    }
+
+    .root {
+        max-width: $responsive-max-width;
+    }
+
+.user-guide-section {
+    flex-direction: row;
+}
 
 }

@@ -716,4 +716,15 @@ h4 {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
 }
 
-/*  Media queries : Tablet and Desktop *//*# sourceMappingURL=style.css.map */
+/*  Media queries : Tablet and Desktop */
+@media only screen and (min-width: 768px) and (max-width: 1400px) {
+  :root {
+    max-width: 1400px;
+  }
+  .root {
+    max-width: 1400px;
+  }
+  .user-guide-section {
+    flex-direction: row;
+  }
+}/*# sourceMappingURL=style.css.map */
