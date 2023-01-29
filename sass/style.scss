@@ -216,6 +216,12 @@ header img {
     i {
         color: $the-darkest-dull-color;
     }
+
+    p {
+        font-size: $the-smallest-font-size;  
+        font-weight: $primary-font-weight; 
+    }
+
 }
 
 
@@ -229,7 +235,7 @@ header img {
     left: 24px;
     border: none;
     color: $white-color;
-    margin-left: 10px;
+    margin: 12px 0px 0px 10px;
 }
 
 
@@ -618,10 +624,15 @@ h4 {
 
 .user-guide-section {
     flex-direction: row;
+    justify-content: center;
+    height: 56px;
 }
 
-.navigation-button {
-    padding: 30px;
+
+.purple-circle {
+    position: relative;
+    left: -25px;
 }
+
 
 }

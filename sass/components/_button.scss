@@ -29,12 +29,12 @@
     @include primary-layout;
     @include button;
 
+    padding-right: 30px;
+    align-items: baseline;
     text-decoration: none;
     -webkit-text-decoration-color: $text-color;
     text-decoration-color: $text-color;
     border-radius: 20px;
-    padding: 16px;
-    padding-left: 0px;
     background-color: $the-lightest-dull-color;
     box-shadow: $quaternary-box-shadow;
 
