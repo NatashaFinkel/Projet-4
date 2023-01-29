@@ -163,6 +163,7 @@
 }
 /* General */
 :root {
+  min-width: 375px;
   max-width: 767px;
 }
 
@@ -713,4 +714,6 @@ h4 {
 .order-button:hover {
   filter: brightness(115%);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*  Media queries : Tablet and Desktop *//*# sourceMappingURL=style.css.map */
