@@ -731,9 +731,14 @@ h4 {
   }
   .user-guide-section {
     flex-direction: row;
-    justify-content: center;
     height: 56px;
     gap: 50px;
+  }
+  .second-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
   }
   .purple-circle {
     position: relative;
