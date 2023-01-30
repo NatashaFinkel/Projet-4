@@ -526,9 +526,12 @@ footer a {
   margin-right: 11px;
 }
 
-.menu-header {
-  gap: 25%;
+header {
+  justify-content: normal;
   padding-left: 25px;
+}
+header .center {
+  justify-items: center;
 }
 
 .arrow {
