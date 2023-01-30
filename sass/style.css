@@ -264,7 +264,7 @@ header {
   display: flex;
   justify-content: center;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  padding: 20px 0px 15px 0px;
+  padding: 20px 0px 10px 0px;
 }
 
 .root {
@@ -272,7 +272,7 @@ header {
 }
 
 header img {
-  width: 30%;
+  width: 162px;
 }
 
 #search-form {
@@ -296,11 +296,10 @@ header img {
   flex-direction: column;
   align-items: center;
   background-color: #F6F6F6;
-  padding-top: 8%;
+  padding: 15px 40px 0px 40px;
 }
 .welcome-section p {
   color: #353535;
-  margin: 3% 5% 0%;
 }
 
 .pink-button {
@@ -311,7 +310,7 @@ header img {
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   padding: 13px 16px;
   border-radius: 25px;
-  margin: 27px 0px 45px 0px;
+  margin: 20px 0px 45px 0px;
   margin-bottom: 45px;
   height: 50px;
   width: 206px;
@@ -528,11 +527,13 @@ footer a {
 }
 
 .menu-header {
-  justify-content: space-between;
-  padding: 4% 30% 2% 5%;
+  gap: 25%;
+  padding-left: 25px;
 }
-.menu-header img {
-  width: 50%;
+
+.arrow {
+  width: 17px;
+  height: 16px;
 }
 
 .image-menu {
@@ -702,7 +703,7 @@ h4 {
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   padding: 13px 16px;
   border-radius: 25px;
-  margin: 27px 0px 45px 0px;
+  margin: 20px 0px 45px 0px;
   margin-bottom: 45px;
   height: 50px;
   width: 206px;
@@ -724,6 +725,9 @@ h4 {
   }
   .root {
     max-width: 1400px;
+  }
+  .header img {
+    width: 200px;
   }
   .user-guide-section {
     flex-direction: row;
