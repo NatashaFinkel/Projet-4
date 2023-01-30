@@ -1,20 +1,34 @@
-/* 
-@mixin heart-animation {
-  @include first-animation;
-  @include animated-heart;
+:root {
+  min-width: 375px;
+  max-width: 767px;
+}
 
-  @if(active:true) {
+.root {
+  max-width: 767px;
+}
 
-   .empty-heart {
-    opacity: 0;
-   }
+/* Used to simplify the sizing process 
+    of a couple of elements inside a box :
 
-  }
+    Each element will be automatically resized
+    to fit into the box (here, the box's total 
+    size includes automatically every margin, 
+    border, and padding of all of its elements).
 
-  @else {
+    If those elements are too wide for 
+    the size of the box, they will 
+    squeeze up to each other
+    (the size of the box itself will remain the same).
 
-  }
-} */
+    The star (*) selects all the elements 
+    (in this case, before AND after the css properties 
+   are declared) */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 @-webkit-keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -23,6 +37,7 @@
     transform: rotate(360deg);
   }
 }
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -161,53 +176,24 @@
     opacity: 0;
   }
 }
-/* General */
-:root {
-  min-width: 375px;
-  max-width: 767px;
-}
-
-/* Used to simplify the sizing process 
-    of a couple of elements inside a box :
-
-    Each element will be automatically resized
-    to fit into the box (here, the box's total 
-    size includes automatically every margin, 
-    border, and padding of all of its elements).
-
-    If those elements are too wide for 
-    the size of the box, they will 
-    squeeze up to each other
-    (the size of the box itself will remain the same).
-
-    The star (*) selects all the elements 
-    (in this case, before AND after the css properties 
-   are declared) */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  margin: 0 auto;
-}
-
-/* 
-h1 {
-    margin: 0% 8%;
-} */
-h3 {
-  margin: 7px;
-}
-
 img {
   display: block;
   -o-object-fit: cover;
   object-fit: cover;
   max-height: 243px;
   width: 100%;
+}
+
+.first-page-picture {
+  border-radius: 15px 15px 0px 0px;
+}
+
+.image-menu {
+  width: 100%;
+  position: relative;
+  z-index: -1;
+  margin-bottom: -55px;
+  max-height: 405px;
 }
 
 #preloader {
@@ -259,7 +245,6 @@ img {
   z-index: -1;
 }
 
-/*HEADER*/
 header {
   display: flex;
   justify-content: center;
@@ -267,28 +252,8 @@ header {
   padding: 20px 0px 10px 0px;
 }
 
-.root {
-  max-width: 767px;
-}
-
-header img {
+header__img {
   width: 162px;
-}
-
-#search-form {
-  display: flex;
-  justify-content: center;
-  padding: 15px;
-  background-color: #EAEAEA;
-}
-
-.location-search-bar {
-  border-width: 0px;
-  background-color: #EAEAEA;
-  font-weight: 500;
-  margin-left: 17px;
-  color: #353535;
-  outline: none;
 }
 
 .welcome-section {
@@ -300,26 +265,6 @@ header img {
 }
 .welcome-section p {
   color: #353535;
-}
-
-.pink-button {
-  display: flex;
-  justify-content: center;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  color: #FFFFFF;
-  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-  padding: 13px 16px;
-  border-radius: 25px;
-  margin: 20px 0px 45px 0px;
-  margin-bottom: 45px;
-  height: 50px;
-  width: 206px;
-  font-size: 16px;
-  font-weight: 500;
-}
-.pink-button:hover {
-  filter: brightness(115%);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
 }
 
 .second-section {
@@ -334,6 +279,160 @@ header img {
   flex-direction: column;
   justify-items: center;
   gap: 25px;
+}
+@media screen and (min-width: 768px) and (max-width: 1400px) {
+  .user-guide-section {
+    flex-direction: row;
+    height: 56px;
+    gap: 50px;
+  }
+}
+
+.all-restaurants {
+  background-color: #F6F6F6;
+  padding-top: 55px;
+  margin-top: 68px;
+}
+.all-restaurants h1,
+.all-restaurants h2,
+.all-restaurants p {
+  margin-left: 20px;
+}
+.all-restaurants p {
+  margin-top: 0px;
+}
+
+.card-container {
+  padding-bottom: 55px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 35px;
+}
+
+.title-container {
+  border-bottom: 3px solid #99E2D0;
+  width: 7%;
+}
+
+.dish-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 10px;
+}
+
+.menu-style {
+  background-color: #F6F6F6;
+  border-radius: 40px 40px 0px 0px;
+  padding: 0px 15px;
+}
+
+.menu-style__h1 {
+  font-family: "Shrikhand";
+  font-weight: 900;
+  font-style: italic;
+  line-height: 41px;
+  letter-spacing: 0em;
+  padding-top: 5%;
+  margin-left: 0px;
+}
+
+.menu-style__h2 {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-transform: uppercase;
+  margin-left: 0px;
+  margin: 42px 0px 12px;
+}
+
+.menu-style__p {
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  padding-top: 33px;
+}
+
+.menu-style__img {
+  width: 100%;
+}
+
+.card {
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background-color: #FFFFFF;
+  margin-left: 35px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dish-card {
+  border-radius: 15px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.location-search-bar {
+  border-width: 0px;
+  background-color: #EAEAEA;
+  font-weight: 500;
+  margin-left: 17px;
+  color: #353535;
+  outline: none;
+}
+
+#search-form {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  background-color: #EAEAEA;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  padding: 20px 0px 35px 25px;
+  color: #FFFFFF;
+}
+footer h1 {
+  font-family: "Shrikhand";
+  font-weight: 900;
+  font-style: italic;
+  margin: 22px 0px 16px 0px;
+}
+footer a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+}
+.footer-links ul {
+  padding-left: 0px;
+  margin: 0px;
+}
+.footer-links li {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.footer-icon {
+  height: 13px;
+  margin-right: 11px;
 }
 
 .navigation-button {
@@ -378,57 +477,16 @@ header img {
   margin: 0px 0px 0px 10px;
   padding: 10px;
 }
-
-.center {
-  display: flex;
-  justify-content: center;
+@media screen and (min-width: 768px) and (max-width: 1400px) {
+  .purple-circle {
+    position: relative;
+    left: -25px;
+  }
 }
 
-.margins-for-navigation-buttons-icon {
-  margin-right: 23px;
-}
-
-.all-restaurants {
-  background-color: #F6F6F6;
-  padding-top: 55px;
-  margin-top: 68px;
-}
-.all-restaurants h1,
-.all-restaurants h2,
-.all-restaurants p {
-  margin-left: 20px;
-}
-.all-restaurants p {
-  margin-top: 0px;
-}
-
-.card-container {
-  padding-bottom: 55px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  margin-top: 35px;
-}
-
-.card {
-  max-width: 90%;
-  display: flex;
-  flex-direction: column;
-  border-radius: 15px;
-  background-color: #FFFFFF;
-  margin-left: 35px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  margin-bottom: 5px;
-}
-
-a {
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 700;
-  color: #000000;
+.arrow {
+  width: 17px;
+  height: 16px;
 }
 
 .label-new {
@@ -443,8 +501,53 @@ a {
   margin-top: 20px;
 }
 
-.first-page-picture {
-  border-radius: 15px 15px 0px 0px;
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0 auto;
+}
+
+h3 {
+  margin: 7px;
+}
+
+.pink-button {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  color: #FFFFFF;
+  background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  padding: 13px 16px;
+  border-radius: 25px;
+  margin: 20px 0px 45px 0px;
+  margin-bottom: 45px;
+  height: 50px;
+  width: 206px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.pink-button:hover {
+  filter: brightness(115%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.margins-for-navigation-buttons-icon {
+  margin-right: 23px;
+}
+
+h2 {
+  margin-bottom: 5px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
 }
 
 .flexible-heart-location {
@@ -489,104 +592,8 @@ a {
   opacity: 0;
 }
 
-footer {
-  display: flex;
-  flex-direction: column;
-  background-color: #353535;
-  padding: 20px 0px 35px 25px;
-  color: #FFFFFF;
-}
-footer h1 {
-  font-family: "Shrikhand";
-  font-weight: 900;
-  font-style: italic;
-  margin: 22px 0px 16px 0px;
-}
-footer a {
-  color: #FFFFFF;
-  text-decoration: none;
-}
-
-.footer-links {
-  display: flex;
-  flex-direction: column;
-}
-.footer-links ul {
-  padding-left: 0px;
-  margin: 0px;
-}
-.footer-links li {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-}
-
-.footer-icon {
-  height: 13px;
-  margin-right: 11px;
-}
-
 header {
   padding-left: 25px;
-}
-
-.arrow {
-  width: 17px;
-  height: 16px;
-}
-
-.image-menu {
-  width: 100%;
-  position: relative;
-  z-index: -1;
-  margin-bottom: -55px;
-  max-height: 405px;
-}
-
-.menu-style {
-  background-color: #F6F6F6;
-  border-radius: 40px 40px 0px 0px;
-  padding: 0px 15px;
-}
-.menu-style h1 {
-  font-family: "Shrikhand";
-  font-weight: 900;
-  font-style: italic;
-  line-height: 41px;
-  letter-spacing: 0em;
-  padding-top: 5%;
-  margin-left: 0px;
-}
-.menu-style h2 {
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 19px;
-  letter-spacing: 0em;
-  text-transform: uppercase;
-  margin-left: 0px;
-  margin: 42px 0px 12px;
-}
-.menu-style p {
-  font-size: 15px;
-  font-weight: 300;
-  margin-left: 0px;
-  margin-bottom: 0px;
-  padding-top: 33px;
-}
-.menu-style img {
-  width: 100%;
-}
-
-.title-container {
-  border-bottom: 3px solid #99E2D0;
-  width: 7%;
-}
-
-.dish-container {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin: 10px;
 }
 
 .clickable:active .price p {
@@ -604,18 +611,6 @@ header {
           animation-duration: 190ms;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-}
-
-.dish-card {
-  border-radius: 15px;
-  background-color: #FFFFFF;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  padding-left: 12px;
-  display: flex;
-  justify-content: space-between;
 }
 
 .card-text {
@@ -728,20 +723,11 @@ h4 {
   .header img {
     width: 200px;
   }
-  .user-guide-section {
-    flex-direction: row;
-    height: 56px;
-    gap: 50px;
-  }
   .second-section {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: space-around;
-  }
-  .purple-circle {
-    position: relative;
-    left: -25px;
   }
   .card-container {
     display: grid;

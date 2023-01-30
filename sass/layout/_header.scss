@@ -1,0 +1,18 @@
+
+header {
+    @include primary-layout;
+    box-shadow: $tertiary-box-shadow;
+    padding: 20px 0px 10px 0px;
+}
+
+
+header__img {
+    width: 162px;
+
+    @include media-queries {
+        width: 200px;
+    }
+}
+
+
+

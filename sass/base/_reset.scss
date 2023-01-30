@@ -1,13 +1,62 @@
-// Reset
-
 // Width
 $min-width: 375px;
 $max-width: 767px;
 
-$reponsive-min-width: 768px;
-$responsive-max-width: 1400px;
+
+// Valeurs générales
+:root {
+    min-width: $min-width;
+    max-width: $max-width;
+
+    @include media-queries {
+       
+        max-width: $responsive-max-width;
+    }
+}
+
+
+.root {
+    min-width: $min-width;
+    max-width: $max-width;
+
+    @include media-queries {
+        min-width: $reponsive-min-width;
+        max-width: $responsive-max-width;
+}
+}
+
 // Box-sizing
 $box-sizing: border-box;
 
+
+/* Used to simplify the sizing process 
+    of a couple of elements inside a box :
+    
+    Each element will be automatically resized
+    to fit into the box (here, the box's total 
+    size includes automatically every margin, 
+    border, and padding of all of its elements).
+    
+    If those elements are too wide for 
+    the size of the box, they will 
+    squeeze up to each other
+    (the size of the box itself will remain the same).
+    
+    The star (*) selects all the elements 
+    (in this case, before AND after the css properties 
+   are declared) */
+*,
+*::before,
+*::after {
+    box-sizing: $box-sizing;
+}
+
+
 // Margin
 $margin: 0 auto;
+
+
+
+// Pour les media queries
+$reponsive-min-width: 768px;
+$responsive-max-width: 1400px;

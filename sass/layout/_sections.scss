@@ -1,0 +1,62 @@
+
+.welcome-section {
+    @include vertical-and-centered;
+    background-color: $the-lightest-dull-color;
+    padding: 15px 40px 0px 40px;
+
+    p {
+        color: $the-darkest-dull-color;
+    }
+
+}
+
+
+.second-section {
+    margin: 0px 33px;
+
+    h1 {
+        margin: 48px 0px 26px 0px;
+    }
+
+@include media-queries {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+}
+
+
+
+
+.user-guide-section {
+    display: $primary-display;
+    flex-direction: $secondary-direction;
+    justify-items: $primary-position;
+    gap: 25px;
+
+    @include media-queries {
+        flex-direction: row;
+        height: 56px;
+        gap: 50px;
+    }
+}
+
+
+.all-restaurants {
+    background-color: $the-lightest-dull-color;
+    padding-top: 55px;
+    margin-top: 68px;
+
+
+    h1,
+    h2,
+    p {
+        margin-left: 20px;
+    }
+
+    p {
+        margin-top: 0px;
+    }
+}

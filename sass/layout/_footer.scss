@@ -1,0 +1,43 @@
+
+footer {
+    @include secondary-layout;
+    background-color: $the-darkest-dull-color;
+    padding: 20px 0px 35px 25px;
+    color: $white-color;
+
+    @include media-queries {
+        flex-direction: row;
+    }
+}
+
+   footer__h1 {
+        @include secondary-text-style;
+        margin: 22px 0px 16px 0px;
+    }
+
+    footer__a {
+        color: $white-color;
+        text-decoration: none;
+    }
+
+
+.footer-links {
+    @include secondary-layout;
+
+    ul {
+        padding-left: 0px;
+        margin: 0px;
+    }
+
+    li {
+        @include tertiary-layout;
+        align-items: baseline;
+    }
+
+}
+
+
+.footer-icon {
+    height: 13px;
+    margin-right: 11px;
+}

@@ -1,0 +1,125 @@
+// Display 
+
+@mixin primary-layout {
+  display: $primary-display;
+  justify-content: $primary-position;
+}
+
+@mixin secondary-layout {
+  display: $primary-display;
+  flex-direction: $secondary-direction;
+}
+
+@mixin tertiary-layout {
+  display: $primary-display;
+  flex-direction: $primary-direction;
+}
+
+// Text-style
+@mixin secondary-text-style {
+  font-family: $secondary-font;
+  font-weight: $the-largest-font-weight;
+  font-style: $secondary-font-style;
+}
+
+// Loader
+@mixin loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 300px;
+  height: 300px;
+  margin: -76px 0 0 -76px;
+  border: 20px solid #FF79DA;
+  border-radius: 50%;
+}
+
+@mixin vertical-and-centered {
+  display: $primary-display;
+  flex-direction: $secondary-direction;
+  align-items: $primary-position;
+}
+
+
+@mixin first-animation {
+  animation: heart 1s forwards;
+  background-image: $gradient-color;
+  background-image: -webkit-linear-gradient($gradient-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 900;
+}
+
+@mixin here {
+  @include detectable;
+}
+
+
+@mixin button {
+  box-shadow: $primary-box-shadow;
+}
+
+@mixin pink-button {
+
+  @include primary-layout;
+  @include button;
+
+  color: $white-color;
+  background: $gradient-color;
+  padding: 13px 16px;
+  border-radius: 25px;
+  margin: 20px 0px 45px 0px;
+  margin-bottom: 45px;
+  height: 50px;
+  width: 206px;
+  font-size: $the-smallest-font-size;
+  font-weight: $primary-font-weight;
+
+  &:hover {
+    filter: brightness(115%);
+    box-shadow: $secondary-box-shadow;
+  }
+}
+
+@mixin navigation-button {
+
+  @include primary-layout;
+  @include button;
+
+  padding-right: 30px;
+  align-items: center;
+  text-decoration: none;
+  -webkit-text-decoration-color: $text-color;
+  text-decoration-color: $text-color;
+  border-radius: 20px;
+  background-color: $the-lightest-dull-color;
+  box-shadow: $quaternary-box-shadow;
+
+  &:hover {
+    background-color: $lighter-primary-color;
+
+    &:hover i {
+      color: $primary-color;
+    }
+
+  }
+}
+
+
+@mixin order-button {
+  @include button;
+  @include pink-button;
+  @include vertical-and-centered;
+}
+
+
+
+@mixin media-queries {
+
+  @media screen and (min-width: $responsive-min-width) and (max-width: $responsive-max-width) {
+    @content;
+  }
+
+}

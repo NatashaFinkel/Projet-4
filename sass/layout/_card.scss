@@ -1,0 +1,30 @@
+
+.card {
+    max-width: 90%;
+    display: $primary-display;
+    flex-direction: $secondary-direction;
+    border-radius: 15px;
+    background-color: $white-color;
+    margin-left: 35px;
+    box-shadow: $quinary-box-shadow;
+
+    @include media-queries {
+        width: 335px;
+    }
+}
+
+// Pages restaurant
+.dish-card {
+    border-radius: 15px;
+    background-color: $white-color;
+    box-shadow: $quinary-box-shadow;
+
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 12px;
+
+    display: flex;
+    justify-content: space-between;
+}
+

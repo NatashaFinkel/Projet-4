@@ -1,0 +1,22 @@
+
+img {
+    display: $secondary-display;
+    -o-object-fit: cover;
+    object-fit: cover;
+    max-height: 243px;
+    width: 100%;
+}
+
+
+.first-page-picture {
+    border-radius: 15px 15px 0px 0px;
+}
+
+
+.image-menu {
+    width: 100%;
+    position: relative;
+    z-index: -1;
+    margin-bottom: -55px;
+    max-height: 405px;
+}

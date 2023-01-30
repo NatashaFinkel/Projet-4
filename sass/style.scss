@@ -1,239 +1,48 @@
-@import "./utils/colors";
-@import "./utils/box-shadow";
-@import "./utils/functions";
-@import "./utils/mixin";
+@import "./abstract/mixin";
 
-
+@import "./base/base";
 @import "./base/reset";
 @import "./base/typography";
 @import "./base/keyframes";
 
-@import "./components/button";
+@import "./utils/variables";
+@import "./utils/colors";
+@import "./utils/box-shadow";
+@import "./utils/functions";
 
 @import "./layout/display";
 @import "./layout/alignment";
+@import "./layout/images";
+@import "./layout/loader";
 @import "./layout/header";
+@import "./layout/sections";
+@import "./layout/containers";
+@import "./layout/card";
+@import "./layout/search-bar";
 @import "./layout/form";
 @import "./layout/footer";
 
+@import "./components/button";
+@import "./components/purple-circles";
+@import "./components/arrow-back";
+@import "./components/label-new";
 
-
-/* General */
-
-
-:root {
-    min-width: $min-width;
-    max-width: $max-width;
-}
-
-
-
-/* Used to simplify the sizing process 
-    of a couple of elements inside a box :
-    
-    Each element will be automatically resized
-    to fit into the box (here, the box's total 
-    size includes automatically every margin, 
-    border, and padding of all of its elements).
-    
-    If those elements are too wide for 
-    the size of the box, they will 
-    squeeze up to each other
-    (the size of the box itself will remain the same).
-    
-    The star (*) selects all the elements 
-    (in this case, before AND after the css properties 
-   are declared) */
-*,
-*::before,
-*::after {
-    box-sizing: $box-sizing;
-}
+@import "./pages/page-restaurant";
 
 // Body
-
 body {
     font-family: $primary-font;
     margin: $margin;
 }
-
-/* 
-h1 {
-    margin: 0% 8%;
-} */
 
 h3 {
     margin: 7px;
 }
 
 
-img {
-    display: $secondary-display;
-    -o-object-fit: cover;
-    object-fit: cover;
-    max-height: 243px;
-    width: 100%;
-}
-
-// Preloader 
-
-#preloader {
-    background: $gradient-color no-repeat $primary-position;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    z-index: 9;
-    display: flex;
-    flex-direction: column;
-    align-items: $primary-position;
-    justify-content: $primary-position;
-
-    & {
-        animation: stop-spin 500ms ease 1s 1 alternate forwards;
-    }
-
-    h1 {
-        position: fixed;
-        color: $text-color;
-        font-family: $secondary-font;
-        font-weight: $the-largest-font-weight;
-        font-size: 90px;
-        font-style: $secondary-font-style;
-        background-position: $primary-position;
-        z-index: 9;
-        letter-spacing: 6px;
-
-    }
-
-    p {
-        font-size: 25px;
-        font-weight: 600;
-        color: $text-color;
-        font-style: $secondary-font-style;
-        font-family: $secondary-font;
-        margin-top: 267px;
-    }
-
-}
-
-
-#loader {
-
-    position: fixed;
-    width: 300px;
-    height: 300px;
-    border-top: 35px solid $light-vivid-color;
-    border-right: 35px solid $primary-color;
-    border-bottom: 35px solid $light-vivid-color;
-    border-left: 35px solid $primary-color;
-    border-radius: 50%;
-
-    animation: spin 750ms ease-in-out 1 normal;
-    z-index: -1;
-}
-
-
-/*HEADER*/
-
-header {
-    @include primary-layout;
-    box-shadow: $tertiary-box-shadow;
-    padding: 20px 0px 10px 0px;
-}
-
-
-.root {
-    max-width: $max-width;
-}
-
-
-header img {
-    width: 162px;
-}
-
-
-#search-form {
-    @include primary-layout;
-    padding: 15px;
-    background-color: $medium-light-dull-color;
-}
-
-
-.location-search-bar {
-    border-width: 0px;
-    background-color: $medium-light-dull-color;
-    font-weight: $primary-font-weight;
-    margin-left: 17px;
-    color: $the-darkest-dull-color;
-    outline: none;
-}
-
-.welcome-section {
-
-    @include vertical-and-centered;
-    background-color: $the-lightest-dull-color;
-    padding: 15px 40px 0px 40px;
-
-    p {
-        color: $the-darkest-dull-color;
-    }
-
-}
-
 
 .pink-button {
     @include pink-button;
-}
-
-.second-section {
-    margin: 0px 33px;
-
-    h1 {
-
-        margin: 48px 0px 26px 0px;
-    }
-
-}
-
-
-.user-guide-section {
-    display: $primary-display;
-    flex-direction: $secondary-direction;
-    justify-items: $primary-position;
-    gap: 25px;
-}
-
-
-
-.navigation-button {
-    @include navigation-button;
-    margin-left: 12px;
-    height: 60px;
-
-    i {
-        color: $the-darkest-dull-color;
-    }
-
-    p {
-        font-size: $the-smallest-font-size;
-        font-weight: $primary-font-weight;
-        margin: -7px;
-    }
-
-}
-
-
-.purple-circle {
-    height: 24px;
-    width: 24px;
-    border-radius: 20px;
-    background-color: $primary-color;
-    position: absolute;
-    z-index: 1;
-    left: 24px;
-    color: $white-color;
-    margin: 0px 0px 0px 10px;
-    padding: 10px;
 }
 
 
@@ -247,41 +56,6 @@ header img {
 }
 
 
-.all-restaurants {
-    background-color: $the-lightest-dull-color;
-    padding-top: 55px;
-    margin-top: 68px;
-
-
-    h1,
-    h2,
-    p {
-        margin-left: 20px;
-    }
-
-    p {
-        margin-top: 0px;
-    }
-}
-
-
-.card-container {
-    padding-bottom: 55px;
-    display: $primary-display;
-    flex-direction: $secondary-direction;
-    gap: 30px;
-    margin-top: 35px;
-}
-
-.card {
-    max-width: 90%;
-    display: $primary-display;
-    flex-direction: $secondary-direction;
-    border-radius: 15px;
-    background-color: $white-color;
-    margin-left: 35px;
-    box-shadow: $quinary-box-shadow;
-}
 
 
 h2 {
@@ -296,24 +70,6 @@ a {
     color: $text-color;
 }
 
-
-
-.label-new {
-    background-color: $light-vivid-color;
-    border-radius: 2px;
-    box-shadow: $tertiary-box-shadow;
-    color: $dark-vivid-color;
-    display: flex;
-    padding: 7px 10px;
-    position: absolute;
-    width: 100px;
-    margin-top: 20px;
-}
-
-
-.first-page-picture {
-    border-radius: 15px 15px 0px 0px;
-}
 
 .flexible-heart-location {
     display: flex;
@@ -359,123 +115,8 @@ a {
     opacity: 0;
 }
 
-
-// Footer
-
-footer {
-    @include secondary-layout;
-    background-color: $the-darkest-dull-color;
-    padding: 20px 0px 35px 25px;
-    color: $white-color;
-
-
-    h1 {
-        @include secondary-text-style;
-        margin: 22px 0px 16px 0px;
-
-    }
-
-    a {
-        color: $white-color;
-        text-decoration: none;
-    }
-
-}
-
-
-.footer-links {
-    @include secondary-layout;
-
-    ul {
-        padding-left: 0px;
-        margin: 0px;
-    }
-
-    li {
-        @include tertiary-layout;
-        align-items: baseline;
-    }
-
-}
-
-
-.footer-icon {
-    height: 13px;
-    margin-right: 11px;
-}
-
-
 // Pages Restaurant
 
-header {
-padding-left: 25px;
-}
-
-
-.arrow {
-    width: 17px;
-    height: 16px;
-}
-
-.image-menu {
-    width: 100%;
-    position: relative;
-    z-index: -1;
-    margin-bottom: -55px;
-    max-height: 405px;
-}
-
-.menu-style {
-    background-color: $the-lightest-dull-color;
-    border-radius: 40px 40px 0px 0px;
-    padding: 0px 15px;
-
-    h1 {
-        @include secondary-text-style;
-
-        line-height: 41px;
-        letter-spacing: 0em;
-        padding-top: 5%;
-        margin-left: 0px;
-    }
-
-    h2 {
-        font-size: $the-smallest-font-size;
-        font-weight: 300;
-        line-height: 19px;
-        letter-spacing: 0em;
-        text-transform: uppercase;
-        margin-left: 0px;
-        margin: 42px 0px 12px;
-    }
-
-
-    p {
-        font-size: 15px;
-        font-weight: 300;
-        margin-left: 0px;
-        margin-bottom: 0px;
-        padding-top: 33px;
-    }
-
-    img {
-        width: 100%;
-    }
-
-}
-
-.title-container {
-    border-bottom: 3px solid #99E2D0;
-    width: 7%;
-}
-
-
-.dish-container {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    margin: 10px;
-}
 
 .clickable:active {
 
@@ -492,19 +133,6 @@ padding-left: 25px;
     }
 }
 
-.dish-card {
-    border-radius: 15px;
-    background-color: $white-color;
-    box-shadow: $quinary-box-shadow;
-
-    padding-top: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    padding-left: 12px;
-
-    display: flex;
-    justify-content: space-between;
-}
 
 .card-text {
     flex-direction: column;
@@ -576,18 +204,6 @@ h4 {
 }
 
 
-.dish-description-box {
-
-    // Pour couper le texte et 
-    // ajouter des points de suspension 
-    // si le texte est trop long
-    max-width: 185px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-
 .price {
     font-weight: 900;
     font-size: 15px;
@@ -612,48 +228,7 @@ h4 {
 /*  Media queries : Tablet and Desktop */
 @media only screen and (min-width: $reponsive-min-width) and (max-width: $responsive-max-width) {
 
-    :root {
-        max-width: $responsive-max-width;
-    }
-
-    .root {
-        max-width: $responsive-max-width;
-    }
-
-    .header img {
-        width: 200px;
-    }
-
-    .user-guide-section {
-        flex-direction: row;
-        height: 56px;
-        gap: 50px;
-    }
-
-    .second-section {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: space-around;
-    }
-
-    .purple-circle {
-        position: relative;
-        left: -25px;
-    }
-
-
-
-    .card-container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        overflow: auto;
-        white-space: nowrap;
-    }
-
-
     .card {
-        width: 335px;
 
         a {
             display: inline-block;
@@ -661,8 +236,6 @@ h4 {
     }
 
     footer {
-        flex-direction: row;
-
 
         ul {
             display: grid;

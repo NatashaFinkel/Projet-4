@@ -1,0 +1,79 @@
+
+.card-container {
+    padding-bottom: 55px;
+    display: $primary-display;
+    flex-direction: $secondary-direction;
+    gap: 30px;
+    margin-top: 35px;
+
+    @include media-queries {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        overflow: auto;
+        white-space: nowrap;
+    }
+}
+
+
+
+.title-container {
+    border-bottom: 3px solid #99E2D0;
+    width: 7%;
+}
+
+
+.dish-container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin: 10px;
+}
+
+.menu-style {
+    background-color: $the-lightest-dull-color;
+    border-radius: 40px 40px 0px 0px;
+    padding: 0px 15px;
+}
+
+.menu-style__h1 {
+     @include secondary-text-style;
+
+        line-height: 41px;
+        letter-spacing: 0em;
+        padding-top: 5%;
+        margin-left: 0px;
+}
+
+.menu-style__h2 {
+    font-size: $the-smallest-font-size;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-transform: uppercase;
+    margin-left: 0px;
+    margin: 42px 0px 12px;
+}
+
+
+.dish-description-box {
+
+    // Pour couper le texte et 
+    // ajouter des points de suspension 
+    // si le texte est trop long
+    max-width: 185px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu-style__p {
+    font-size: 15px;
+        font-weight: 300;
+        margin-left: 0px;
+        margin-bottom: 0px;
+        padding-top: 33px;
+}
+
+.menu-style__img {
+    width: 100%;
+}
