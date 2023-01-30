@@ -1,18 +1,28 @@
-
-
 .navigation-button {
     @include navigation-button;
     margin-left: 12px;
     height: 60px;
-
-    i {
-        color: $the-darkest-dull-color;
-    }
-
-    p {
-        font-size: $the-smallest-font-size;
-        font-weight: $primary-font-weight;
-        margin: -7px;
-    }
-
 }
+
+
+.navigation-button__i {
+    color: $the-darkest-dull-color;
+}
+
+.navigation-button__p {
+    font-size: $the-smallest-font-size;
+    font-weight: $primary-font-weight;
+    margin: -7px;   
+}
+
+
+.pink-button {
+    @include pink-button;
+}
+
+
+.order-button {
+    @include order-button;
+}
+
+    

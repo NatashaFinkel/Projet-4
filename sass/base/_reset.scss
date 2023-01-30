@@ -1,15 +1,9 @@
-// Width
-$min-width: 375px;
-$max-width: 767px;
-
-
 // Valeurs générales
 :root {
     min-width: $min-width;
     max-width: $max-width;
 
     @include media-queries {
-       
         max-width: $responsive-max-width;
     }
 }
@@ -20,9 +14,9 @@ $max-width: 767px;
     max-width: $max-width;
 
     @include media-queries {
-        min-width: $reponsive-min-width;
+        min-width: $responsive-min-width;
         max-width: $responsive-max-width;
-}
+    }
 }
 
 // Box-sizing
@@ -50,13 +44,3 @@ $box-sizing: border-box;
 *::after {
     box-sizing: $box-sizing;
 }
-
-
-// Margin
-$margin: 0 auto;
-
-
-
-// Pour les media queries
-$reponsive-min-width: 768px;
-$responsive-max-width: 1400px;

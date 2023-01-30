@@ -2,9 +2,21 @@
   min-width: 375px;
   max-width: 767px;
 }
+@media screen and (min-width: 768px) and (max-width: 1400px) {
+  :root {
+    max-width: 1400px;
+  }
+}
 
 .root {
+  min-width: 375px;
   max-width: 767px;
+}
+@media screen and (min-width: 768px) and (max-width: 1400px) {
+  .root {
+    min-width: 768px;
+    max-width: 1400px;
+  }
 }
 
 /* Used to simplify the sizing process 
@@ -255,6 +267,11 @@ header {
 header__img {
   width: 162px;
 }
+@media screen and (min-width: 768px) and (max-width: 1400px) {
+  header__img {
+    width: 200px;
+  }
+}
 
 .welcome-section {
   display: flex;
@@ -272,6 +289,14 @@ header__img {
 }
 .second-section h1 {
   margin: 48px 0px 26px 0px;
+}
+@media screen and (min-width: 768px) and (max-width: 1400px) {
+  .second-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+  }
 }
 
 .user-guide-section {
@@ -308,6 +333,14 @@ header__img {
   flex-direction: column;
   gap: 30px;
   margin-top: 35px;
+}
+@media screen and (min-width: 768px) and (max-width: 1400px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    overflow: auto;
+    white-space: nowrap;
+  }
 }
 
 .title-container {
@@ -348,6 +381,13 @@ header__img {
   margin: 42px 0px 12px;
 }
 
+.dish-description-box {
+  max-width: 185px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .menu-style__p {
   font-size: 15px;
   font-weight: 300;
@@ -368,6 +408,11 @@ header__img {
   background-color: #FFFFFF;
   margin-left: 35px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+@media screen and (min-width: 768px) and (max-width: 1400px) {
+  .card {
+    width: 335px;
+  }
 }
 
 .dish-card {
@@ -405,13 +450,20 @@ footer {
   padding: 20px 0px 35px 25px;
   color: #FFFFFF;
 }
-footer h1 {
+@media screen and (min-width: 768px) and (max-width: 1400px) {
+  footer {
+    flex-direction: row;
+  }
+}
+
+footer__h1 {
   font-family: "Shrikhand";
   font-weight: 900;
   font-style: italic;
   margin: 22px 0px 16px 0px;
 }
-footer a {
+
+footer__a {
   color: #FFFFFF;
   text-decoration: none;
 }
@@ -592,10 +644,6 @@ a {
   opacity: 0;
 }
 
-header {
-  padding-left: 25px;
-}
-
 .clickable:active .price p {
   -webkit-animation-name: slide;
           animation-name: slide;
@@ -667,13 +715,6 @@ h4 {
   top: 50px;
 }
 
-.dish-description-box {
-  max-width: 185px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 .price {
   font-weight: 900;
   font-size: 15px;
@@ -714,35 +755,8 @@ h4 {
 
 /*  Media queries : Tablet and Desktop */
 @media only screen and (min-width: 768px) and (max-width: 1400px) {
-  :root {
-    max-width: 1400px;
-  }
-  .root {
-    max-width: 1400px;
-  }
-  .header img {
-    width: 200px;
-  }
-  .second-section {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: space-around;
-  }
-  .card-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    overflow: auto;
-    white-space: nowrap;
-  }
-  .card {
-    width: 335px;
-  }
   .card a {
     display: inline-block;
-  }
-  footer {
-    flex-direction: row;
   }
   footer ul {
     display: grid;
