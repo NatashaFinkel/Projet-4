@@ -527,11 +527,7 @@ footer a {
 }
 
 header {
-  justify-content: normal;
   padding-left: 25px;
-}
-header .center {
-  justify-items: center;
 }
 
 .arrow {
