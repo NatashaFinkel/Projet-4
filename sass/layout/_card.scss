@@ -1,4 +1,3 @@
-
 .card {
     max-width: 90%;
     display: $primary-display;
@@ -11,7 +10,39 @@
     @include media-queries {
         width: 335px;
     }
+
+    a {
+        @include media-queries {
+            display: inline-block;
+        }
+    }
 }
+
+
+.card-text {
+    flex-direction: column;
+    padding-top: 12px;
+    display: flex;
+
+    h3 {
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 0em;
+        margin-right: 0%;
+        margin-left: 0px;
+    }
+
+    p {
+        font-size: 15px;
+        font-weight: 300;
+        margin-left: 0px;
+        max-width: 200px;
+        padding-bottom: 20px;
+        margin-block: 0%;
+    }
+}
+
 
 // Pages restaurant
 .dish-card {
@@ -27,4 +58,3 @@
     display: flex;
     justify-content: space-between;
 }
-

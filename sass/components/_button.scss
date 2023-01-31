@@ -2,17 +2,18 @@
     @include navigation-button;
     margin-left: 12px;
     height: 60px;
-}
+
+    p {
+        font-size: $the-smallest-font-size;
+        font-weight: $primary-font-weight;
+        margin: -7px;   
+    }
 
 
-.navigation-button__i {
-    color: $the-darkest-dull-color;
-}
-
-.navigation-button__p {
-    font-size: $the-smallest-font-size;
-    font-weight: $primary-font-weight;
-    margin: -7px;   
+    i {
+        color: $the-darkest-dull-color;
+        margin-right: 23px;
+    }
 }
 
 

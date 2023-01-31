@@ -1,12 +1,12 @@
 @import "./abstract/variables";
 @import "./abstract/typography";
+@import "./abstract/colors";
 @import "./abstract/mixin";
 
 @import "./base/base";
 @import "./base/reset";
 @import "./base/keyframes";
 
-@import "./utils/colors";
 @import "./utils/box-shadow";
 @import "./utils/functions";
 
@@ -32,18 +32,6 @@
 
 
 // Body
-
-
-.center {
-    @include primary-layout;
-}
-
-
-.margins-for-navigation-buttons-icon {
-    margin-right: 23px;
-}
-
-
 
 
 .flexible-heart-location {
@@ -149,13 +137,6 @@
 /*  Media queries : Tablet and Desktop */
 @media only screen and (min-width: $responsive-min-width) and (max-width: $responsive-max-width) {
 
-   
-    footer {
-
-        ul {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-        }
-    }
+  
 
 }

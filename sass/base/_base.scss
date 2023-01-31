@@ -9,16 +9,14 @@ body {
 
 h2 {
     margin-bottom: 5px;
-
 }
 
 h3 {
     margin: 7px;
 }
 
-
 h4 {
-    font-weight: 300;
+    font-weight: $the-smallest-font-weight;
     font-size: 15px;
     line-height: 18px;
     margin: 0px;
@@ -33,33 +31,9 @@ a {
     color: $text-color;
 }
 
-.card__a {
 
-    @include media-queries {
-        display: inline-block;
-    }
-}
 
-.card-text {
-    flex-direction: column;
-    padding-top: 12px;
-    display: flex;
-}
 
-.card-text__h3 {
-    font-weight: 900;
-    font-size: 18px;
-    line-height: 21px;
-    letter-spacing: 0em;
-    margin-right: 0%;
-    margin-left: 0px;
-}
-
-.card-text__p {
-    font-size: 15px;
-    font-weight: 300;
-    margin-left: 0px;
-    max-width: 200px;
-    padding-bottom: 20px;
-    margin-block: 0%;
+.center {
+    @include primary-layout;
 }
