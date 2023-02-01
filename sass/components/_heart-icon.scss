@@ -9,20 +9,25 @@
     height: 21px;
     width: 22px;
     position: absolute;
-
-    background-image: $gradient-color;
-    background-image: -webkit-linear-gradient($gradient-color);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
 }
 
 .filled-heart {
-
     opacity: 0;
+
+    transition: all 2s ease-in-out;
+
+    background-image: $text-color;
+    background-image: -webkit-linear-gradient($text-color);
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 
     &:active {
         opacity: 1;
+
+        background-image: $gradient-color;
+        background-image: -webkit-linear-gradient($gradient-color);
     }
 }
 
@@ -30,6 +35,8 @@
     opacity: 1;
     color: $text-color;
     position: absolute;
+
+    transition: all 2ms linear;
 
     &:active {
         opacity: 0;

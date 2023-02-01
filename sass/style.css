@@ -649,24 +649,28 @@ header__img {
   height: 21px;
   width: 22px;
   position: absolute;
-  background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-  background-image: -webkit-linear-gradient(linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%));
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
 }
 
 .filled-heart {
   opacity: 0;
+  transition: all 2s ease-in-out;
+  background-image: #000000;
+  background-image: -webkit-linear-gradient(#000000);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 .filled-heart:active {
   opacity: 1;
+  background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background-image: -webkit-linear-gradient(linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%));
 }
 
 .empty-heart {
   opacity: 1;
   color: #000000;
   position: absolute;
+  transition: all 2ms linear;
 }
 .empty-heart:active {
   opacity: 0;
