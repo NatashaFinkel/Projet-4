@@ -1,0 +1,37 @@
+.flexible-heart-location {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 25px;
+    position: relative;
+}
+
+.heart {
+    height: 21px;
+    width: 22px;
+    position: absolute;
+
+    background-image: $gradient-color;
+    background-image: -webkit-linear-gradient($gradient-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.filled-heart {
+
+    opacity: 0;
+
+    &:active {
+        opacity: 1;
+    }
+}
+
+.empty-heart {
+    opacity: 1;
+    color: $text-color;
+    position: absolute;
+
+    &:active {
+        opacity: 0;
+    }
+}

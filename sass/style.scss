@@ -22,8 +22,10 @@
 
 @import "./components/button";
 @import "./components/purple-circles";
-@import "./components/arrow-back";
 @import "./components/label-new";
+@import "./components/heart-icon";
+@import "./components/arrow-back";
+
 
 @import "./pages/page-restaurant";
 
@@ -32,15 +34,7 @@
 // Body
 
 
-.flexible-heart-location {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 25px;
-    position: relative;
-    z-index: 2;
-}
-
-
+/* 
 .heart-button {
     display: flex;
     border: 0px;
@@ -75,7 +69,9 @@
 .filled-heart {
     opacity: 0;
 }
+ */
 
+ 
 // Pages Restaurant
 
 
@@ -131,10 +127,3 @@
 }
 
 
-
-/*  Media queries : Tablet and Desktop */
-@media only screen and (min-width: $responsive-min-width) and (max-width: $responsive-max-width) {
-
-  
-
-}

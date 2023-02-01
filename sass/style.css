@@ -626,11 +626,6 @@ header__img {
   }
 }
 
-.arrow {
-  width: 17px;
-  height: 16px;
-}
-
 .label-new {
   background-color: #99E2D0;
   border-radius: 2px;
@@ -648,43 +643,76 @@ header__img {
   justify-content: flex-end;
   margin-right: 25px;
   position: relative;
-  z-index: 2;
 }
 
-.heart-button {
-  display: flex;
-  border: 0px;
-  padding: 0px;
+.heart {
   height: 21px;
   width: 22px;
-  background-color: initial;
   position: absolute;
-}
-.heart-button:active .filled-heart {
-  -webkit-animation: heart 1s forwards;
-          animation: heart 1s forwards;
   background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   background-image: -webkit-linear-gradient(linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%));
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  font-weight: 900;
-  opacity: 1;
-}
-.heart-button:active .second-heart {
-  opacity: 0;
-}
-
-.heart-icon {
-  position: absolute;
-  width: 22px;
-  height: 21px;
 }
 
 .filled-heart {
   opacity: 0;
 }
+.filled-heart:active {
+  opacity: 1;
+}
 
+.empty-heart {
+  opacity: 1;
+  color: #000000;
+  position: absolute;
+}
+.empty-heart:active {
+  opacity: 0;
+}
+
+.arrow {
+  width: 17px;
+  height: 16px;
+}
+
+/* 
+.heart-button {
+    display: flex;
+    border: 0px;
+    padding: 0px;
+    height: 21px;
+    width: 22px;
+    background-color: initial;
+    position: absolute;
+
+    &:active {
+
+        .filled-heart {
+            @include first-animation;
+            opacity: 1;
+        }
+
+        .second-heart {
+            opacity: 0;
+        }
+
+    }
+}
+
+
+.heart-icon {
+    position: absolute;
+    width: 22px;
+    height: 21px;
+}
+
+
+.filled-heart {
+    opacity: 0;
+}
+ */
 .clickable:active .price p {
   -webkit-animation-name: slide;
           animation-name: slide;
@@ -732,6 +760,4 @@ header__img {
   position: relative;
   display: flex;
   justify-content: flex-end;
-}
-
-/*  Media queries : Tablet and Desktop *//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
