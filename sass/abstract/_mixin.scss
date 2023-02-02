@@ -42,16 +42,6 @@
 }
 
 
-@mixin first-animation {
-  animation: heart 1s forwards;
-  background-image: $gradient-color;
-  background-image: -webkit-linear-gradient($gradient-color);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  font-weight: 900;
-}
-
 @mixin here {
   @include detectable;
 }

@@ -117,26 +117,20 @@ a {
     transform: scale(0);
   }
 }
-@-webkit-keyframes heart {
+@-webkit-keyframes heart-animation {
   0% {
-    opacity: 0;
-  }
-  99% {
-    opacity: 1;
+    transform: scale(0.5);
   }
   100% {
-    opacity: 1;
+    transform: scale(1);
   }
 }
-@keyframes heart {
+@keyframes heart-animation {
   0% {
-    opacity: 0;
-  }
-  99% {
-    opacity: 1;
+    transform: scale(0.5);
   }
   100% {
-    opacity: 1;
+    transform: scale(1);
   }
 }
 @-webkit-keyframes slide {
@@ -458,6 +452,12 @@ header__img {
     display: inline-block;
   }
 }
+.card__card-added-item {
+  justify-content: flex-end;
+  margin-right: 25px;
+  position: relative;
+  display: flex;
+}
 
 .card-text {
   flex-direction: column;
@@ -645,35 +645,29 @@ header__img {
   position: relative;
 }
 
-.heart {
-  height: 21px;
-  width: 22px;
-  position: absolute;
+.heart-btn {
+  height: 18px;
+  margin: 0px;
+  padding: 0px;
+  border: none;
+  background-color: transparent;
 }
-
-.filled-heart {
-  opacity: 0;
-  transition: all 2s ease-in-out;
-  background-image: #000000;
-  background-image: -webkit-linear-gradient(#000000);
+.heart-btn:focus {
+  -webkit-animation: heart-animation 1700ms ease 0s 1 normal forwards;
+          animation: heart-animation 1700ms ease 0s 1 normal forwards;
+  background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background-image: -webkit-linear-gradient(linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%));
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
-.filled-heart:active {
-  opacity: 1;
-  background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-  background-image: -webkit-linear-gradient(linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%));
+
+.first-heart {
+  position: absolute;
 }
 
-.empty-heart {
-  opacity: 1;
-  color: #000000;
-  position: absolute;
-  transition: all 2ms linear;
-}
-.empty-heart:active {
-  opacity: 0;
+.second-heart {
+  color: transparent;
 }
 
 .arrow {
@@ -681,43 +675,7 @@ header__img {
   height: 16px;
 }
 
-/* 
-.heart-button {
-    display: flex;
-    border: 0px;
-    padding: 0px;
-    height: 21px;
-    width: 22px;
-    background-color: initial;
-    position: absolute;
-
-    &:active {
-
-        .filled-heart {
-            @include first-animation;
-            opacity: 1;
-        }
-
-        .second-heart {
-            opacity: 0;
-        }
-
-    }
-}
-
-
-.heart-icon {
-    position: absolute;
-    width: 22px;
-    height: 21px;
-}
-
-
-.filled-heart {
-    opacity: 0;
-}
- */
-.clickable:active .price p {
+.clickable:focus .price p {
   -webkit-animation-name: slide;
           animation-name: slide;
   -webkit-animation-duration: 190ms;
@@ -725,7 +683,7 @@ header__img {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-.clickable:active .check-box {
+.clickable:focus .check-box {
   -webkit-animation-name: detectable;
           animation-name: detectable;
   -webkit-animation-duration: 190ms;

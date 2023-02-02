@@ -16,6 +16,13 @@
             display: inline-block;
         }
     }
+
+    &__card-added-item {
+        justify-content: flex-end;
+        margin-right: 25px;
+        position: relative;
+        display: flex;
+    }
 }
 
 
@@ -57,4 +64,5 @@
 
     display: flex;
     justify-content: space-between;
+
 }

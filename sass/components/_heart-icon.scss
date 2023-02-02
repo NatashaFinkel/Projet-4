@@ -5,40 +5,30 @@
     position: relative;
 }
 
-.heart {
-    height: 21px;
-    width: 22px;
-    position: absolute;
-}
 
-.filled-heart {
-    opacity: 0;
+.heart-btn {
+    height: 18px;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    background-color: transparent;
 
-    transition: all 2s ease-in-out;
 
-    background-image: $text-color;
-    background-image: -webkit-linear-gradient($text-color);
-
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-
-    &:active {
-        opacity: 1;
-
+    &:focus {
+        animation: heart-animation 1700ms ease 0s 1 normal forwards;
         background-image: $gradient-color;
         background-image: -webkit-linear-gradient($gradient-color);
-    }
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    } 
+
 }
 
-.empty-heart {
-    opacity: 1;
-    color: $text-color;
-    position: absolute;
+.first-heart {
+    position: absolute;    
+}
 
-    transition: all 2ms linear;
-
-    &:active {
-        opacity: 0;
-    }
+.second-heart {
+    color: transparent;
 }

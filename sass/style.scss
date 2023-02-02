@@ -31,51 +31,10 @@
 
 
 
-// Body
-
-
-/* 
-.heart-button {
-    display: flex;
-    border: 0px;
-    padding: 0px;
-    height: 21px;
-    width: 22px;
-    background-color: initial;
-    position: absolute;
-
-    &:active {
-
-        .filled-heart {
-            @include first-animation;
-            opacity: 1;
-        }
-
-        .second-heart {
-            opacity: 0;
-        }
-
-    }
-}
-
-
-.heart-icon {
-    position: absolute;
-    width: 22px;
-    height: 21px;
-}
-
-
-.filled-heart {
-    opacity: 0;
-}
- */
-
- 
 // Pages Restaurant
 
 
-.clickable:active {
+.clickable:focus {
 
     .price p {
         animation-name: slide;
