@@ -13,10 +13,12 @@
     h1 {
         @include secondary-text-style;
         margin: 22px 0px 16px 0px;
+        font-size: 18px;
     }
 
     @include media-queries {
-        flex-direction: row;
+        flex-direction: row-reverse;
+        padding-right: 70px;
     }
 }
 
