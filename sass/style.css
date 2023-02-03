@@ -381,33 +381,29 @@ header img {
 
 .title-container {
   border-bottom: 3px solid #99E2D0;
-  width: 7%;
+  width: 35px;
+  margin-bottom: 13px;
 }
 
 .dish-container {
   display: flex;
   flex-direction: column;
   gap: 14px;
-  margin: 10px;
 }
-
 .menu-style {
   background-color: #F6F6F6;
   border-radius: 40px 40px 0px 0px;
-  padding: 0px 15px;
+  padding: 30px 17px;
 }
-
-.menu-style__h1 {
+.menu-style h1 {
   font-family: "Shrikhand";
   font-weight: 900;
   font-style: italic;
+  margin: 0px;
   line-height: 41px;
   letter-spacing: 0em;
-  padding-top: 5%;
-  margin-left: 0px;
 }
-
-.menu-style__h2 {
+.menu-style h2 {
   font-size: 16px;
   font-weight: 300;
   line-height: 19px;
@@ -415,6 +411,18 @@ header img {
   text-transform: uppercase;
   margin-left: 0px;
   margin: 42px 0px 12px;
+}
+@media screen and (min-width: 768px) and (max-width: 1400px) {
+  .menu-style {
+    margin: 0px 15%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .menu-style section {
+    width: 90%;
+    margin: 0% 20%;
+  }
 }
 
 .dish-description-box {

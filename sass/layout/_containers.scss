@@ -1,4 +1,3 @@
-
 .card-container {
     padding-bottom: 55px;
     display: $primary-display;
@@ -17,7 +16,8 @@
 
 .title-container {
     border-bottom: 3px solid #99E2D0;
-    width: 7%;
+    width: 35px;
+    margin-bottom: 13px;
 }
 
 
@@ -25,34 +25,46 @@
     display: flex;
     flex-direction: column;
     gap: 14px;
-    margin: 10px;
+
+    @include media-queries {
+    
+    }
 }
 
 .menu-style {
     background-color: $the-lightest-dull-color;
     border-radius: 40px 40px 0px 0px;
-    padding: 0px 15px;
-}
+    padding: 30px 17px;
 
-.menu-style__h1 {
-     @include secondary-text-style;
-
+    h1 {
+        @include secondary-text-style;
+        margin: 0px;
         line-height: 41px;
         letter-spacing: 0em;
-        padding-top: 5%;
+    }
+
+    h2 {
+        font-size: $the-smallest-font-size;
+        font-weight: 300;
+        line-height: 19px;
+        letter-spacing: 0em;
+        text-transform: uppercase;
         margin-left: 0px;
-}
+        margin: 42px 0px 12px;
+    }
 
-.menu-style__h2 {
-    font-size: $the-smallest-font-size;
-    font-weight: 300;
-    line-height: 19px;
-    letter-spacing: 0em;
-    text-transform: uppercase;
-    margin-left: 0px;
-    margin: 42px 0px 12px;
-}
+    @include media-queries {
+        margin: 0px 15%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
 
+        section {
+            width: 90%;
+            margin: 0% 20%;
+        }
+    }
+}
 
 .dish-description-box {
 
@@ -67,10 +79,10 @@
 
 .menu-style__p {
     font-size: 15px;
-        font-weight: 300;
-        margin-left: 0px;
-        margin-bottom: 0px;
-        padding-top: 33px;
+    font-weight: 300;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    padding-top: 33px;
 }
 
 .menu-style__img {
