@@ -290,12 +290,11 @@ header {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   padding: 20px 0px 10px 0px;
 }
-
-header__img {
+header img {
   width: 162px;
 }
 @media screen and (min-width: 768px) and (max-width: 1400px) {
-  header__img {
+  header img {
     width: 200px;
   }
 }
