@@ -64,33 +64,21 @@
     flex-direction: row;
     justify-content: space-between;
 
+
     &:focus {
 
-        .price {
+        .price p {
             padding-right: 0px;
-
-            p {
-                padding-top: 12px;
-                animation: price-slide 500ms forwards;
-            }
+            padding-top: 12px;
+            animation: price-slide 500ms forwards;
         }
 
         .dish-adding {
             display: flex;
-            width: 75px;
-            background-color: $tertiary-color;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            border-top-right-radius: 15px;
-            border-bottom-right-radius: 15px;
-            color: $white-color;
-            font-size: 20px;
-            position: relative;
             animation: green-animation 1s forwards;
         }
-
     }
+
 }
 
 .dish-container .dish-card {
@@ -152,11 +140,24 @@
     display: flex;
     justify-content: flex-end;
     padding: 0px;
-    padding-right: 25px;
     align-items: self-end;
     width: 200px;
+
+    p {
+        padding-right: 25px; 
+    }
 }
 
 .dish-adding {
+    width: 75px;
+    background-color: $tertiary-color;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: $white-color;
+    font-size: 20px;
+    position: relative;
     display: none;
 }

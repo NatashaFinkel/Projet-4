@@ -26,12 +26,11 @@
     flex-direction: column;
     gap: 14px;
 
+
     @include media-queries {
     
     }
-
 }
-
 .menu-style {
     background-color: $the-lightest-dull-color;
     border-radius: 40px 40px 0px 0px;

@@ -469,26 +469,14 @@ header img {
   flex-direction: row;
   justify-content: space-between;
 }
-.dish-card:focus .price {
-  padding-right: 0px;
-}
 .dish-card:focus .price p {
+  padding-right: 0px;
   padding-top: 12px;
   -webkit-animation: price-slide 500ms forwards;
           animation: price-slide 500ms forwards;
 }
 .dish-card:focus .dish-adding {
   display: flex;
-  width: 75px;
-  background-color: #99E2D0;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  color: #FFFFFF;
-  font-size: 20px;
-  position: relative;
   -webkit-animation: green-animation 1s forwards;
           animation: green-animation 1s forwards;
 }
@@ -544,12 +532,24 @@ header img {
   display: flex;
   justify-content: flex-end;
   padding: 0px;
-  padding-right: 25px;
   align-items: self-end;
   width: 200px;
 }
+.price p {
+  padding-right: 25px;
+}
 
 .dish-adding {
+  width: 75px;
+  background-color: #99E2D0;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  color: #FFFFFF;
+  font-size: 20px;
+  position: relative;
   display: none;
 }
 
