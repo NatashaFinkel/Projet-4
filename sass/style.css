@@ -480,10 +480,6 @@ header img {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  -webkit-animation: dish-slide 1s forwards;
-          animation: dish-slide 1s forwards;
-  -webkit-animation-delay: 200ms;
-          animation-delay: 200ms;
 }
 .dish-card:focus .price {
   padding-right: 0px;
@@ -508,25 +504,34 @@ header img {
   -webkit-animation: green-animation 1s forwards;
           animation: green-animation 1s forwards;
 }
-.dish-card--first-group {
-  -webkit-animation: dish-slide 1s forwards;
-          animation: dish-slide 1s forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-.dish-card--second-group {
-  -webkit-animation: dish-slide 1s forwards;
-          animation: dish-slide 1s forwards;
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}
-.dish-card--third-group {
-  -webkit-animation: dish-slide 1s forwards;
-          animation: dish-slide 1s forwards;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+
+.dish-container .dish-card {
+  -webkit-animation: dish-slide 400ms ease-in-out both;
+          animation: dish-slide 400ms ease-in-out both;
 }
 
+.dish-container-1 .dish-card:nth-child(1) {
+  -webkit-animation-delay: 1ms;
+          animation-delay: 1ms;
+}
+.dish-container-1 .dish-card:nth-child(2) {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+.dish-container-1 .dish-card:nth-child(3) {
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+
+/* 
+.dish-container-2 {
+animation-delay: 500ms;
+} */
+/* 
+.dish-container-3 {
+animation-delay: 800ms;
+}
+ */
 .price {
   font-weight: 900;
   font-size: 15px;
