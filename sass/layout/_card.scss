@@ -64,14 +64,6 @@
     flex-direction: row;
     justify-content: space-between;
 
-    //  animation: dish-slide 1s forwards;
-    //  animation-delay: 200ms;
-
-  //  &:nth-child(2) {
-  //      animation-delay: 200ms;
-  //  }
-
-
     &:focus {
 
         .price {
@@ -153,20 +145,6 @@
     }
 }
 
-
-
-
-
-
-/* 
-.dish-container-2 {
-animation-delay: 500ms;
-} */
-/* 
-.dish-container-3 {
-animation-delay: 800ms;
-}
- */
 .price {
     font-weight: 900;
     font-size: 15px;
