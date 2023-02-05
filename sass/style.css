@@ -551,7 +551,6 @@ header img {
 }
 .btn__pink-btn p {
   color: #FFFFFF;
-  padding: 13px;
 }
 .btn__pink-btn:hover {
   filter: brightness(115%);

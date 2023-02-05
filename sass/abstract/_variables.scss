@@ -3,11 +3,6 @@ $min-width: 375px;
 $max-width: 767px;
 
 
-// Pour les media queries
-$responsive-min-width: 768px;
-$responsive-max-width: 1400px;
-
-
 // Margin
 $margin: 0 auto;
 
@@ -24,3 +19,50 @@ $primary-position : center;
 // Direction
 $primary-direction: row;
 $secondary-direction: column;
+
+// Typography
+$primary-font: "Roboto", sans-serif;
+$secondary-font: "Shrikhand";
+
+//Font-weight
+$primary-font-weight: 500;
+$secondary-font-weight: 400;
+$tertiary-font-weight: 700;
+
+$the-smallest-font-weight: 300;
+$the-largest-font-weight: 900;
+
+//Font-size
+$big-font-size: 24px;
+$medium-font-size: 18px;
+$the-smallest-font-size: 16px;
+$bigger-font-size: 28px;
+
+
+// Font-style
+$secondary-font-style: italic;
+
+
+// Color
+$primary-color: #9356DC;
+$lighter-primary-color: #F5EDFF;
+
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+$gradient-color: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+
+$text-color: #000000;
+$white-color: #FFFFFF;
+
+$dark-vivid-color: #008766;
+$light-vivid-color: #99E2D0;
+
+$the-lightest-dull-color: #F6F6F6;
+$medium-light-dull-color: #EAEAEA;
+$medium-dark-dull-color: #7E7E7E;
+$the-darkest-dull-color: #353535;
+
+
+// Pour les media queries
+$responsive-min-width: 768px;
+$responsive-max-width: 1400px;
