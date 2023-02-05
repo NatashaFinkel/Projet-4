@@ -54,6 +54,8 @@
         margin: 42px 0px 12px;
     }
 
+
+
     @include media-queries {
         margin: 0px 15%;
         align-items: center;
@@ -78,17 +80,6 @@
     text-overflow: ellipsis;
 }
 
-.menu-style__p {
-    font-size: 15px;
-    font-weight: 300;
-    margin-left: 0px;
-    margin-bottom: 0px;
-    padding-top: 33px;
-}
-
-.menu-style__img {
-    width: 100%;
-}
 
 .dish-order {
     display: flex;
