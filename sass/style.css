@@ -140,84 +140,18 @@ p {
 }
 @-webkit-keyframes slide {
   0% {
-    transform: translateX(0);
+    transform: translateX(0px);
   }
   100% {
-    transform: translateX(-30px);
+    transform: translateX(-10px);
   }
 }
 @keyframes slide {
   0% {
-    transform: translateX(0);
+    transform: translateX(0px);
   }
   100% {
-    transform: translateX(-30px);
-  }
-}
-@-webkit-keyframes stop-slide {
-  0% {
-    transform: translateX(-20px);
-  }
-  99% {
-    transform: translateX(-20px);
-  }
-  100% {
-    transform: translateX(-20px);
-  }
-}
-@keyframes stop-slide {
-  0% {
-    transform: translateX(-20px);
-  }
-  99% {
-    transform: translateX(-20px);
-  }
-  100% {
-    transform: translateX(-20px);
-  }
-}
-@-webkit-keyframes detectable {
-  0% {
-    opacity: 0;
-  }
-  99% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes detectable {
-  0% {
-    opacity: 0;
-  }
-  99% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes hidden {
-  0% {
-    opacity: 1;
-  }
-  99% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes hidden {
-  0% {
-    opacity: 1;
-  }
-  99% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
+    transform: translateX(-10px);
   }
 }
 img {
@@ -478,7 +412,7 @@ header img {
 
 .card-text {
   flex-direction: column;
-  padding-top: 12px;
+  padding: 12px 0px;
   display: flex;
 }
 .card-text h3 {
@@ -507,7 +441,31 @@ header img {
   padding-bottom: 0px;
   padding-left: 12px;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+}
+.dish-card:focus .price {
+  padding-right: 0px;
+  -webkit-animation: slide 2s forwards;
+          animation: slide 2s forwards;
+}
+.dish-card:focus p {
+  margin-right: 20px;
+}
+.dish-card:focus .dish-adding {
+  display: flex;
+  width: 60px;
+  background-color: #99E2D0;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding-right: 0px;
+  color: #FFFFFF;
+}
+
+.dish-adding {
+  display: none;
 }
 
 .location-search-bar {
@@ -695,51 +653,47 @@ header img {
   height: 16px;
 }
 
-.clickable:focus .price p {
-  -webkit-animation-name: slide;
-          animation-name: slide;
-  -webkit-animation-duration: 190ms;
-          animation-duration: 190ms;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-.clickable:focus .check-box {
-  -webkit-animation-name: detectable;
-          animation-name: detectable;
-  -webkit-animation-duration: 190ms;
-          animation-duration: 190ms;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+/*  .price p {
+     animation-name: slide;
+     animation-duration: 190ms;
+     animation-fill-mode: forwards;
+ } */
+/*   .check-box {
+        animation-name: detectable;
+        animation-duration: 190ms;
+        animation-fill-mode: forwards;
+    }
 }
 
 .check-box {
-  background-color: #99E2D0;
-  color: #FFFFFF;
-  align-content: center;
-  justify-content: center;
-  border-radius: 0px 15px 15px 0px;
-  flex-wrap: wrap;
-  position: relative;
-  -webkit-animation: hidden 190ms linear normal forwards;
-          animation: hidden 190ms linear normal forwards;
-  max-height: 100%;
+    background-color: $tertiary-color;
+    color: $white-color;
+    align-content: center;
+    justify-content: center;
+    border-radius: 0px 15px 15px 0px;
+    flex-wrap: wrap;
+    position: relative;
+    animation: hidden 190ms linear normal forwards;
+    max-height: 100%;
 }
+
 
 .check-icon {
-  font-size: 28px;
-  position: -webkit-sticky;
-  position: sticky;
-  padding-top: 25px;
-  padding-right: 20px;
-  padding-bottom: 25px;
-  padding-left: 20px;
-  top: 50px;
+    font-size: 28px;
+    position: sticky;
+    padding-top: 25px;
+    padding-right: 20px;
+    padding-bottom: 25px;
+    padding-left: 20px;
+    top: 50px;
 }
 
+ */
 .price {
   font-weight: 900;
   font-size: 15px;
   position: relative;
   display: flex;
   justify-content: flex-end;
+  padding-right: 20px;
 }/*# sourceMappingURL=style.css.map */

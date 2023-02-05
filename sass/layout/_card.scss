@@ -28,7 +28,7 @@
 
 .card-text {
     flex-direction: column;
-    padding-top: 12px;
+    padding: 12px 0px;
     display: flex;
 
     h3 {
@@ -63,6 +63,37 @@
     padding-left: 12px;
 
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 
+    &:focus {
+        .price {
+            padding-right: 0px;
+            animation:slide 2s forwards;
+        }
+
+
+        p {
+            margin-right: 20px;
+        }
+
+
+        .dish-adding {
+            display: flex;
+            width: 60px;
+            background-color: $tertiary-color;
+            justify-content: center;
+            align-items: center;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            padding-right: 0px;
+            color: $white-color;
+        }
+
+    }
+}
+
+
+.dish-adding {
+    display: none;
 }

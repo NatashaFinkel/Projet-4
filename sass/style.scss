@@ -34,15 +34,15 @@
 // Pages Restaurant
 
 
-.clickable:focus {
 
-    .price p {
+
+   /*  .price p {
         animation-name: slide;
         animation-duration: 190ms;
         animation-fill-mode: forwards;
-    }
+    } */
 
-    .check-box {
+  /*   .check-box {
         animation-name: detectable;
         animation-duration: 190ms;
         animation-fill-mode: forwards;
@@ -50,7 +50,6 @@
 }
 
 .check-box {
-
     background-color: $tertiary-color;
     color: $white-color;
     align-content: center;
@@ -59,10 +58,7 @@
     flex-wrap: wrap;
     position: relative;
     animation: hidden 190ms linear normal forwards;
-
     max-height: 100%;
-
-
 }
 
 
@@ -76,13 +72,14 @@
     top: 50px;
 }
 
-
+ */
 .price {
     font-weight: 900;
     font-size: 15px;
     position: relative;
     display: flex;
     justify-content: flex-end;
+    padding-right: 20px;
 }
 
 

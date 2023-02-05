@@ -34,62 +34,14 @@
 	}
 }
 
-// Pour faire coulisser vers la gauche
 @keyframes slide {
+  
   0% {
-    transform: translateX(0);
+    transform: translateX(0px);
   }
 
   100% {
-    transform: translateX((-30px));
-  }
-
-}
-
-// Pour que l'élément reste au même endroit après avoir coulissé
-@keyframes stop-slide {
-
-  0% { 
-  transform: translateX((-20px));}
-
-  99% {
-    transform: translateX((-20px));
-  }
-
-  100% {
-    transform: translateX((-20px));
+    transform: translateX(-10px);
   }
 }
 
-// Pour que l'élément apparaisse
-@keyframes detectable {
-  0% {
-    opacity: 0;
-  }
-
-  99% {
-    opacity: 1;
-  }
-
-
-  100% {
-    opacity: 1;
-  }
-
-}
-
-
-// Pour que l'élément soit caché 
-@keyframes hidden {
-  0% {
-    opacity: 1;
-  }
-
-  99% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
