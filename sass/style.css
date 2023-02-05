@@ -251,7 +251,6 @@ header img {
 }
 .welcome-section p {
   color: #353535;
-  margin-top: 0px;
 }
 
 .second-section {
@@ -637,6 +636,10 @@ header img {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+.first-heart, .second-heart {
+  font-size: 20px;
 }
 
 .first-heart {
