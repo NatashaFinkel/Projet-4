@@ -24,24 +24,62 @@
   }
 }
 
- @keyframes heart-animation {
-	0% {
-		transform: scale(0.5);
-	}
-
-	100% {
-		transform: scale(1);
-	}
-}
-
-@keyframes slide {
-  
+@keyframes heart-animation {
   0% {
-    transform: translateX(0px);
+    transform: scale(0.5);
   }
 
   100% {
-    transform: translateX(-10px);
+    transform: scale(1);
   }
 }
 
+@keyframes dish-slide{ 
+  0% {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes price-slide {
+  from {
+    transform: translateX(-25px);
+  }
+
+  to {
+    transform: translateX(-60px);
+  }
+
+}
+
+@keyframes green-animation {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+}
+
+
+// @keyframes dish-adding-animation {
+
+//   0% {
+//     opacity: 0;
+// 		transform: translateX(50px);
+//   }
+
+//   100% {
+//     opacity: 1;
+// 		transform: translateX(0);
+//   }
+// }
