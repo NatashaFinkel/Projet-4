@@ -8,39 +8,64 @@
 .footer-container {
     @include secondary-layout;
     background-color: $the-darkest-dull-color;
-    padding: 20px 0px 35px 25px;
+    padding: 0px 0px 35px 25px;
+   
+
+    @include media-queries {
+        flex-direction: row-reverse;
+        padding: 0px;
+        padding-right: 37px;
+        align-items: center;
+        height: 115px;
+    }
+
 
     h1 {
         @include secondary-text-style;
         margin: 22px 0px 16px 0px;
         font-size: 18px;
-    }
+        line-height: 27px;
 
-    @include media-queries {
-        flex-direction: row-reverse;
-        padding-right: 70px;
+        @include media-queries {
+            padding-left: 50px;
+            margin: 0px;
+        }
     }
 }
 
 
 .footer-links {
-    @include secondary-layout;
+display: flex;
+flex-direction: column;
 
     ul {
         padding-left: 0px;
         margin: 0px;
 
         @include media-queries {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
+           display: flex;
         }
     }
 
     li {
         @include tertiary-layout;
         align-items: baseline;
+        color: white;
+        margin-bottom: 7px;
+
+        @include media-queries {
+            margin-right: 10px;
+            margin-bottom: 0px;
+        }
+
+        p {
+            margin: 0px;
+        }
     }
 
+    @include media-queries {
+      //  margin-top: 29px;
+    }
 }
 
 

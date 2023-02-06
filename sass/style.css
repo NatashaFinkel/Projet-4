@@ -613,7 +613,16 @@ header img {
   display: flex;
   flex-direction: column;
   background-color: #353535;
-  padding: 20px 0px 35px 25px;
+  padding: 0px 0px 35px 25px;
+}
+@media screen and (min-width: 768px) and (max-width: 1400px) {
+  .footer-container {
+    flex-direction: row-reverse;
+    padding: 0px;
+    padding-right: 37px;
+    align-items: center;
+    height: 115px;
+  }
 }
 .footer-container h1 {
   font-family: "Shrikhand";
@@ -621,11 +630,12 @@ header img {
   font-style: italic;
   margin: 22px 0px 16px 0px;
   font-size: 18px;
+  line-height: 27px;
 }
 @media screen and (min-width: 768px) and (max-width: 1400px) {
-  .footer-container {
-    flex-direction: row-reverse;
-    padding-right: 70px;
+  .footer-container h1 {
+    padding-left: 50px;
+    margin: 0px;
   }
 }
 
@@ -639,16 +649,25 @@ header img {
 }
 @media screen and (min-width: 768px) and (max-width: 1400px) {
   .footer-links ul {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
   }
 }
 .footer-links li {
   display: flex;
   flex-direction: row;
   align-items: baseline;
+  color: white;
+  margin-bottom: 7px;
 }
-
+@media screen and (min-width: 768px) and (max-width: 1400px) {
+  .footer-links li {
+    margin-right: 10px;
+    margin-bottom: 0px;
+  }
+}
+.footer-links li p {
+  margin: 0px;
+}
 .footer-icon {
   height: 13px;
   margin-right: 11px;
