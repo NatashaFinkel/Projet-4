@@ -278,6 +278,10 @@ header img {
   }
 }
 
+.menu-header {
+  justify-content: space-between;
+}
+
 .welcome-section {
   display: flex;
   flex-direction: column;
