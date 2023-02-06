@@ -794,41 +794,4 @@ header img {
 .arrow {
   width: 17px;
   height: 16px;
-}
-
-/*  .price p {
-     animation-name: slide;
-     animation-duration: 190ms;
-     animation-fill-mode: forwards;
- } */
-/*   .check-box {
-        animation-name: detectable;
-        animation-duration: 190ms;
-        animation-fill-mode: forwards;
-    }
-}
-
-.check-box {
-    background-color: $tertiary-color;
-    color: $white-color;
-    align-content: center;
-    justify-content: center;
-    border-radius: 0px 15px 15px 0px;
-    flex-wrap: wrap;
-    position: relative;
-    animation: hidden 190ms linear normal forwards;
-    max-height: 100%;
-}
-
-
-.check-icon {
-    font-size: 28px;
-    position: sticky;
-    padding-top: 25px;
-    padding-right: 20px;
-    padding-bottom: 25px;
-    padding-left: 20px;
-    top: 50px;
-}
-
- *//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
