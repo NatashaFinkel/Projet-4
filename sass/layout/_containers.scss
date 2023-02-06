@@ -73,10 +73,9 @@
     // Pour couper le texte et 
     // ajouter des points de suspension 
     // si le texte est trop long
-    max-width: 185px;
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 

@@ -399,10 +399,9 @@ header img {
 }
 
 .dish-description-box {
-  max-width: 185px;
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .dish-order {
@@ -441,6 +440,7 @@ header img {
   flex-direction: column;
   padding: 12px 0px;
   display: flex;
+  text-align: justify;
 }
 .card-text h3 {
   font-weight: 900;
@@ -449,6 +449,7 @@ header img {
   letter-spacing: 0em;
   margin-right: 0%;
   margin-left: 0px;
+  white-space: nowrap;
 }
 .card-text p {
   font-size: 15px;
@@ -460,7 +461,7 @@ header img {
 }
 
 .dish-card {
-  border: solid 2px;
+  border: none;
   border-radius: 15px;
   background-color: #FFFFFF;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -468,6 +469,15 @@ header img {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.dish-card:focus {
+  padding-right: 0px;
+}
+.dish-card:focus .card-text {
+  padding-bottom: 0px;
+}
+.dish-card:focus .price {
+  align-items: flex-end;
 }
 .dish-card:focus .price p {
   padding-right: 0px;
@@ -479,6 +489,16 @@ header img {
   display: flex;
   -webkit-animation: green-animation 1s forwards;
           animation: green-animation 1s forwards;
+  height: 83px;
+  width: 75px;
+  background-color: #99E2D0;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  color: #FFFFFF;
+  font-size: 20px;
+  position: relative;
 }
 
 .dish-container .dish-card {
@@ -532,7 +552,7 @@ header img {
   display: flex;
   justify-content: flex-end;
   padding: 0px;
-  align-items: self-end;
+  align-self: flex-end;
   width: 200px;
 }
 .price p {
@@ -540,16 +560,6 @@ header img {
 }
 
 .dish-adding {
-  width: 75px;
-  background-color: #99E2D0;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  color: #FFFFFF;
-  font-size: 20px;
-  position: relative;
   display: none;
 }
 
