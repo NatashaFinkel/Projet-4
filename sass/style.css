@@ -375,6 +375,7 @@ header img {
   margin: 0px;
   line-height: 41px;
   letter-spacing: 0em;
+  white-space: nowrap;
 }
 .menu-style h2 {
   font-size: 16px;
@@ -395,6 +396,31 @@ header img {
   .menu-style section {
     width: 90%;
     margin: 0% 20%;
+  }
+}
+
+.title-box {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-right: 40px;
+  gap: 15px;
+}
+@media screen and (min-width: 768px) and (max-width: 1400px) {
+  .title-box {
+    justify-content: center;
+    padding: 0px;
+    gap: 20px;
+  }
+}
+.title-box .flexible-heart-location {
+  margin-right: 0px;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 768px) and (max-width: 1400px) {
+  .title-box .flexible-heart-location {
+    gap: 25px;
+    justify-content: center;
   }
 }
 
