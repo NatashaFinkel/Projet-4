@@ -21,6 +21,23 @@
         -webkit-background-clip: text;
         color: transparent;
     }
+
+    @include media-queries {
+
+        &:focus {
+           animation-duration: 0s;
+        }
+
+        &:hover {
+        animation: heart-animation 1700ms ease 0s 1 normal forwards;
+        background-image: $gradient-color;
+        background-image: -webkit-linear-gradient($gradient-color);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        }
+    }
+
 }
 
 .first-heart, .second-heart {

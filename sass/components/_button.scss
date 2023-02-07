@@ -37,6 +37,10 @@
 
         &:hover {
             background-color: $lighter-primary-color;
+
+            i {
+                color: $primary-color;
+            }
         }
 
         p {
@@ -47,10 +51,6 @@
         i {
             color: $the-darkest-dull-color;
             margin-right: 23px;
-
-            &:hover {
-                color: $primary-color;
-            }
         }
     }
 }

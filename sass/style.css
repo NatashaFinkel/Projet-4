@@ -204,6 +204,7 @@ img {
 
 .first-page-picture {
   border-radius: 15px 15px 0px 0px;
+  height: 243px;
 }
 
 .image-menu {
@@ -434,6 +435,12 @@ header img {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  max-width: 150px;
+}
+@media screen and (min-width: 768px) and (max-width: 1400px) {
+  .dish-description-box {
+    max-width: none;
+  }
 }
 
 .dish-order {
@@ -519,8 +526,8 @@ header img {
 }
 .dish-card:focus .dish-adding {
   display: flex;
-  -webkit-animation: green-animation 1s forwards;
-          animation: green-animation 1s forwards;
+  -webkit-animation: green-animation 500ms forwards;
+          animation: green-animation 500ms forwards;
   height: 83px;
   width: 75px;
   background-color: #99E2D0;
@@ -715,15 +722,15 @@ header img {
 .btn__nav-btn:hover {
   background-color: #F5EDFF;
 }
+.btn__nav-btn:hover i {
+  color: #9356DC;
+}
 .btn__nav-btn p {
   margin: -7px;
 }
 .btn__nav-btn i {
   color: #353535;
   margin-right: 23px;
-}
-.btn__nav-btn i:hover {
-  color: #9356DC;
 }
 
 .order-btn {
@@ -783,6 +790,21 @@ header img {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+@media screen and (min-width: 768px) and (max-width: 1400px) {
+  .heart-btn:focus {
+    -webkit-animation-duration: 0s;
+            animation-duration: 0s;
+  }
+  .heart-btn:hover {
+    -webkit-animation: heart-animation 1700ms ease 0s 1 normal forwards;
+            animation: heart-animation 1700ms ease 0s 1 normal forwards;
+    background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    background-image: -webkit-linear-gradient(linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
 }
 
 .first-heart, .second-heart {
