@@ -13,5 +13,7 @@ header {
 }
 
 .menu-header {
-    justify-content: space-between;
+  padding-left: 50px;
+  justify-content: flex-start;
+  gap: 35%;
 }
