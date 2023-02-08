@@ -1,8 +1,7 @@
-
 #preloader {
     background: $gradient-color no-repeat $primary-position;
-    height: 100%;
-    width: 100%;
+    height: $full-size;
+    width: $full-size;
     position: fixed;
     z-index: 9;
     display: flex;
@@ -11,7 +10,9 @@
     justify-content: $primary-position;
 
     & {
-        animation: stop-spin 500ms ease 1s 1 alternate forwards;
+     // Cette animation fait apparaître puis
+     // disparaître le loader, mais ne l'anime pas
+        animation: loading 500ms ease 1000ms forwards;
     }
 
     h1 {
@@ -23,17 +24,16 @@
         font-style: $secondary-font-style;
         background-position: $primary-position;
         z-index: 9;
-        letter-spacing: 6px;
-
+        letter-spacing: 3px;
     }
 
     p {
-        font-size: 25px;
+        font-size: $a-quarter;
         font-weight: 600;
         color: $text-color;
         font-style: $secondary-font-style;
         font-family: $secondary-font;
-        margin-top: 267px;
+        margin-top: 214px;
     }
 
 }
@@ -42,15 +42,14 @@
 #loader {
 
     position: fixed;
-    width: 300px;
-    height: 300px;
+    width: 251px;
+    height: 251px;
     border-top: 35px solid $light-vivid-color;
     border-right: 35px solid $primary-color;
     border-bottom: 35px solid $light-vivid-color;
     border-left: 35px solid $primary-color;
-    border-radius: 50%;
+    border-radius: $half-size;
 
-    animation: spin 750ms ease-in-out 1 normal;
+   animation: spin 850ms;
     z-index: -1;
 }
-

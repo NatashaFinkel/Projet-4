@@ -37,7 +37,7 @@
     display: $primary-display;
     flex-direction: $secondary-direction;
     justify-items: $primary-position;
-    gap: 25px;
+    gap: $a-quarter;
 
     @include media-queries {
         flex-direction: row;

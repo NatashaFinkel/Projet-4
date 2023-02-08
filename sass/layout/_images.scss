@@ -4,7 +4,7 @@ img {
     -o-object-fit: cover;
     object-fit: cover;
     max-height: 243px;
-    width: 100%;
+    width: $full-size;
 }
 
 
@@ -15,7 +15,7 @@ img {
 
 
 .image-menu {
-    width: 100%;
+    width: $full-size;
     position: relative;
     z-index: -1;
     margin-bottom: -55px;

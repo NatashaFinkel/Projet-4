@@ -2,7 +2,7 @@
     max-width: 90%;
     display: $primary-display;
     flex-direction: $secondary-direction;
-    border-radius: 15px;
+    border-radius: $card-radius;
     background-color: $white-color;
     margin-left: 35px;
     box-shadow: $quinary-box-shadow;
@@ -19,7 +19,7 @@
 
     &__card-added-item {
         justify-content: flex-end;
-        margin-right: 25px;
+        margin-right: $a-quarter;
         position: relative;
         display: flex;
     }
@@ -57,7 +57,7 @@
 
 .dish-card {
     border: none;
-    border-radius: 15px;
+    border-radius: $card-radius;
     background-color: $white-color;
     box-shadow: $quinary-box-shadow;
     padding-left: 12px;
@@ -93,8 +93,8 @@
             background-color: $tertiary-color;
             justify-content: center;
             align-items: center;
-            border-top-right-radius: 15px;
-            border-bottom-right-radius: 15px;
+            border-top-right-radius: $card-radius;
+            border-bottom-right-radius: $card-radius;
             color: $white-color;
             font-size: 20px;
             position: relative;
@@ -166,7 +166,7 @@
     width: 200px;
 
     p {
-        padding-right: 25px;
+        padding-right: $a-quarter;
     }
 }
 

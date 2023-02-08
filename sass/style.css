@@ -96,7 +96,7 @@ p {
     transform: rotate(360deg);
   }
 }
-@-webkit-keyframes stop-spin {
+@-webkit-keyframes loading {
   0% {
     opacity: 1;
   }
@@ -109,7 +109,7 @@ p {
     transform: scale(0);
   }
 }
-@keyframes stop-spin {
+@keyframes loading {
   0% {
     opacity: 1;
   }
@@ -227,8 +227,8 @@ img {
   justify-content: center;
 }
 #preloader {
-  -webkit-animation: stop-spin 500ms ease 1s 1 alternate forwards;
-          animation: stop-spin 500ms ease 1s 1 alternate forwards;
+  -webkit-animation: loading 500ms ease 1000ms forwards;
+          animation: loading 500ms ease 1000ms forwards;
 }
 #preloader h1 {
   position: fixed;
@@ -239,7 +239,7 @@ img {
   font-style: italic;
   background-position: center;
   z-index: 9;
-  letter-spacing: 6px;
+  letter-spacing: 3px;
 }
 #preloader p {
   font-size: 25px;
@@ -247,20 +247,20 @@ img {
   color: #000000;
   font-style: italic;
   font-family: "Shrikhand";
-  margin-top: 267px;
+  margin-top: 214px;
 }
 
 #loader {
   position: fixed;
-  width: 300px;
-  height: 300px;
+  width: 251px;
+  height: 251px;
   border-top: 35px solid #99E2D0;
   border-right: 35px solid #9356DC;
   border-bottom: 35px solid #99E2D0;
   border-left: 35px solid #9356DC;
   border-radius: 50%;
-  -webkit-animation: spin 750ms ease-in-out 1 normal;
-          animation: spin 750ms ease-in-out 1 normal;
+  -webkit-animation: spin 850ms;
+          animation: spin 850ms;
   z-index: -1;
 }
 
@@ -681,6 +681,7 @@ header img {
 .footer-links li p {
   margin: 0px;
 }
+
 .footer-icon {
   height: 13px;
   margin-right: 11px;
@@ -758,7 +759,6 @@ header img {
 
 .label-new {
   background-color: #99E2D0;
-  border-radius: 2px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   color: #008766;
   display: flex;
