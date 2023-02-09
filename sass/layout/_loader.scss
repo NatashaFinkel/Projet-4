@@ -8,11 +8,9 @@
     align-items: $primary-position;
     justify-content: $primary-position;
 
-    & {
-     // Cette animation fait apparaître puis
-     // disparaître le loader, mais ne l'anime pas
-        animation: loading 500ms ease 1000ms forwards;
-    }
+    // Cette animation fait apparaître puis
+    // disparaître le loader, mais ne l'anime pas
+    animation: loading 500ms ease 1000ms forwards;
 
     h1 {
         position: fixed;
@@ -34,7 +32,6 @@
         font-family: $secondary-font;
         margin-top: 214px;
     }
-
 }
 
 
@@ -49,6 +46,6 @@
     border-left: 35px solid $primary-color;
     border-radius: $half-size;
 
-   animation: spin 850ms;
+    animation: spin 850ms;
     z-index: -1;
 }

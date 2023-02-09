@@ -5,6 +5,7 @@
 
     @include media-queries {
         max-width: $responsive-max-width;
+        min-width: $responsive-min-width;
     }
 }
 

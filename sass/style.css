@@ -42,6 +42,7 @@ p {
 @media screen and (min-width: 768px) and (max-width: 1400px) {
   :root {
     max-width: 1400px;
+    min-width: 768px;
   }
 }
 
@@ -165,8 +166,6 @@ img {
   z-index: 9;
   align-items: center;
   justify-content: center;
-}
-#preloader {
   animation: loading 500ms ease 1000ms forwards;
 }
 #preloader h1 {
@@ -428,7 +427,7 @@ header img {
   font-size: 18px;
   line-height: 21px;
   letter-spacing: 0em;
-  margin-right: 0%;
+  margin-right: 0px;
   margin-left: 0px;
   white-space: nowrap;
 }
@@ -438,7 +437,7 @@ header img {
   margin-left: 0px;
   max-width: 200px;
   padding-bottom: 20px;
-  margin-block: 0%;
+  margin-block: 0px;
 }
 
 .dish-card {
