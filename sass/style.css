@@ -79,34 +79,12 @@ p {
   box-sizing: border-box;
 }
 
-@-webkit-keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes loading {
-  0% {
-    opacity: 1;
-  }
-  99% {
-    opacity: 0;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0);
   }
 }
 @keyframes loading {
@@ -122,30 +100,12 @@ p {
     transform: scale(0);
   }
 }
-@-webkit-keyframes heart-animation {
-  0% {
-    transform: scale(0.5);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 @keyframes heart-animation {
   0% {
     transform: scale(0.5);
   }
   100% {
     transform: scale(1);
-  }
-}
-@-webkit-keyframes dish-slide {
-  0% {
-    opacity: 0;
-    transform: translateX(300px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0px);
   }
 }
 @keyframes dish-slide {
@@ -158,30 +118,12 @@ p {
     transform: translateX(0px);
   }
 }
-@-webkit-keyframes price-slide {
-  from {
-    transform: translateX(-25px);
-  }
-  to {
-    transform: translateX(-60px);
-  }
-}
 @keyframes price-slide {
   from {
     transform: translateX(-25px);
   }
   to {
     transform: translateX(-60px);
-  }
-}
-@-webkit-keyframes green-animation {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
   }
 }
 @keyframes green-animation {
@@ -227,8 +169,7 @@ img {
   justify-content: center;
 }
 #preloader {
-  -webkit-animation: loading 500ms ease 1000ms forwards;
-          animation: loading 500ms ease 1000ms forwards;
+  animation: loading 500ms ease 1000ms forwards;
 }
 #preloader h1 {
   position: fixed;
@@ -259,8 +200,7 @@ img {
   border-bottom: 35px solid #99E2D0;
   border-left: 35px solid #9356DC;
   border-radius: 50%;
-  -webkit-animation: spin 850ms;
-          animation: spin 850ms;
+  animation: spin 850ms;
   z-index: -1;
 }
 
@@ -505,15 +445,12 @@ header img {
   background-color: #FFFFFF;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   padding-left: 12px;
+  padding: 0px;
+  padding-left: 12px;
+  height: 77px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-.dish-card:focus {
-  padding-right: 0px;
-}
-.dish-card:focus .card-text {
-  padding-bottom: 0px;
 }
 .dish-card:focus .price {
   align-items: flex-end;
@@ -521,14 +458,12 @@ header img {
 .dish-card:focus .price p {
   padding-right: 0px;
   padding-top: 12px;
-  -webkit-animation: price-slide 500ms forwards;
-          animation: price-slide 500ms forwards;
+  animation: price-slide 500ms forwards;
 }
 .dish-card:focus .dish-adding {
   display: flex;
-  -webkit-animation: green-animation 500ms forwards;
-          animation: green-animation 500ms forwards;
-  height: 83px;
+  animation: green-animation 500ms forwards;
+  height: 77px;
   width: 75px;
   background-color: #99E2D0;
   justify-content: center;
@@ -539,52 +474,60 @@ header img {
   font-size: 20px;
   position: relative;
 }
-
-.dish-container .dish-card {
-  -webkit-animation: dish-slide 400ms ease-in-out both;
-          animation: dish-slide 400ms ease-in-out both;
+@media screen and (min-width: 768px) and (max-width: 1400px) {
+  .dish-card:focus p,
+  .dish-card:focus .dish-adding {
+    animation-duration: 0s;
+  }
+  .dish-card:hover p {
+    animation: price-slide 500ms forwards;
+  }
+  .dish-card:hover .price .dish-adding {
+    display: flex;
+    animation: green-animation 500ms forwards;
+    height: 77px;
+    width: 75px;
+    background-color: #99E2D0;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: #FFFFFF;
+    font-size: 20px;
+    position: relative;
+  }
 }
-
-.dish-container-1 .dish-card:nth-child(1) {
-  -webkit-animation-delay: 1ms;
-          animation-delay: 1ms;
+.dish-card .dish-container .dish-card {
+  animation: dish-slide 400ms ease-in-out both;
 }
-.dish-container-1 .dish-card:nth-child(2) {
-  -webkit-animation-delay: 300ms;
-          animation-delay: 300ms;
+.dish-card .dish-container-1 .dish-card:nth-child(1) {
+  animation-delay: 1ms;
 }
-.dish-container-1 .dish-card:nth-child(3) {
-  -webkit-animation-delay: 500ms;
-          animation-delay: 500ms;
+.dish-card .dish-container-1 .dish-card:nth-child(2) {
+  animation-delay: 300ms;
 }
-
-.dish-container-2 .dish-card:nth-child(1) {
-  -webkit-animation-delay: 800ms;
-          animation-delay: 800ms;
+.dish-card .dish-container-1 .dish-card:nth-child(3) {
+  animation-delay: 500ms;
 }
-.dish-container-2 .dish-card:nth-child(2) {
-  -webkit-animation-delay: 1000ms;
-          animation-delay: 1000ms;
+.dish-card .dish-container-2 .dish-card:nth-child(1) {
+  animation-delay: 800ms;
 }
-.dish-container-2 .dish-card:nth-child(3) {
-  -webkit-animation-delay: 1200ms;
-          animation-delay: 1200ms;
+.dish-card .dish-container-2 .dish-card:nth-child(2) {
+  animation-delay: 1000ms;
 }
-
-.dish-container-3 .dish-card:nth-child(1) {
-  -webkit-animation-delay: 1500ms;
-          animation-delay: 1500ms;
+.dish-card .dish-container-2 .dish-card:nth-child(3) {
+  animation-delay: 1200ms;
 }
-.dish-container-3 .dish-card:nth-child(2) {
-  -webkit-animation-delay: 1700ms;
-          animation-delay: 1700ms;
+.dish-card .dish-container-3 .dish-card:nth-child(1) {
+  animation-delay: 1500ms;
 }
-.dish-container-3 .dish-card:nth-child(3) {
-  -webkit-animation-delay: 1900ms;
-          animation-delay: 1900ms;
+.dish-card .dish-container-3 .dish-card:nth-child(2) {
+  animation-delay: 1700ms;
 }
-
-.price {
+.dish-card .dish-container-3 .dish-card:nth-child(3) {
+  animation-delay: 1900ms;
+}
+.dish-card .price {
   font-weight: 900;
   font-size: 15px;
   position: relative;
@@ -592,13 +535,13 @@ header img {
   justify-content: flex-end;
   padding: 0px;
   align-self: flex-end;
+  align-items: flex-end;
   width: 200px;
 }
-.price p {
+.dish-card .price p {
   padding-right: 25px;
 }
-
-.dish-adding {
+.dish-card .dish-adding {
   display: none;
 }
 
@@ -783,8 +726,7 @@ header img {
   background-color: transparent;
 }
 .heart-btn:focus {
-  -webkit-animation: heart-animation 1700ms ease 0s 1 normal forwards;
-          animation: heart-animation 1700ms ease 0s 1 normal forwards;
+  animation: heart-animation 1700ms ease 0s 1 normal forwards;
   background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
   background-image: -webkit-linear-gradient(linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%));
   background-clip: text;
@@ -793,12 +735,10 @@ header img {
 }
 @media screen and (min-width: 768px) and (max-width: 1400px) {
   .heart-btn:focus {
-    -webkit-animation-duration: 0s;
-            animation-duration: 0s;
+    animation-duration: 0s;
   }
   .heart-btn:hover {
-    -webkit-animation: heart-animation 1700ms ease 0s 1 normal forwards;
-            animation: heart-animation 1700ms ease 0s 1 normal forwards;
+    animation: heart-animation 1700ms ease 0s 1 normal forwards;
     background-image: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
     background-image: -webkit-linear-gradient(linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%));
     background-clip: text;

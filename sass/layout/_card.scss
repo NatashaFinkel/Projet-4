@@ -61,18 +61,15 @@
     background-color: $white-color;
     box-shadow: $quinary-box-shadow;
     padding-left: 12px;
-
+    padding: 0px;
+    padding-left: 12px;
+    height: 77px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
 
     &:focus {
-        padding-right: 0px;
-
-        .card-text {
-            padding-bottom: 0px;
-        }
 
         .price {
             align-items: flex-end;
@@ -88,7 +85,7 @@
             display: flex;
             animation: green-animation 500ms forwards;
 
-            height: 83px;
+            height: 77px;
             width: 75px;
             background-color: $tertiary-color;
             justify-content: center;
@@ -101,75 +98,112 @@
         }
     }
 
-}
+    @include media-queries {
 
-.dish-container .dish-card {
-    animation: dish-slide 400ms ease-in-out both;
-}
+        &:focus {
 
-.dish-container-1 {
+            p,
+            .dish-adding {
+                animation-duration: 0s;
+            }
+        }
 
-    .dish-card:nth-child(1) {
-        animation-delay: 1ms;
+        &:hover {
+
+            p {
+                animation: price-slide 500ms forwards;
+            }
+
+            .price {
+
+                .dish-adding {
+                    display: flex;
+                    animation: green-animation 500ms forwards;
+                    height: 77px;
+                    width: 75px;
+                    background-color: $tertiary-color;
+                    justify-content: center;
+                    align-items: center;
+                    border-top-right-radius: $card-radius;
+                    border-bottom-right-radius: $card-radius;
+                    color: $white-color;
+                    font-size: 20px;
+                    position: relative;
+                }
+            }
+        }
+
     }
 
-    .dish-card:nth-child(2) {
-        animation-delay: 300ms;
+    .dish-container .dish-card {
+        animation: dish-slide 400ms ease-in-out both;
     }
 
-    .dish-card:nth-child(3) {
-        animation-delay: 500ms;
-    }
-}
+    .dish-container-1 {
 
-.dish-container-2 {
+        .dish-card:nth-child(1) {
+            animation-delay: 1ms;
+        }
 
-    .dish-card:nth-child(1) {
-        animation-delay: 800ms;
-    }
+        .dish-card:nth-child(2) {
+            animation-delay: 300ms;
+        }
 
-    .dish-card:nth-child(2) {
-        animation-delay: 1000ms;
-    }
-
-
-    .dish-card:nth-child(3) {
-        animation-delay: 1200ms;
-    }
-}
-
-
-.dish-container-3 {
-
-    .dish-card:nth-child(1) {
-        animation-delay: 1500ms;
+        .dish-card:nth-child(3) {
+            animation-delay: 500ms;
+        }
     }
 
-    .dish-card:nth-child(2) {
-        animation-delay: 1700ms;
+    .dish-container-2 {
+
+        .dish-card:nth-child(1) {
+            animation-delay: 800ms;
+        }
+
+        .dish-card:nth-child(2) {
+            animation-delay: 1000ms;
+        }
+
+
+        .dish-card:nth-child(3) {
+            animation-delay: 1200ms;
+        }
     }
 
 
-    .dish-card:nth-child(3) {
-        animation-delay: 1900ms;
+    .dish-container-3 {
+
+        .dish-card:nth-child(1) {
+            animation-delay: 1500ms;
+        }
+
+        .dish-card:nth-child(2) {
+            animation-delay: 1700ms;
+        }
+
+
+        .dish-card:nth-child(3) {
+            animation-delay: 1900ms;
+        }
     }
-}
 
-.price {
-    font-weight: 900;
-    font-size: 15px;
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    padding: 0px;
-    align-self: flex-end;
-    width: 200px;
+    .price {
+        font-weight: 900;
+        font-size: 15px;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0px;
+        align-self: flex-end;
+        align-items: flex-end;
+        width: 200px;
 
-    p {
-        padding-right: $a-quarter;
+        p {
+            padding-right: $a-quarter;
+        }
     }
-}
 
-.dish-adding {
-    display: none;
+    .dish-adding {
+        display: none;
+    }
 }
