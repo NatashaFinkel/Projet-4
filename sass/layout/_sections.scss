@@ -24,8 +24,7 @@
     }
 
 @include media-queries {
-    display: flex;
-    flex-direction: column;
+    @include secondary-layout;
     flex-wrap: wrap;
     align-content: space-around;
 }
@@ -34,13 +33,12 @@
 
 
 .user-guide-section {
-    display: $primary-display;
-    flex-direction: $secondary-direction;
+    @include secondary-layout;
     justify-items: $primary-position;
     gap: $a-quarter;
 
     @include media-queries {
-        flex-direction: row;
+        flex-direction: $primary-direction;
         height: 56px;
         gap: 50px;
     }

@@ -35,15 +35,14 @@
 
 
 .footer-links {
-display: flex;
-flex-direction: column;
+    @include secondary-layout;
 
     ul {
         padding-left: 0px;
         margin: 0px;
 
         @include media-queries {
-           display: flex;
+           display: $primary-display;
         }
     }
 

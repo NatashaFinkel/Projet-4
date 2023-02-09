@@ -1,7 +1,7 @@
 .card {
+
+    @include secondary-layout;
     max-width: 90%;
-    display: $primary-display;
-    flex-direction: $secondary-direction;
     border-radius: $card-radius;
     background-color: $white-color;
     margin-left: 35px;
@@ -21,15 +21,14 @@
         justify-content: flex-end;
         margin-right: $a-quarter;
         position: relative;
-        display: flex;
+        display: $primary-display;
     }
 }
 
 
 .card-text {
-    flex-direction: column;
+    @include secondary-layout;
     padding: 12px 0px;
-    display: flex;
     text-align: justify;
 
     h3 {
@@ -56,6 +55,7 @@
 // Pages restaurant
 
 .dish-card {
+    @include tertiary-layout;
     border: none;
     border-radius: $card-radius;
     background-color: $white-color;
@@ -64,10 +64,7 @@
     padding: 0px;
     padding-left: 12px;
     height: 77px;
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
-
 
     &:focus {
 
@@ -117,13 +114,13 @@
             .price {
 
                 .dish-adding {
-                    display: flex;
+                    display: $primary-display;
                     animation: green-animation 500ms forwards;
                     height: 77px;
                     width: 75px;
                     background-color: $tertiary-color;
-                    justify-content: center;
-                    align-items: center;
+                    justify-content: $primary-position;
+                    align-items: $primary-position;
                     border-top-right-radius: $card-radius;
                     border-bottom-right-radius: $card-radius;
                     color: $white-color;

@@ -1,6 +1,6 @@
 .btn {
-    display: flex;
-    justify-content: center;
+    @include primary-layout;
+
     box-shadow: $primary-box-shadow;
     p {
         font-size: $the-smallest-font-size;
@@ -26,13 +26,13 @@
 
     &__nav-btn {
         padding-right: 30px;
-        align-items: center;
+        display: $primary-display;
+        align-items: $primary-position;
         border-radius: 20px;
         background-color: $the-lightest-dull-color;
         box-shadow: $quaternary-box-shadow;
         margin-left: 12px;
         height: 60px;
-        display: flex;
 
         &:hover {
             background-color: $lighter-primary-color;

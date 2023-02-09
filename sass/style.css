@@ -16,7 +16,6 @@ h4 {
   font-size: 15px;
   line-height: 18px;
   margin: 0px;
-  grid-column-start: 1;
 }
 
 a {
@@ -158,13 +157,13 @@ img {
 }
 
 #preloader {
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%) no-repeat center;
   height: 100%;
   width: 100%;
   position: fixed;
   z-index: 9;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -220,9 +219,13 @@ header img {
 }
 
 .menu-header {
-  padding-left: 50px;
   justify-content: flex-start;
   gap: 35%;
+}
+@media screen and (min-width: 768px) and (max-width: 1400px) {
+  .menu-header {
+    padding-left: 40px;
+  }
 }
 
 .welcome-section {
@@ -284,9 +287,9 @@ header img {
 }
 
 .card-container {
-  padding-bottom: 55px;
   display: flex;
   flex-direction: column;
+  padding-bottom: 55px;
   gap: 30px;
   margin-top: 35px;
 }
@@ -335,10 +338,10 @@ header img {
 }
 @media screen and (min-width: 768px) and (max-width: 1400px) {
   .menu-style {
-    margin: 0px 15%;
-    align-items: center;
     display: flex;
     flex-direction: column;
+    margin: 0px 15%;
+    align-items: center;
   }
   .menu-style section {
     width: 90%;
@@ -390,9 +393,9 @@ header img {
 }
 
 .card {
-  max-width: 90%;
   display: flex;
   flex-direction: column;
+  max-width: 90%;
   border-radius: 15px;
   background-color: #FFFFFF;
   margin-left: 35px;
@@ -416,9 +419,9 @@ header img {
 }
 
 .card-text {
+  display: flex;
   flex-direction: column;
   padding: 12px 0px;
-  display: flex;
   text-align: justify;
 }
 .card-text h3 {
@@ -440,6 +443,8 @@ header img {
 }
 
 .dish-card {
+  display: flex;
+  flex-direction: row;
   border: none;
   border-radius: 15px;
   background-color: #FFFFFF;
@@ -448,8 +453,6 @@ header img {
   padding: 0px;
   padding-left: 12px;
   height: 77px;
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
 .dish-card:focus .price {
@@ -655,13 +658,13 @@ header img {
 }
 .btn__nav-btn {
   padding-right: 30px;
+  display: flex;
   align-items: center;
   border-radius: 20px;
   background-color: #F6F6F6;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   margin-left: 12px;
   height: 60px;
-  display: flex;
 }
 .btn__nav-btn:hover {
   background-color: #F5EDFF;
@@ -762,4 +765,5 @@ header img {
 .arrow {
   width: 17px;
   height: 16px;
+  padding-left: 15px;
 }/*# sourceMappingURL=style.css.map */
