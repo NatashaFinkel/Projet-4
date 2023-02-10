@@ -35,7 +35,6 @@
 
 
 .footer-links {
-    @include secondary-layout;
 
     ul {
         padding-left: 0px;
@@ -47,9 +46,8 @@
     }
 
     li {
-        @include tertiary-layout;
-        align-items: baseline;
-        color: white;
+
+        display: $primary-display;
         margin-bottom: 7px;
 
         @include media-queries {
@@ -59,6 +57,12 @@
 
         p {
             margin: 0px;
+        }
+
+        a {
+            color: $white-color;
+            display: flex;
+            flex-direction: row;
         }
     }
 }

@@ -596,10 +596,6 @@ header img {
   }
 }
 
-.footer-links {
-  display: flex;
-  flex-direction: column;
-}
 .footer-links ul {
   padding-left: 0px;
   margin: 0px;
@@ -611,9 +607,6 @@ header img {
 }
 .footer-links li {
   display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  color: white;
   margin-bottom: 7px;
 }
 @media screen and (min-width: 768px) and (max-width: 1400px) {
@@ -624,6 +617,11 @@ header img {
 }
 .footer-links li p {
   margin: 0px;
+}
+.footer-links li a {
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
 }
 
 .footer-icon {
