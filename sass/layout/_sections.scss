@@ -1,16 +1,18 @@
-
 .welcome-section {
     @include vertical-and-centered;
     background-color: $the-lightest-dull-color;
     padding: 15px 40px 0px 40px;
 
-   h1 {
-       font-size: 24px;
-       font-weight: 900;
-   }
-
     p {
         color: $the-darkest-dull-color;
+
+    }
+
+    h5.title {
+
+        font-size: 24px;
+        font-weight: 900;
+        color: $text-color;
     }
 
 }
@@ -18,16 +20,17 @@
 
 .second-section {
     margin: 0px 33px;
+    padding-top: 40px;
 
     h1 {
         margin: 48px 0px 26px 0px;
     }
 
-@include media-queries {
-    @include secondary-layout;
-    flex-wrap: wrap;
-    align-content: space-around;
-}
+    @include media-queries {
+        @include secondary-layout;
+        flex-wrap: wrap;
+        align-content: space-around;
+    }
 
 }
 
@@ -36,6 +39,7 @@
     @include secondary-layout;
     justify-items: $primary-position;
     gap: $a-quarter;
+    padding-top: 25px;
 
     @include media-queries {
         flex-direction: $primary-direction;
@@ -47,6 +51,7 @@
 
 .all-restaurants {
     background-color: $the-lightest-dull-color;
+    padding-left: 33px;
     padding-top: 55px;
     margin-top: 68px;
 
@@ -58,6 +63,7 @@
     }
 
     p {
-        margin-top: 0px;
+        margin-top: -13px;
+        font-size: 17px;
     }
 }

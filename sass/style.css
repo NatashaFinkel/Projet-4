@@ -5,6 +5,7 @@ body {
 
 h2 {
   margin-bottom: 5px;
+  font-size: 23px;
 }
 
 h3 {
@@ -15,6 +16,12 @@ h4 {
   font-weight: 300;
   font-size: 15px;
   line-height: 18px;
+  margin: 0px;
+}
+
+h5 {
+  font-size: 24px;
+  font-weight: 700;
   margin: 0px;
 }
 
@@ -233,16 +240,18 @@ header img {
   background-color: #F6F6F6;
   padding: 15px 40px 0px 40px;
 }
-.welcome-section h1 {
-  font-size: 24px;
-  font-weight: 900;
-}
 .welcome-section p {
   color: #353535;
+}
+.welcome-section h5.title {
+  font-size: 24px;
+  font-weight: 900;
+  color: #000000;
 }
 
 .second-section {
   margin: 0px 33px;
+  padding-top: 40px;
 }
 .second-section h1 {
   margin: 48px 0px 26px 0px;
@@ -261,6 +270,7 @@ header img {
   flex-direction: column;
   justify-items: center;
   gap: 25px;
+  padding-top: 25px;
 }
 @media screen and (min-width: 768px) and (max-width: 1400px) {
   .user-guide-section {
@@ -272,6 +282,7 @@ header img {
 
 .all-restaurants {
   background-color: #F6F6F6;
+  padding-left: 33px;
   padding-top: 55px;
   margin-top: 68px;
 }
@@ -281,7 +292,8 @@ header img {
   margin-left: 20px;
 }
 .all-restaurants p {
-  margin-top: 0px;
+  margin-top: -13px;
+  font-size: 17px;
 }
 
 .card-container {
@@ -303,7 +315,13 @@ header img {
 .title-container {
   border-bottom: 3px solid #99E2D0;
   width: 35px;
-  margin-bottom: 13px;
+  margin: 30px 0px 20px 0px;
+}
+.title-container h5 {
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 3px;
 }
 
 .dish-container {
@@ -321,18 +339,7 @@ header img {
   font-weight: 900;
   font-style: italic;
   margin: 0px;
-  line-height: 41px;
-  letter-spacing: 0em;
   white-space: nowrap;
-}
-.menu-style h2 {
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 19px;
-  letter-spacing: 0em;
-  text-transform: uppercase;
-  margin-left: 0px;
-  margin: 42px 0px 12px;
 }
 @media screen and (min-width: 768px) and (max-width: 1400px) {
   .menu-style {
@@ -431,18 +438,9 @@ header img {
   margin-left: 0px;
   white-space: nowrap;
 }
-.card-text p {
-  font-size: 15px;
-  font-weight: 300;
-  margin-left: 0px;
-  max-width: 200px;
-  padding-bottom: 20px;
-  margin-block: 0px;
-}
 
 .dish-card {
   display: flex;
-  flex-direction: row;
   border: none;
   border-radius: 15px;
   background-color: #FFFFFF;
@@ -498,37 +496,42 @@ header img {
     position: relative;
   }
 }
-.dish-card .dish-container .dish-card {
+
+.dish-container .dish-card {
   animation: dish-slide 400ms ease-in-out both;
 }
-.dish-card .dish-container-1 .dish-card:nth-child(1) {
+
+.dish-container-1 .dish-card:nth-child(1) {
   animation-delay: 1ms;
 }
-.dish-card .dish-container-1 .dish-card:nth-child(2) {
+.dish-container-1 .dish-card:nth-child(2) {
   animation-delay: 300ms;
 }
-.dish-card .dish-container-1 .dish-card:nth-child(3) {
+.dish-container-1 .dish-card:nth-child(3) {
   animation-delay: 500ms;
 }
-.dish-card .dish-container-2 .dish-card:nth-child(1) {
+
+.dish-container-2 .dish-card:nth-child(1) {
   animation-delay: 800ms;
 }
-.dish-card .dish-container-2 .dish-card:nth-child(2) {
+.dish-container-2 .dish-card:nth-child(2) {
   animation-delay: 1000ms;
 }
-.dish-card .dish-container-2 .dish-card:nth-child(3) {
+.dish-container-2 .dish-card:nth-child(3) {
   animation-delay: 1200ms;
 }
-.dish-card .dish-container-3 .dish-card:nth-child(1) {
+
+.dish-container-3 .dish-card:nth-child(1) {
   animation-delay: 1500ms;
 }
-.dish-card .dish-container-3 .dish-card:nth-child(2) {
+.dish-container-3 .dish-card:nth-child(2) {
   animation-delay: 1700ms;
 }
-.dish-card .dish-container-3 .dish-card:nth-child(3) {
+.dish-container-3 .dish-card:nth-child(3) {
   animation-delay: 1900ms;
 }
-.dish-card .price {
+
+.price {
   font-weight: 900;
   font-size: 15px;
   position: relative;
@@ -539,10 +542,11 @@ header img {
   align-items: flex-end;
   width: 200px;
 }
-.dish-card .price p {
+.price p {
   padding-right: 25px;
 }
-.dish-card .dish-adding {
+
+.dish-adding {
   display: none;
 }
 

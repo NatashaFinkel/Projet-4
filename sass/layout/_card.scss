@@ -40,22 +40,13 @@
         margin-left: 0px;
         white-space: nowrap;
     }
-
-    p {
-        font-size: 15px;
-        font-weight: 300;
-        margin-left: 0px;
-        max-width: 200px;
-        padding-bottom: 20px;
-        margin-block: 0px;
-    }
 }
 
 
 // Pages restaurant
 
 .dish-card {
-    @include tertiary-layout;
+    display: $primary-display;
     border: none;
     border-radius: $card-radius;
     background-color: $white-color;
@@ -131,6 +122,8 @@
         }
 
     }
+}
+
 
     .dish-container .dish-card {
         animation: dish-slide 400ms ease-in-out both;
@@ -203,4 +196,5 @@
     .dish-adding {
         display: none;
     }
-}
+
+
