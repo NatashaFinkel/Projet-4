@@ -1,9 +1,8 @@
-
 .label-new {
     background-color: $light-vivid-color;
     box-shadow: $tertiary-box-shadow;
     color: $dark-vivid-color;
-    display: flex;
+    display: $primary-display;
     padding: 7px 10px;
     position: absolute;
     width: 100px;

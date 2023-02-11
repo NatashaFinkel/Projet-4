@@ -1,20 +1,18 @@
 .welcome-section {
-    @include vertical-and-centered;
+    @include  secondary-layout;
+    align-items: $primary-position;
     background-color: $the-lightest-dull-color;
     padding: 15px 40px 0px 40px;
 
     p {
         color: $the-darkest-dull-color;
-
     }
 
     h5.title {
-
-        font-size: 24px;
-        font-weight: 900;
+        font-size: $big-font-size;
+        font-weight: $the-largest-font-weight;
         color: $text-color;
     }
-
 }
 
 
