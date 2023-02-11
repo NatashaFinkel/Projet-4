@@ -33,12 +33,26 @@
     h3 {
         font-weight: 900;
         font-size: 18px;
-        line-height: 21px;
-        letter-spacing: 0em;
         margin-right: 0px;
         margin-left: 0px;
-        white-space: nowrap;
     }
+
+    h3, h4 {
+
+// Pour couper le texte et 
+    // ajouter des points de suspension 
+    // si le texte est trop long
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 150px;
+
+    @include media-queries {
+        max-width: none;
+    }
+
+}
+
 }
 
 
@@ -56,13 +70,12 @@
     height: 77px;
     justify-content: space-between;
 
+  
     &:focus {
 
         .price {
-            align-items: flex-end;
-
+           
             p {
-                padding-right: 0px;
                 padding-top: 12px;
                 animation: price-slide 500ms forwards;
             }

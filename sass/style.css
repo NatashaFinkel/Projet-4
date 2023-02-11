@@ -130,7 +130,7 @@ p {
     transform: translateX(-25px);
   }
   to {
-    transform: translateX(-60px);
+    transform: translateX(-50px);
   }
 }
 @keyframes green-animation {
@@ -431,11 +431,19 @@ header img {
 .card-text h3 {
   font-weight: 900;
   font-size: 18px;
-  line-height: 21px;
-  letter-spacing: 0em;
   margin-right: 0px;
   margin-left: 0px;
+}
+.card-text h3, .card-text h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
+  max-width: 150px;
+}
+@media screen and (min-width: 768px) and (max-width: 1400px) {
+  .card-text h3, .card-text h4 {
+    max-width: none;
+  }
 }
 
 .dish-card {
@@ -450,11 +458,7 @@ header img {
   height: 77px;
   justify-content: space-between;
 }
-.dish-card:focus .price {
-  align-items: flex-end;
-}
 .dish-card:focus .price p {
-  padding-right: 0px;
   padding-top: 12px;
   animation: price-slide 500ms forwards;
 }
