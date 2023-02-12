@@ -82,14 +82,14 @@
         }
 
         .dish-adding {
-            display: flex;
+            display: $primary-display;
             animation: green-animation 500ms forwards;
 
             height: 77px;
             width: 75px;
             background-color: $tertiary-color;
-            justify-content: center;
-            align-items: center;
+            justify-content: $primary-position;
+            align-items: $primary-position;
             border-top-right-radius: $card-radius;
             border-bottom-right-radius: $card-radius;
             color: $white-color;

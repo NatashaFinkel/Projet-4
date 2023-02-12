@@ -1,5 +1,5 @@
 .flexible-heart-location {
-    display: flex;
+    display: $primary-display;
     justify-content: flex-end;
     margin-right: $a-quarter;
     position: relative;
@@ -14,7 +14,7 @@
     background-color: transparent;
 
     &:focus {
-        animation: heart-animation 1700ms ease 0s 1 normal forwards;
+        animation: heart-animation 1700ms forwards;
         background-image: $gradient-color;
         background-image: -webkit-linear-gradient($gradient-color);
         background-clip: text;
