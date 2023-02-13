@@ -4,8 +4,8 @@
     max-width: $max-width;
 
     @include media-queries {
-        max-width: $responsive-max-width;
         min-width: $responsive-min-width;
+        max-width: $responsive-max-width;
     }
 }
 
@@ -14,7 +14,7 @@
     min-width: $min-width;
     max-width: $max-width;
 
-    @include media-queries {
+  @include media-queries {
         min-width: $responsive-min-width;
         max-width: $responsive-max-width;
     }
