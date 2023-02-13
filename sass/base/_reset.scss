@@ -1,23 +1,23 @@
 // Valeurs générales
 :root {
-    min-width: $min-width;
-    max-width: $max-width;
-
     @include media-queries {
         min-width: $responsive-min-width;
         max-width: $responsive-max-width;
     }
+
+    min-width: $min-width;
+    max-width: $max-width;
 }
 
 
 .root {
-    min-width: $min-width;
-    max-width: $max-width;
-
-  @include media-queries {
+    @include media-queries {
         min-width: $responsive-min-width;
         max-width: $responsive-max-width;
     }
+    min-width: $min-width;
+    max-width: $max-width;
+
 }
 
 // Box-sizing

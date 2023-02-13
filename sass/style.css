@@ -48,10 +48,10 @@ p {
   min-width: 375px;
   max-width: 767px;
 }
-@media screen and (min-width: 768px) and (max-width: 1400px) {
+@media screen and (min-width: 768px) and (max-width: 100vw) {
   :root {
     min-width: 768px;
-    max-width: 1400px;
+    max-width: 100vw;
   }
 }
 
@@ -59,10 +59,10 @@ p {
   min-width: 375px;
   max-width: 767px;
 }
-@media screen and (min-width: 768px) and (max-width: 1400px) {
+@media screen and (min-width: 768px) and (max-width: 100vw) {
   .root {
     min-width: 768px;
-    max-width: 1400px;
+    max-width: 100vw;
   }
 }
 
@@ -219,7 +219,7 @@ header {
 header img {
   width: 162px;
 }
-@media screen and (min-width: 768px) and (max-width: 1400px) {
+@media screen and (min-width: 768px) and (max-width: 100vw) {
   header img {
     width: 200px;
   }
@@ -229,7 +229,7 @@ header img {
   justify-content: flex-start;
   gap: 35%;
 }
-@media screen and (min-width: 768px) and (max-width: 1400px) {
+@media screen and (min-width: 768px) and (max-width: 100vw) {
   .menu-header {
     padding-left: 40px;
   }
@@ -258,7 +258,7 @@ header img {
 .second-section h1 {
   margin: 48px 0px 26px 0px;
 }
-@media screen and (min-width: 768px) and (max-width: 1400px) {
+@media screen and (min-width: 768px) and (max-width: 100vw) {
   .second-section {
     display: flex;
     flex-direction: column;
@@ -274,7 +274,7 @@ header img {
   gap: 25px;
   padding-top: 25px;
 }
-@media screen and (min-width: 768px) and (max-width: 1400px) {
+@media screen and (min-width: 768px) and (max-width: 100vw) {
   .user-guide-section {
     flex-direction: row;
     height: 56px;
@@ -305,7 +305,7 @@ header img {
   gap: 30px;
   margin-top: 35px;
 }
-@media screen and (min-width: 768px) and (max-width: 1400px) {
+@media screen and (min-width: 768px) and (max-width: 100vw) {
   .card-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -343,7 +343,7 @@ header img {
   margin: 0px;
   white-space: nowrap;
 }
-@media screen and (min-width: 768px) and (max-width: 1400px) {
+@media screen and (min-width: 768px) and (max-width: 100vw) {
   .menu-style {
     display: flex;
     flex-direction: column;
@@ -363,7 +363,7 @@ header img {
   padding-right: 40px;
   gap: 15px;
 }
-@media screen and (min-width: 768px) and (max-width: 1400px) {
+@media screen and (min-width: 768px) and (max-width: 100vw) {
   .title-box {
     justify-content: center;
     padding: 0px;
@@ -374,7 +374,7 @@ header img {
   margin-right: 0px;
   margin-bottom: 10px;
 }
-@media screen and (min-width: 768px) and (max-width: 1400px) {
+@media screen and (min-width: 768px) and (max-width: 100vw) {
   .title-box .flexible-heart-location {
     gap: 25px;
     justify-content: center;
@@ -387,7 +387,7 @@ header img {
   white-space: nowrap;
   max-width: 150px;
 }
-@media screen and (min-width: 768px) and (max-width: 1400px) {
+@media screen and (min-width: 768px) and (max-width: 100vw) {
   .dish-description-box {
     max-width: none;
   }
@@ -407,12 +407,12 @@ header img {
   background-color: #FFFFFF;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
-@media screen and (min-width: 768px) and (max-width: 1400px) {
+@media screen and (min-width: 768px) and (max-width: 100vw) {
   .card {
     width: 335px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1400px) {
+@media screen and (min-width: 768px) and (max-width: 100vw) {
   .card a {
     display: inline-block;
   }
@@ -442,7 +442,7 @@ header img {
   white-space: nowrap;
   max-width: 150px;
 }
-@media screen and (min-width: 768px) and (max-width: 1400px) {
+@media screen and (min-width: 768px) and (max-width: 100vw) {
   .card-text h3, .card-text h4 {
     max-width: none;
   }
@@ -478,7 +478,7 @@ header img {
   font-size: 20px;
   position: relative;
 }
-@media screen and (min-width: 768px) and (max-width: 1400px) {
+@media screen and (min-width: 768px) and (max-width: 100vw) {
   .dish-card:focus p,
   .dish-card:focus .dish-adding {
     animation-duration: 0s;
@@ -584,7 +584,7 @@ header img {
   background-color: #353535;
   padding: 0px 0px 35px 25px;
 }
-@media screen and (min-width: 768px) and (max-width: 1400px) {
+@media screen and (min-width: 768px) and (max-width: 100vw) {
   .footer-container {
     flex-direction: row-reverse;
     padding: 0px;
@@ -601,7 +601,7 @@ header img {
   font-size: 18px;
   line-height: 27px;
 }
-@media screen and (min-width: 768px) and (max-width: 1400px) {
+@media screen and (min-width: 768px) and (max-width: 100vw) {
   .footer-container h1 {
     padding-left: 50px;
     margin: 0px;
@@ -612,7 +612,7 @@ header img {
   padding-left: 0px;
   margin: 0px;
 }
-@media screen and (min-width: 768px) and (max-width: 1400px) {
+@media screen and (min-width: 768px) and (max-width: 100vw) {
   .footer-links ul {
     display: flex;
   }
@@ -621,7 +621,7 @@ header img {
   display: flex;
   margin-bottom: 7px;
 }
-@media screen and (min-width: 768px) and (max-width: 1400px) {
+@media screen and (min-width: 768px) and (max-width: 100vw) {
   .footer-links li {
     margin-right: 10px;
     margin-bottom: 0px;
@@ -704,7 +704,7 @@ header img {
   margin: 0px 0px 0px 10px;
   padding: 10px;
 }
-@media screen and (min-width: 768px) and (max-width: 1400px) {
+@media screen and (min-width: 768px) and (max-width: 100vw) {
   .purple-circle {
     position: relative;
     left: -25px;
@@ -744,7 +744,7 @@ header img {
   -webkit-background-clip: text;
   color: transparent;
 }
-@media screen and (min-width: 768px) and (max-width: 1400px) {
+@media screen and (min-width: 768px) and (max-width: 100vw) {
   .heart-btn:focus {
     animation-duration: 0s;
   }
